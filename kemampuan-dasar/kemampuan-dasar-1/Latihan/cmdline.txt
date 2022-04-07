@@ -1,0 +1,195 @@
+﻿Mencamtumkan file (ls)
+
+1. jika ingin melihat daftar file di sistem UNIX, gunakan perintah ‘Ls’
+musyaffak@musyaffak-Aspire-E5-475:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+
+2. “ls-R’ untuk menampilkan semua file tidak hanya di direktori, tetapi juga subdirektori:
+musyaffak@musyaffak-Aspire-E5-475:~$ ls -R
+.:
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+
+./Desktop:
+
+./Documents:
+env.txt  kernel-linux.txt
+
+./Downloads:
+code_1.66.0-1648620611_amd64.deb
+
+./Music:
+
+./Pictures:
+
+./Public:
+
+./Templates:
+
+./Videos:
+
+3. ‘ls -a’ untuk melihat file yang disembunyikan:
+musyaffak@musyaffak-Aspire-E5-475:~$ ls -a
+.              Desktop      .mozilla                   Templates
+..             .dmrc        Music                      .themes
+.bash_history  Documents    musyaffak                  Videos
+.bash_logout   Downloads    Pictures                   .vscode
+.bashrc        .gnupg       .pki                       .Xauthority
+.cache         .gtkrc-2.0   .profile                   .xsession-errors
+.cinnamon      .gtkrc-xfce  Public                     .xsession-errors.old
+.config        .local       .sudo_as_admin_successful
+
+4. ‘ls -al’ perintah untuk memberikan informasi dalam format kolom. Kolom berisi format berikut:
+musyaffak@musyaffak-Aspire-E5-475:~$ ls -al
+total 136
+drwxr-xr-x 20 musyaffak musyaffak  4096 Apr  6 14:49 .
+drwxr-xr-x  3 root      root       4096 Apr  6  2022 ..
+-rw-------  1 musyaffak musyaffak   834 Apr  6 14:13 .bash_history
+-rw-r--r--  1 musyaffak musyaffak   220 Apr  6  2022 .bash_logout
+-rw-r--r--  1 musyaffak musyaffak  3771 Apr  6  2022 .bashrc
+drwx------  9 musyaffak musyaffak  4096 Apr  6 12:39 .cache
+drwxrwxr-x  4 musyaffak musyaffak  4096 Apr  6  2022 .cinnamon
+drwxr-xr-x 16 musyaffak musyaffak  4096 Apr  6 14:06 .config
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6  2022 Desktop
+-rw-r--r--  1 musyaffak musyaffak    27 Apr  6  2022 .dmrc
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6 14:28 Documents
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6 13:30 Downloads
+drwx------  3 musyaffak musyaffak  4096 Apr  6  2022 .gnupg
+-rw-r--r--  1 musyaffak musyaffak    22 Apr  6  2022 .gtkrc-2.0
+-rw-r--r--  1 musyaffak musyaffak   516 Apr  6  2022 .gtkrc-xfce
+drwxrwxr-x  3 musyaffak musyaffak  4096 Apr  6  2022 .local
+drwx------  4 musyaffak musyaffak  4096 Apr  6 12:39 .mozilla
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6  2022 Music
+drwxrwxr-x  2 musyaffak musyaffak  4096 Apr  6 14:49 musyaffak
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6  2022 Pictures
+drwx------  3 musyaffak musyaffak  4096 Apr  6 14:07 .pki
+-rw-r--r--  1 musyaffak musyaffak   807 Apr  6  2022 .profile
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6  2022 Public
+-rw-r--r--  1 musyaffak musyaffak     0 Apr  6 13:58 .sudo_as_admin_successful
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6  2022 Templates
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6  2022 .themes
+drwxr-xr-x  2 musyaffak musyaffak  4096 Apr  6  2022 Videos
+drwxrwxr-x  3 musyaffak musyaffak  4096 Apr  6 14:06 .vscode
+-rw-------  1 musyaffak musyaffak    68 Apr  6 13:26 .Xauthority
+-rw-------  1 musyaffak musyaffak  8161 Apr  6 13:26 .xsession-errors
+-rw-------  1 musyaffak musyaffak 13580 Apr  6 13:00 .xsession-errors.old
+
+5. ‘mkdir’ untuk membuat folder pada computer:
+musyaffak@musyaffak-Aspire-E5-475:~$ mkdir musyaffak
+mkdir: cannot create directory ‘musyaffak’: File exists
+
+6. menggabungkan 2 file dengan mengunakan sample 1 dan sample 2. segera setelah memasukkan perintah ini dan tekan enter:
+musyaffak@musyaffak-Aspire-E5-475:~$ sample1 sample2 > sample
+
+Command 'sample1' not found, did you mean:
+
+  command 'sample' from deb barcode (0.99-3)
+
+Try: sudo apt install <deb name>
+
+7. ‘mkdir tmp/music akan membuat direktori ‘Musik’ dibawah direktori ‘/tmp:
+musyaffak@musyaffak-Aspire-E5-475:~$ mkadir /tmp/MUSIC
+
+Command 'mkadir' not found, did you mean:
+
+  command 'mkdir' from deb coreutils (8.30-3ubuntu2)
+
+Try: sudo apt install <deb name>
+
+8. ‘man man’memberikan perintah informasi tentang peintah man:
+MAN(1)                        Manual pager utils                        MAN(1)
+
+NAME
+       man - an interface to the system reference manuals
+
+SYNOPSIS
+       man [man options] [[section] page ...] ...
+       man -k [apropos options] regexp ...
+       man -K [man options] [section] term ...
+       man -f [whatis options] page ...
+       man -l [man options] file ...
+       man -w|-W [man options] page ...
+
+DESCRIPTION
+       man  is  the system's manual pager.  Each page argument given to man is
+       normally the name of a program, utility or function.  The  manual  page
+       associated with each of these arguments is then found and displayed.  A
+       section, if provided, will direct man to look only in that  section  of
+       the  manual.   The  default action is to search in all of the available
+       sections following a pre-defined order (see DEFAULTS), and to show only
+       the first page found, even if page exists in several sections.
+
+       The table below shows the section numbers of the manual followed by the
+ Manual page man(1) line 1 (press h for help or q to quit)
+
+9. perintah ‘history’ menunjukkan semua perintah dasar di linux yang telah anda gunakan di masa lalu untuk sesi terminal saat ini. Ini dapat membantu anda merujuk ke perintah lama yang telah anda masukkan dan menggunakannya kembali dalam oprasi anda lagi:
+musyaffak@musyaffak-Aspire-E5-475:~$ history
+    1  /etc/X11/default-display-manager
+    2  /etc/sysconfig/displaymanager
+    3  systemctl status display-manager
+    4  /etc/X11/default-display-manager
+    5  aptitude -F %p search '~i ~P^x-display-manager$'
+    6  /etc/X11/default-display-manager
+    7  </var/lib/dpkg/status awk '
+    8      /^Package: / {package = $2}
+    9      /^Provides: .*x-display-manager/ {print package}'
+   10  </var/lib/dpkg/status awk '
+   11      /^Package: / {package = $2}
+   12  ps auxf | awk '{print $11}' | \grep --color -e dm$ -e slim$
+   13  ps auxf | awk '{print $11}' | \grep --color -e dm$ -e slim$
+   14  mkdir test
+   15  file /etc/systemd/system/display-manager.service
+   16  ➜ systemctl --property=Id,Description show display-manager.service
+   17  Id=sddm.service
+   18  Description=Simple Desktop Display Manager
+   19  wmcrt -m 
+   20  lshw -c video | grep 'configuration'
+   21  sudo apt-get install wmctrl
+   22  wmctrl -m
+   23  OnlyShowIn=XFCE
+   24  $ ls -l /usr/share/xsessions/
+   25  total 8
+   26  sudo grep "Starting session" /var/log/lightdm/lightdm.log
+   27  lsb_release -a
+   28  uname -a
+   29  uname -r
+   30  cat /proc/version
+   31  hostnamectl | grep Kernel
+   32  4.15.0-39-generic
+   33  $ cat /proc/version
+   34  Linux version 4.19.2 (vivek@nixcraft-asus.nixcraft.com) (gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04)) #1 SMP Fri Nov 16 01:38:13 IST 2018
+   35  hostnamectl
+   36  hostnamectl | grep Kernel
+   37  ls
+   38  ls -R
+   39  ls-al
+   40  musyaffak
+   41  mkdir musyaffak
+   42  ls-a
+   43  ls -a
+   44  ls -al
+   45  nama file kucing
+   46  mkdir musyaffak
+   47  sample
+   48  sample1 sample2 > sample
+   49  sample
+   50  mv sample2/home/musyaffak/documents
+   51  sudo command_you_want_to_execute
+   52  mv musyaffak musyafffak
+   53  mkadir /tmp/MUSIC
+   54  man man
+   55  history
+
+10. ‘sudo’ menjalankan progam dengan hak keamanan superuser atau root:
+musyaffak@musyaffak-Aspire-E5-475:~$ sudo
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+
+
+
+

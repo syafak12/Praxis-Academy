@@ -1,0 +1,9 @@
+﻿5.4.0-91-generic
+   Static hostname: musyaffak-Aspire-E5-475
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: 09143d0261be487380a9ec9bf41d5922
+           Boot ID: 8dbfeced862246279e01f522f0131c61
+  Operating System: Linux Mint 20.3
+            Kernel: Linux 5.4.0-91-generic
+      Architecture: x86-64
