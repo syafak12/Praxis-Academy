@@ -1,1 +1,1 @@
-#proxis-academy
+#praxis-academy
