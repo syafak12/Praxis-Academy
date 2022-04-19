@@ -1,1 +1,1 @@
-#praxis-academy
+#Praxis-Academy.

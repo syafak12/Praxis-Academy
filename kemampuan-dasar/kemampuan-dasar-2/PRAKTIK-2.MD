@@ -23,7 +23,23 @@ Biasanya ada ada dua cara menyiapkan Github untuk kolaborasi tim:
 7. isi semua kolom yang ada di https://github.com/orgs/PONDOK-LETEH/welcome_survey/new atau di Wecome to Gibhub.
 8. klik submit
 
-2. Kllaborations
+2. Collaborations
 Collaborators digunakan untuk memberikan akses Read + Write access ke satu repositori yang dimiliki oleh akun pribadi. Untuk menambahkan Collaborators, (akun pribadi Github lainnya)
+Di karenakan belum membuat colllaborations ataupun add sama teman, Jadi langsung lanjut ke Alat 2: Pull Reques
+
+* Pull Requests
+Pull Requests adalah cara yang mengagumkan untuk konstribusi para repositori secara mandiri dengan fork itu. Pada akhirnya, jika kita mau, kita dapat mengirim permintaan tarik ke pemilik repositori untuk menggabungkan perubahan kode kita. Pull requests itu sendiri dapat memicu diskusi untuk kualitas kode, fitur atau bahkan strategi umum.
+
+* langkah-langkah dasar untuk memulai pull requests di guthub ada 2:
+
+1. Push collaborations di dalam Github.
+3. Identifikasi GitHub Repository yang ingin Anda kontribusikan,klik tombol "fork" untuk membuat tiruan dari repositoridi akun GitHub.
+4. membuat folder kosong untuk mengisi file cloning dari GitHUb.
+5. ketik git clone (ssh-url/https)dan tempelkan di terimanal lalu Enter.
+6. untuk membuat cabang baru untuk membuat perubahan yang sederhana, dengan mengetik "git checkout -b (new -feature)"
+
+
+
+
 
 
