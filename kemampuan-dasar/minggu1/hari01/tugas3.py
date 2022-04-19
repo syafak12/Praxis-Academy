@@ -101,9 +101,9 @@
 # print(len(s))
 
 
-a = 4;
-b = 3;
-print(a ** b)
+# a = 4;
+# b = 3;
+# print(a ** b)
 
 
 # kami = ['a', 'b', 'c', 'd', 'e',]
@@ -112,8 +112,16 @@ print(a ** b)
 # print("kami")
 
 
+# from re import A
+
+
 # kami = ['a', 'b', 'c', 'd', 'e',]
-# len ("kami")
+# print(len ("kami"))
+
+
+# a = "saya mau masuk ke ruangan pribadi"
+# print(len(a))
+
 
 # i = 256*256
 # print('The value of i is', i)
@@ -121,6 +129,15 @@ print(a ** b)
 # while a < 1000:
 #     print(a, end=',')
 #     a, b = b, a+b
+
+
+# i = 256*256
+# print('Nilai i adalah', i)
+# a, b = 0, 1
+# while a < 1000:
+#     print(a, end=',')
+#     a, b = b, a+b
+
 
 
 

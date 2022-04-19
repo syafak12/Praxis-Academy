@@ -11,23 +11,36 @@
 # else :
 #     print("More")
 
+# x = int(input("silakan masukkan bilangan bulat : "))
+# if x < 0 :
+#     x = 0
+#     print("negative di ubah menjadi nol")
+# elif x == 0 :
+#     print("nol")
+# elif x == 1 :
+#     print("satu")
+# elif x == 2 :
+#     print("dua")
+# else :
+#     print("lainnya")
+
 
 
 # words = ['cat,'window','defenestrate']
 # for W in words:
 # print(w, len(w))
 
-# users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
-# for user, status in users.copy().items():
-#     if status == 'inactive':
-#         del users[user]
+users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
+for user, status in users.copy().items():
+    if status == 'inactive':
+        del users[user]
 
-# active_users = {}
-# for user, status in users.items():
-#     if status == 'active':
-#         active_users[user] = status
+active_users = {}
+for user, status in users.items():
+    if status == 'active':
+        active_users[user] = status
 
-# print(active_users)
+print(active_users)
 
 # for i in range(10, 6,-2):
 #     print(i)
