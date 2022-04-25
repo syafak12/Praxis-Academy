@@ -117,8 +117,109 @@
 # if __name__ == '__main__':
 #     unittest.main()
 
+# from django.test import TestCase
+
+# class MyTestCase(TestCase):
+
+# musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar$ python3 -m unittest test
+
+# ----------------------------------------------------------------------
+# Ran 0 tests in 0.000s
+
+# OK
+
+
+# import unittest
+
+# from my_sum import sum
+
+
+# class TestSum(unittest.TestCase):
+#     def test_list_int(self):
+#         """
+#         Test that it can sum a list of integers
+#         """
+#         data = [1, 2, 3]
+#         result = sum(data)
+#         self.assertEqual(result, 6)
+
+#     def test_list_fraction(self):
+#         """
+#         Test that it can sum a list of fractions
+#         """
+#         data = [Fraction(1, 4), Fraction(1, 4), Fraction(2, 5)]
+#         result = sum(data)
+#         self.assertEqual(result, 1)
+
+# if __name__ == '__main__':
+#     unittest.main
+
+# from django.test import TestCase
+
+# class MyTestCase(TestCase):
+#     # Your test methods
+
+# import fractions
+# import unittest
+# import my_app 
+
+# class MyTestCase(unittest.TestCase):
+
+#     def setUp(self):
+#         my_app.app.testing = True
+#         self.app = my_app.app.test_client()
+
+#     def test_home(self):
+#         result = self.app.get('/')
+#         # Make your assertions
+
+# # ini bisa
+# from fractions import Fraction
+# import unittest
+# from my_sum import sum
+
+
+# class TestSum(unittest.TestCase):
+#     def test_list_int(self):
+#         """
+#         Test that it can sum a list of integers
+#         """
+#         data = [1, 2, 3]
+#         result = sum(data)
+#         self.assertEqual(result, 6)
+
+#     def test_list_fractions(self):
+#         """
+#         Test that it can sum a list of fractions
+#         """
+#         data = [Fraction(1, 4), Fraction(1, 4), Fraction(2, 5)]
+#         result = sum(data)
+#         self.assertEqual(result, 1)
+
+#     def test_bad_type(self):
+#         data = "banana"
+#         with self.assertRaises(TypeError):
+#             result = sum(data)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
+# yang lain
 from django.test import TestCase
 
 class MyTestCase(TestCase):
+# Your test methods
+import my_app
+import unittest
 
+
+class MyTestCase(unittest.TestCase):
+
+    def setUp(self):
+        my_app.app.testing = True
+        self.app = my_app.app.test_client()
+
+    def test_home(self):
+        result = self.app.get('/')
+        # Make your assertions
 
