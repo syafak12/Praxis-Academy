@@ -1,12 +1,36 @@
-from injector import Injector, SingletonScope, provider
+from injector import Injector, Module, singleton, provider
+
+
+# class Api:
+#     def fetch_remote_data(self):
+#         print('Api called')
+#         return 42
+
+
+# class BusinessLogic:
+#     def __init__(self, api: Api):
+#         self.api = api
+
+#     def do_stuff(self):
+#         api_result = self.api.fetch_remote_data()
+#         print(f'the api returned a result: {api_result}')
+#         # do something with the data and return a result
+
+# # ---
+
+# if __name__ == '__main__':
+#     api = Api()
+#     logic = BusinessLogic(api=api)
+
+#     # ...
+#     print(logic.do_stuff())
+
 
 
 class Api:
     def fetch_remote_data(self):
         print('Api called')
         return 42
-
-
 class BusinessLogic:
     def __init__(self, api: Api):
         self.api = api
@@ -15,45 +39,19 @@ class BusinessLogic:
         api_result = self.api.fetch_remote_data()
         print(f'the api returned a result: {api_result}')
         # do something with the data and return a result
-
-# ---
-
-if __name__ == '__main__':
-    api = Api()
-    logic = BusinessLogic(api=api)
-
-    # ...
-    print(logic.do_stuff())
+# print(logic.do_stuff())
 
 
 
-class Api:
-    def fetch_remote_data(self):
-        print('Api called')
-        return 42
-class BusinessLogic:
-    def __init__(self, api: Api):
-        self.api = api
-
-    def do_stuff(self):
-        api_result = self.api.fetch_remote_data()
-        print(f'the api returned a result: {api_result}')
-        # do something with the data and return a result
-print(logic.do_stuff())
-
-
-
-class AppModule(Module):SingletonScope
-    # @provide
-
-    # @singleton
-    # @provider
+class AppModule(Module):
+    @singleton
+    @provider
     def provide_business_logic(self, api: Api) -> BusinessLogic:
         return BusinessLogic(api=api)
 
-    # @singleton
-    # @provider
-    def provide_api(self) -> Api:
+    @singleton
+    @provider
+    def pro_api(self) -> Api:
         # there is no complex logic in our case,
         # but you can use this method to hide the complexity of initial configuration
         # e.g. when instantiating a particular DB connector.
@@ -72,7 +70,7 @@ class TestApi(Api):
         return 24
 class TestAppModule(Module):
 
-    @SingletonScope
+    @singleton
     @provider
     def provide_api(self) -> Api:
         return TestApi()
