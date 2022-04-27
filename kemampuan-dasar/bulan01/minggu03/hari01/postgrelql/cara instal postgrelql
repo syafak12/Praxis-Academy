@@ -1,0 +1,353 @@
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01/postgrelql$ sudo apt update
+[sudo] password for musyaffak:       
+Get:1 http://packages.microsoft.com/repos/code stable InRelease [10,4 kB]
+Get:2 http://download.nus.edu.sg/mirror/mariadb/repo/5.5/debian wheezy InRelease [2.488 B]
+Ign:3 http://packages.linuxmint.com una InRelease                              
+Hit:4 http://ppa.launchpad.net/deadsnakes/ppa/ubuntu focal InRelease           
+Hit:5 http://archive.ubuntu.com/ubuntu focal InRelease                         
+Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]        
+Hit:8 http://packages.linuxmint.com una Release                                
+Hit:9 http://archive.canonical.com/ubuntu focal InRelease                      
+Get:10 http://packages.microsoft.com/repos/code stable/main amd64 Packages [80,8 kB]
+Err:2 http://download.nus.edu.sg/mirror/mariadb/repo/5.5/debian wheezy InRelease
+  The following signatures were invalid: 199369E5404BD5FC7D2FE43BCBCB082A1BB943DB
+Ign:11 https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 InRelease    
+Get:12 http://packages.microsoft.com/repos/code stable/main armhf Packages [81,6 kB]
+Get:13 http://packages.microsoft.com/repos/code stable/main arm64 Packages [81,7 kB]
+Hit:14 https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 Release      
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]     
+Get:18 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [426 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [635 kB]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1.418 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1.746 kB]
+Get:22 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [245 kB]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,6 kB]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [10,1 kB]
+Get:25 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66,3 kB]
+Get:26 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2.464 B]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [278 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [15,0 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [918 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [391 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [8.004 B]
+Get:33 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30,8 kB]
+Reading package lists... Done                                                  
+W: GPG error: http://download.nus.edu.sg/mirror/mariadb/repo/5.5/debian wheezy InRelease: The following signatures were invalid: 199369E5404BD5FC7D2FE43BCBCB082A1BB943DB
+E: The repository 'http://download.nus.edu.sg/mirror/mariadb/repo/5.5/debian wheezy InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01/postgrelql$ sudo apt install postgresql postgresql-contrib
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libllvm10 libpq5 postgresql-12 postgresql-client-12 postgresql-client-common
+  postgresql-common sysstat
+Suggested packages:
+  postgresql-doc postgresql-doc-12 libjson-perl isag
+The following NEW packages will be installed:
+  libllvm10 libpq5 postgresql postgresql-12 postgresql-client-12
+  postgresql-client-common postgresql-common postgresql-contrib sysstat
+0 upgraded, 9 newly installed, 0 to remove and 225 not upgraded.
+1 not fully installed or removed.
+Need to get 30,6 MB of archives.
+After this operation, 121 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libllvm10 amd64 1:10.0.0-4ubuntu1 [15,3 MB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpq5 amd64 12.9-0ubuntu0.20.04.1 [117 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-client-common all 214ubuntu0.1 [28,2 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-client-12 amd64 12.9-0ubuntu0.20.04.1 [1.047 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-common all 214ubuntu0.1 [169 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-12 amd64 12.9-0ubuntu0.20.04.1 [13,5 MB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql all 12+214ubuntu0.1 [3.924 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-contrib all 12+214ubuntu0.1 [3.932 B]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 sysstat amd64 12.2.0-2ubuntu0.1 [448 kB]
+Fetched 30,6 MB in 17s (1.797 kB/s)                                            
+Preconfiguring packages ...
+Selecting previously unselected package libllvm10:amd64.
+(Reading database ... 291312 files and directories currently installed.)
+Preparing to unpack .../0-libllvm10_1%3a10.0.0-4ubuntu1_amd64.deb ...
+Unpacking libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libpq5:amd64.
+Preparing to unpack .../1-libpq5_12.9-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libpq5:amd64 (12.9-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../2-postgresql-client-common_214ubuntu0.1_all.deb ...
+Unpacking postgresql-client-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-client-12.
+Preparing to unpack .../3-postgresql-client-12_12.9-0ubuntu0.20.04.1_amd64.deb .
+..
+Unpacking postgresql-client-12 (12.9-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../4-postgresql-common_214ubuntu0.1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postg
+resql-common'
+Unpacking postgresql-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-12.
+Preparing to unpack .../5-postgresql-12_12.9-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking postgresql-12 (12.9-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql.
+Preparing to unpack .../6-postgresql_12+214ubuntu0.1_all.deb ...
+Unpacking postgresql (12+214ubuntu0.1) ...
+Selecting previously unselected package postgresql-contrib.
+Preparing to unpack .../7-postgresql-contrib_12+214ubuntu0.1_all.deb ...
+Unpacking postgresql-contrib (12+214ubuntu0.1) ...
+Selecting previously unselected package sysstat.
+Preparing to unpack .../8-sysstat_12.2.0-2ubuntu0.1_amd64.deb ...
+Unpacking sysstat (12.2.0-2ubuntu0.1) ...
+Setting up postgresql-client-common (214ubuntu0.1) ...
+Setting up libpq5:amd64 (12.9-0ubuntu0.20.04.1) ...
+Setting up libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Setting up postgresql-client-12 (12.9-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/share/postgresql/12/man/man1/psql.1.gz to provid
+e /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up postgresql-common (214ubuntu0.1) ...
+supported-versions: WARNING! Unknown distribution: linuxmint
+ubuntu found in ID_LIKE, treating as Ubuntu
+supported-versions: WARNING: Unknown Ubuntu release: 20.3
+Adding user postgres to group ssl-cert
+
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+  de_at_frami
+  de_ch_frami
+  de_de_frami
+  en_au
+  en_ca
+  en_gb
+  en_us
+  en_za
+  es_es
+  fr
+  it_it
+  pt_br
+  pt_pt
+  ru_ru
+Removing obsolete dictionary files:
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service →
+ /lib/systemd/system/postgresql.service.
+Setting up postgresql-12 (12.9-0ubuntu0.20.04.1) ...
+Creating new PostgreSQL cluster 12/main ...
+/usr/lib/postgresql/12/bin/initdb -D /var/lib/postgresql/12/main --auth-local pe
+er --auth-host md5
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locales
+  COLLATE:  en_US.UTF-8
+  CTYPE:    en_US.UTF-8
+  MESSAGES: en_US.UTF-8
+  MONETARY: id_ID.UTF-8
+  NUMERIC:  id_ID.UTF-8
+  TIME:     en_US.UTF-8
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/12/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Asia/Jakarta
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctlcluster 12 main start
+
+Ver Cluster Port Status Owner    Data directory              Log file
+12  main    5432 down   postgres /var/lib/postgresql/12/main /var/log/postgresql
+/postgresql-12-main.log
+update-alternatives: using /usr/share/postgresql/12/man/man1/postmaster.1.gz to 
+provide /usr/share/man/man1/postmaster.1.gz (postmaster.1.gz) in auto mode
+Setting up openafs-client (1.8.4~pre1-1ubuntu2.3) ...
+Job for openafs-client.service failed because the control process exited with er
+ror code.
+See "systemctl status openafs-client.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript openafs-client, action "start" failed.
+● openafs-client.service - OpenAFS client
+     Loaded: loaded (/lib/systemd/system/openafs-client.service; enabled; vendor
+ preset: enabled)
+     Active: failed (Result: exit-code) since Tue 2022-04-26 15:14:11 WIB; 31ms 
+ago
+    Process: 17040 ExecStartPre=/usr/share/openafs/openafs-client-precheck (code
+=exited, status=0/SUCCESS)
+    Process: 17048 ExecStart=/sbin/afsd $AFSD_ARGS (code=exited, status=1/FAILUR
+E)
+    Process: 17049 ExecStopPost=/sbin/rmmod $KMOD (code=exited, status=0/SUCCESS
+)
+
+Apr 26 15:14:11 musyaffak-Aspire-E5-475 systemd[1]: Starting OpenAFS client...
+Apr 26 15:14:11 musyaffak-Aspire-E5-475 afsd[17048]: afsd: some file missing or 
+bad in /etc/openafs/
+Apr 26 15:14:11 musyaffak-Aspire-E5-475 systemd[1]: openafs-client.service: Cont
+rol process exited, code=exited, status=1/FAILURE
+Apr 26 15:14:11 musyaffak-Aspire-E5-475 systemd[1]: openafs-client.service: Fail
+ed with result 'exit-code'.
+Apr 26 15:14:11 musyaffak-Aspire-E5-475 systemd[1]: Failed to start OpenAFS clie
+nt.
+dpkg: error processing package openafs-client (--configure):
+ installed openafs-client package post-installation script subprocess returned e
+rror exit status 1
+Setting up sysstat (12.2.0-2ubuntu0.1) ...
+
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in
+ auto mode
+Created symlink /etc/systemd/system/multi-user.target.wants/sysstat.service → /l
+ib/systemd/system/sysstat.service.
+Setting up postgresql-contrib (12+214ubuntu0.1) ...
+Setting up postgresql (12+214ubuntu0.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Processing triggers for systemd (245.4-4ubuntu3.15) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for doc-base (0.10.9) ...
+Processing 1 added doc-base file...
+Errors were encountered while processing:
+ openafs-client
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01/postgrelql$ 
+
+
+
+
+
+
+
+Cara Menginstal PostgreSQL pada Ubuntu 20.04 [Mulai Cepat]
+Published on October 27, 2020
+
+    PostgreSQL
+    Databases
+    Ubuntu
+    Ubuntu 20.04
+    Quickstart
+
+Default avatar
+By Mark Drake
+Manager, Developer Education
+Bahasa Indonesia
+Cara Menginstal PostgreSQL pada Ubuntu 20.04 [Mulai Cepat]
+Pengantar
+
+PostgreSQL, atau Postgres, adalah sistem manajemen basis data relasional yang memberikan penerapan dari bahasa pengkuerian SQL. Sistem ini sesuai dengan standar dan memiliki banyak fitur lanjutan seperti transaksi yang andal dan konkurensi tanpa kunci baca.
+
+Panduan ini menunjukkan cara cepat untuk segera membuat Postgres aktif dan berjalan pada server Ubuntu 20.04, mulai dari menginstal PostgreSQL hingga menyiapkan pengguna dan basis data baru. Jika Anda lebih menyukai tutorial yang lebih mendalam tentang menginstal dan mengelola basis data PostgreSQL, silakan lihat Cara Menginstal dan Menggunakan PostgreSQL pada Ubuntu 20.04.
+Prasyarat
+
+Untuk mengikuti tutorial ini, Anda akan membutuhkan satu server Ubuntu 20.04 yang telah dikonfigurasi dengan mengikuti Panduan Penyiapan Server Awal untuk Ubuntu 20.04 dari kami. Setelah menyelesaikan tutorial prasyarat ini, server Anda akan memiliki pengguna non-root dengan izin sudo dan firewall dasar.
+Langkah 1 — Menginstal PostgreSQL
+
+Untuk menginstal PostgreSQL, segarkan indeks paket lokal server Anda terlebih dahulu:
+
+    sudo apt update
+
+Lalu, instal paket Postgres bersama dengan paket -contrib yang menambah beberapa utilitas dan fungsionalitas tambahan:
+
+    sudo apt install postgresql postgresql-contrib
+
+Langkah 2 — Menggunakan Peran dan Basis Data PostgreSQL
+
+Secara asali, Postgres menggunakan konsep yang disebut “peran” untuk menangani autentikasi dan otorisasi. Dalam beberapa hal, hal ini mirip seperti grup dan pengguna bergaya Unix reguler.
+
+Setelah instalasi, Postgres sudah siap untuk menggunakan autentikasi ident, yang berarti ini mengasosiasikan peran-peran Postgres dengan akun sistem Unix/Linux yang cocok. Jika peran ada di dalam Postgres, nama pengguna Unix/Linux dengan nama yang sama dapat masuk sebagai peran itu.
+
+Prosedur instalasi menciptakan akun pengguna bernama postgres yang terasosiasi dengan peran Postgres asali. Ada beberapa cara untuk memanfaatkan akun ini untuk mengakses Postgres. Salah satu caranya adalah dengan beralih ke akun postgres di server Anda dengan mengetik:
+
+    sudo -i -u postgres
+
+Lalu, Anda dapat mengakses prompt Postgres dengan mengetik:
+
+    psql
+
+Ini akan membawa Anda log masuk ke prompt PostgreSQL, dan dari sini Anda akan segera bebas untuk berinteraksi dengan sistem manajemen basis data.
+
+Untuk keluar dari prompt PostgreSQL, jalankan yang berikut:
+
+    \q
+
+Ini akan membawa Anda kembali ke prompt perintah Linux postgres. Untuk kembali ke pengguna sistem reguler Anda, jalankan perintah exit:
+
+    exit
+
+Cara lain untuk terhubung ke prompt Postgres adalah dengan menjalankan perintah psql sebagai akun postgres secara langsung dengan sudo:
+
+    sudo -u postgres psql
+
+Ini akan membawa Anda log masuk secara langsung ke Postgres tanpa shell bash perantara di antaranya.
+
+Sekali lagi, Anda dapat keluar dari sesi Postgres interaktif dengan mengetik:
+
+    \q
+
+Langkah 3 — Menciptakan Peran Baru
+
+Jika Anda log masuk sebagai akun postgres, Anda dapat menciptakan peran baru dengan mengetik:
+
+    createuser --interactive
+
+Jika, alih-alih Anda lebih memilih untuk menggunakan sudo untuk setiap perintah tanpa berpindah dari akun normal Anda, ketik:
+
+    sudo -u postgres createuser --interactive
+
+Apa pun pilihan Anda, skrip akan memberi Anda beberapa pilihan dan menjalankan perintah Postgres yang benar berdasarkan respons Anda untuk menciptakan pengguna sesuai dengan spesifikasi Anda.
+
+Output
+Enter name of role to add: sammy
+Shall the new role be a superuser? (y/n) y
+
+Langkah 4 — Menciptakan Basis Data Baru
+
+Asumsi lain yang dibuat oleh sistem autentikasi Postgres secara asali adalah bahwa untuk setiap peran yang digunakan untuk log masuk, peran itu akan memiliki basis data dengan nama yang sama yang dapat diaksesnya.
+
+Ini berarti bahwa jika pengguna yang Anda ciptakan di bagian terakhir bernama sammy, maka peran itu akan mencoba terhubung ke basis data yang juga bernama “sammy” secara asali. Anda dapat menciptakan basis data yang sesuai dengan perintah createdb.
+
+Jika Anda log masuk sebagai akun postgres, Anda dapat mengetik sesuatu seperti:
+
+    createdb sammy
+
+Jika, alih-alih Anda lebih memilih untuk menggunakan sudo untuk setiap perintah tanpa berpindah dari akun normal Anda, Anda dapat mengetik:
+
+    sudo -u postgres createdb sammy
+
+Langkah 5 — Membuka Prompt Postgres dengan Peran Baru
+
+Untuk log masuk dengan autentikasi berbasis ident, Anda akan membutuhkan pengguna Linux dengan nama yang sama dengan peran dan basis data Postgres Anda.
+
+Jika Anda tidak memiliki pengguna Linux tersedia yang cocok, Anda dapat menciptakannya dengan perintah adduser. Anda akan harus melakukan ini dari akun non-root Anda dengan privilese sudo (yang berarti, tidak sedang log masuk sebagai pengguna postgres):
+
+    sudo adduser sammy
+
+Setelah akun baru ini tersedia, Anda dapat berpindah dan terhubung ke basis data dengan mengetik:
+
+    sudo -i -u sammy
+    psql
+
+Atau, Anda dapat melakukannya dalam satu baris ini:
+
+    sudo -u sammy psql
+
+Perintah ini akan membawa Anda log masuk secara otomatis, dengan asumsi bahwa semua komponen telah dikonfigurasi dengan benar.
+
+Jika Anda ingin pengguna Anda terhubung ke basis data yang berbeda, Anda dapat melakukannya dengan menetapkan basis datanya seperti ini:
+
+    psql -d postgres
+
+Setelah log masuk, Anda dapat memeriksa informasi koneksi Anda saat ini dengan mengetik:
+
+    \conninfo
+
+Output
+You are connected to database "sammy" as user "sammy" via socket in "/var/run/postgresql" at port "5432".
+
+Kesimpulan
+
+Anda sekarang sudah siap dengan PostgreSQL di server Ubuntu 20.04. Jika Anda ingin mempelajari lebih lanjut tentang Postgres dan cara menggunakannya, kami menyarankan Anda untuk membaca panduan berikut:
+

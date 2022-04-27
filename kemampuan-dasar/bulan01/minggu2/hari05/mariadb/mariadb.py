@@ -6,11 +6,11 @@ import sys
 # Connect to MariaDB Platform
 try:
     conn = mariadb.connect(
-        user="db_user",
-        password="db_user_passwd",
-        host="192.0.2.1",
-        port=3306,
-        database="employees"
+    user="db_user",
+    password="db_user_passwd",
+    host="192.0.2.1",
+    port=3306,
+    database="employees"
 
     )
 except mariadb.Error as e:
@@ -20,9 +20,9 @@ except mariadb.Error as e:
 # Get Cursor
 cur = conn.cursor()
 
-cur.execute(
-    "SELECT first_name,last_name FROM employees WHERE first_name=?", 
-    (some_name,))
+# cur.execute(
+#     "SELECT first_name,last_name FROM employees WHERE first_name=?", 
+#     (first_name,))
 
 
 # Print Result-set
@@ -40,7 +40,7 @@ conn.autocommit = False
 
 
 try:
-    Cursor.execute("some MariaDB query"))
+    Cursor.execute("some MariaDB query")
 except mariadb.Error as e:
     print(f"Error: {e}")
 
