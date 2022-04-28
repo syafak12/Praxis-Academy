@@ -1,0 +1,84 @@
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01$ sudo mkdir -p /data/db; sudo chown `id -u` /data/db 
+[sudo] password for musyaffak:       
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01$ sudo mkdir -p /data/db; sudo chown `id -u` /data/db 
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01$ mongod
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] MongoDB starting : pid=4484 port=27017 dbpath=/data/db 64-bit host=musyaffak-Aspire-E5-475
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] db version v3.6.8
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] git version: 8e540c0b6db93ce994cc548f000900bdc740f80a
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1f  31 Mar 2020
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] modules: none
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] build environment:
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten]     distarch: x86_64
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2022-04-27T15:02:24.248+0700 I CONTROL  [initandlisten] options: {}
+2022-04-27T15:02:24.255+0700 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2022-04-27T15:02:24.269+0700 I CONTROL  [initandlisten] now exiting
+2022-04-27T15:02:24.269+0700 I CONTROL  [initandlisten] shutting down with code:48
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01$ mongo
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { "id" : UUID("d143717a-37ce-4242-96ba-80d0ff56e686") }
+MongoDB server version: 3.6.8
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	http://docs.mongodb.org/
+Questions? Try the support group
+	http://groups.google.com/group/mongodb-user
+Server has startup warnings: 
+2022-04-27T14:23:13.160+0700 I STORAGE  [initandlisten] 
+2022-04-27T14:23:13.160+0700 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2022-04-27T14:23:13.161+0700 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] 
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] 
+> use blog
+switched to db blog
+> "title" : "syafak"
+2022-04-27T15:14:01.326+0700 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:8
+> post = {
+... "title" : "syafak pondok",
+... "content" : "disini saya berlatih membuat database, latihan pada minggu ke 3 hari ke 1, ada beberapa hal yang ingin saya sampaikan pada moment ini, yaitu hal-hal yang berkaitan dengan adanya data base kita lebih mudah. inilah contoh contah dari data base",
+... "date" : new date()}
+2022-04-27T15:19:21.864+0700 E QUERY    [thread1] ReferenceError: date is not defined :
+@(shell):4:1
+> insert() 
+2022-04-27T15:22:18.243+0700 E QUERY    [thread1] ReferenceError: insert is not defined :
+@(shell):1:1
+> find()
+2022-04-27T15:22:25.047+0700 E QUERY    [thread1] ReferenceError: find is not defined :
+@(shell):1:1
+> insert() 
+2022-04-27T15:23:15.836+0700 E QUERY    [thread1] ReferenceError: insert is not defined :
+@(shell):1:1
+> 
+bye
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01$ insert()
+
+
+
+
+
+
+
+
+
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy/kemampuan-dasar/bulan01/minggu03/hari01$ mongo
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { "id" : UUID("7c61c928-781d-4af5-9435-eaa416cef5e2") }
+MongoDB server version: 3.6.8
+Server has startup warnings: 
+2022-04-27T14:23:13.160+0700 I STORAGE  [initandlisten] 
+2022-04-27T14:23:13.160+0700 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2022-04-27T14:23:13.161+0700 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] 
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2022-04-27T14:23:15.871+0700 I CONTROL  [initandlisten] 
+> new Date()
+ISODate("2022-04-27T08:31:40.728Z")
+> 
+
