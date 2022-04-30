@@ -1,0 +1,307 @@
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy$ pip3 install arcade
+Collecting arcade
+  Downloading arcade-2.6.13-py3-none-any.whl (39.3 MB)
+     |                           
+     |                           
+     |                           
+     |                           
+     |                           
+     |                           
+     |                           
+     |                           
+     |                           
+     |                                | 102 kB 825 kB/s eta 0:00:4
+     |                                | 112 kB 825 kB/s eta 0:00:4
+     |                                | 122 kB 825 kB/s eta 0:00:4
+     |                                | 133 kB 825 kB/s eta 0:00:4
+     |▏                               | 143 kB 825 kB/s eta 0:00:4
+     |▏                               | 153 kB 825 kB/s eta 0:00:4
+     |▏                               | 163 kB 825 kB/s eta 0:00:4
+     |▏                               | 174 kB 825 kB/s eta 0:00:4
+     |▏                               | 184 kB 825 kB/s eta 0:00:4
+     |▏                               | 194 kB 825 kB/s eta 0:00:4
+     |▏                               | 204 kB 825 kB/s eta 0:00:4
+     |▏                               | 215 kB 825 kB/s eta 0:00:4
+     |▏                               | 225 kB 825 kB/s eta 0:00:4
+     |▏                               | 235 kB 825 kB/s eta 0:00:4
+     |▏                               | 245 kB 825 kB/s eta 0:00:4
+     |▏                               | 256 kB 825 kB/s eta 0:00:4
+     |▏                               | 266 kB 825 kB/s eta 0:00:4
+     |▎                               | 276 kB 825 kB/s eta 0:00:4
+     |▎                               | 286 kB 825 kB/s eta 0:00:4
+     |▎                               | 296 kB 825 kB/s eta 0:00:4
+     |▎                               | 307 kB 825 kB/s eta 0:00:4
+     |▎                               | 317 kB 825 kB/s eta 0:00:4
+     |▎                               | 327 kB 825 kB/s eta 0:00:4
+     |▎                               | 337 kB 825 kB/s eta 0:00:4
+     |▎                               | 348 kB 825 kB/s eta 0:00:4
+     |▎                               | 358 kB 825 kB/s eta 0:00:4
+     |▎                               | 368 kB 825 kB/s eta 0:00:4
+     |▎                               | 378 kB 825 kB/s eta 0:00:4
+     |▎                               | 389 kB 825 kB/s eta 0:00:4
+     |▎                               | 399 kB 825 kB/s eta 0:00:4
+     |▎                               | 409 kB 825 kB/s eta 0:00:4
+     |▍                               | 419 kB 825 kB/s eta 0:00:4
+     |▍                               | 430 kB 825 kB/s eta 0:00:4
+     |▍                               | 440 kB 825 kB/s eta 0:00:4
+     |▍                               | 450 kB 825 kB/s eta 0:00:4
+     |▍                               | 460 kB 825 kB/s eta 0:00:4
+     |▍                               | 471 kB 825 kB/s eta 0:00:4
+     |▍                               | 481 kB 825 kB/s eta 0:00:4
+     |▍                               | 491 kB 825 kB/s eta 0:00:4
+     |▍                               | 501 kB 825 kB/s eta 0:00:4
+     |▍                               | 512 kB 825 kB/s eta 0:00:4
+     |▍                               | 522 kB 825 kB/s eta 0:00:4
+     |▍                               | 532 kB 825 kB/s eta 0:00:4
+     |▍                               | 542 kB 825 kB/s eta 0:00:4
+     |▌                               | 552 kB 825 kB/s eta 0:00:4
+     |▌                               | 563 kB 825 kB/s eta 0:00:4
+     |▌                               | 573 kB 825 kB/s eta 0:00:4
+     |▌                               | 583 kB 825 kB/s eta 0:00:4
+     |▌                               | 593 kB 825 kB/s eta 0:00:4
+     |▌                               | 604 kB 825 kB/s eta 0:00:4
+     |▌                               | 614 kB 825 kB/s eta 0:00:4
+     |▌                               | 624 kB 825 kB/s eta 0:00:4
+     |▌                               | 634 kB 825 kB/s eta 0:00:4
+     |▌                               | 645 kB 825 kB/s eta 0:00:4
+     |▌                               | 655 kB 825 kB/s eta 0:00:4
+     |▌                               | 665 kB 825 kB/s eta 0:00:4
+     |▌                               | 675 kB 825 kB/s eta 0:00:4
+     |▋                               | 686 kB 825 kB/s eta 0:00:4
+     |▋                               | 696 kB 825 kB/s eta 0:00:4
+     |▋                               | 706 kB 825 kB/s eta 0:00:4
+     |▋                               | 716 kB 825 kB/s eta 0:00:4
+     |▋                               | 727 kB 825 kB/s eta 0:00:4
+     |▋                               | 737 kB 825 kB/s eta 0:00:4
+     |▋                               | 747 kB 825 kB/s eta 0:00:4
+     |▋                               | 757 kB 825 kB/s eta 0:00:4
+     |▋                               | 768 kB 825 kB/s eta 0:00:4
+     |▋                               | 778 kB 825 kB/s eta 0:00:4
+     |▋                               | 788 kB 825 kB/s eta 0:00:4
+     |▋                               | 798 kB 825 kB/s eta 0:00:4
+     |▋                               | 808 kB 825 kB/s eta 0:00:4
+     |▋                               | 819 kB 825 kB/s eta 0:00:4
+     |▊                               | 829 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 839 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 849 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 860 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 870 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 880 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 890 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 901 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 911 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 921 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 931 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 942 kB 1.3 MB/s eta 0:00:3
+     |▊                               | 952 kB 1.3 MB/s eta 0:00:3
+     |▉                               | 962 kB 1.3 MB/s eta 0:00:3
+     |▉                               | 972 kB 1.3 MB/s eta 0:00:3
+     |▉                               | 983 kB 1.3 MB/s eta 0:00:3
+     |▉                               | 993 kB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.0 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.0 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.0 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.0 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.0 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |▉                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.1 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:3
+     |█                               | 1.2 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.3 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.4 MB 1.3 MB/s eta 0:00:2
+     |█                               | 1.4 MB 1.3 MB/s eta 0:00:2
+     |█▏                              | 1.4 MB 1.3 MB/s eta 0:00:2
+     |█▏                              | 1.4 MB 1.3 MB/s eta 0:00:2
+     |█▏                              | 1.4 MB 1.3 MB/s eta 0:00:2
+     |█▏                              | 1.4 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.4 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.4 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.4 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.4 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▏                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▎                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▎                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▎                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▎                              | 1.5 MB 162 kB/s eta 0:03:5
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▎                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▍                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▌                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▋                         
+     |█▊                         
+     |█▊                         
+     |█▊                         
+     |█▊                         
+     |█▊                         
+     |█▊                         
+     |█▊                              | 2.1 MB 726 kB/s eta 0:00:5
+     |█▊                              | 2.1 MB 726 kB/s eta 0:00:5
+     |█▊                              | 2.1 MB 726 kB/s eta 0:00:5
+     |█▊                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▊                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▊                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▊                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.2 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.3 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.3 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.3 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.3 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.3 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.3 MB 726 kB/s eta 0:00:5
+     |█▉                              | 2.3 MB 726 kB/s eta 0:00:5
+     |██                              | 2.3 MB 726 kB/s eta 0:00:5
+     |██                              | 2.3 MB 726 kB/s eta 0:00:5
+     |██                              | 2.3 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.4 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 726 kB/s eta 0:00:5
+     |██                              | 2.5 MB 664 kB/s eta 0:00:5
+     |██                              | 2.5 MB 664 kB/s eta 0:00:5
+     |██                              | 2.5 MB 664 kB/s eta 0:00:5
+     |██                              | 2.6 MB 664 kB/s eta 0:00:5
+     |██                              | 2.6 MB 664 kB/s eta 0:00:5
+     |██                              | 2.6 MB 664 kB/s eta 0:00:5
+     |██                              | 2.6 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.6 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.6 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.6 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.6 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.6 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▏                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.7 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.8 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.9 MB 664 kB/s eta 0:00:5
+     |██▎                             | 2.9 MB 664 kB/s eta 0:00:5
+     |████████████████████████████████| 39.3 MB 32 kB/s 
+Collecting pytiled-parser==2.0.1
+  Downloading pytiled_parser-2.0.1-py3-none-any.whl (35 kB)
+Collecting pymunk~=6.2.1
+  Downloading pymunk-6.2.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (980 kB)
+     |████████████████████████████████| 980 kB 67 kB/s 
+Collecting pillow~=9.0.1
+  Downloading Pillow-9.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+     |████████████████████████████████| 4.3 MB 54 kB/s 
+Collecting pyglet==2.0a2
+  Downloading pyglet-2.0a2-py3-none-any.whl (946 kB)
+     |████████████████████████████████| 946 kB 403 kB/s 
+Requirement already satisfied: attrs>=18.2.0 in /home/musyaffak/.local/lib/python3.8/site-packages (from pytiled-parser==2.0.1->arcade) (21.4.0)
+Requirement already satisfied: typing-extensions in /home/musyaffak/.local/lib/python3.8/site-packages (from pytiled-parser==2.0.1->arcade) (4.2.0)
+Collecting cffi>=1.15.0
+  Downloading cffi-1.15.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (446 kB)
+     |████████████████████████████████| 446 kB 365 kB/s 
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     |████████████████████████████████| 118 kB 604 kB/s 
+Installing collected packages: pytiled-parser, pycparser, cffi, pymunk, pillow, pyglet, arcade
+Successfully installed arcade-2.6.13 cffi-1.15.0 pillow-9.0.1 pycparser-2.21 pyglet-2.0a2 pymunk-6.2.1 pytiled-parser-2.0.1
+musyaffak@musyaffak-Aspire-E5-475
+musyaffak@musyaffak-Aspire-E5-475:~/Praxis-Academy$ 
