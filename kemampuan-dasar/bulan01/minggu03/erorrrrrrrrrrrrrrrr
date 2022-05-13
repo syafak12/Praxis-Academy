@@ -1,0 +1,2889 @@
+syafak@syafak-IdeaPad-5-14ITL05:~$ apt update
+[sudo] password for syafak:       
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease                         
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Hit:4 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]        
+Ign:6 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease      
+Hit:7 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release        
+Ign:8 http://packages.linuxmint.com una InRelease                              
+Hit:9 http://archive.canonical.com/ubuntu focal InRelease                      
+Hit:11 http://packages.linuxmint.com una Release                               
+Get:13 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]     
+Fetched 336 kB in 3s (127 kB/s)     
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+syafak@syafak-IdeaPad-5-14ITL05:~$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get update
+Ign:1 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease
+Hit:2 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release        
+Hit:3 http://packages.microsoft.com/repos/code stable InRelease                
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Hit:6 http://archive.ubuntu.com/ubuntu focal InRelease                         
+Ign:7 http://packages.linuxmint.com una InRelease                              
+Hit:8 http://archive.canonical.com/ubuntu focal InRelease                      
+Hit:9 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]       
+Hit:11 http://packages.linuxmint.com una Release                               
+Get:13 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]     
+Fetched 336 kB in 2s (142 kB/s)     
+Reading package lists... Done
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install -y mongodb-org
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 22150 (apt)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /var/lib/dpkg/lock
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install -y mongodb-org
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 22150 (apt)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install gnupg
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 22150 (apt)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /var/lib/dpkg/lock
+rm: cannot remove '/var/lib/dpkg/lock': No such file or directory
+syafak@syafak-IdeaPad-5-14ITL05:~$ wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+OK
+syafak@syafak-IdeaPad-5-14ITL05:~$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Hit:2 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease                         
+Ign:4 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease      
+Hit:5 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release        
+Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Hit:8 http://archive.canonical.com/ubuntu focal InRelease                      
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]        
+Ign:10 http://packages.linuxmint.com una InRelease                             
+Get:11 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]     
+Hit:12 http://packages.linuxmint.com una Release         
+Fetched 336 kB in 3s (131 kB/s)                          
+Reading package lists... Done
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install -y mongodb-org
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 22150 (apt)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /var/lib/dpkg/lock-frontend
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /var/lib/dpkg/lock
+rm: cannot remove '/var/lib/dpkg/lock': No such file or directory
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt install mongodb-org
+E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo dpkg install mongodb-org
+dpkg: error: need an action option
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo dpkg install mongodb-org*
+dpkg: error: need an action option
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt install mongodb-org*
+E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo dpkg --configure -a mongodb-org
+dpkg: error: --configure --pending does not take any non-option arguments
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo dpkg --configure -a mongodb-org*
+dpkg: error: --configure --pending does not take any non-option arguments
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo dpkg purge mongodb-org*
+dpkg: error: need an action option
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt purge mongodb-org*
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'mongodb-org-unstable-tools' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-mongos' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-tools' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-database-tools-extra' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-server' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-shell' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-shell' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-mongos' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-database-tools-extra' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-tools-unstable' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-database' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-server' for glob 'mongodb-org*'
+Package 'mongodb-org-tools-unstable' is not installed, so not removed
+Package 'mongodb-org-unstable' is not installed, so not removed
+Package 'mongodb-org-unstable-mongos' is not installed, so not removed
+Package 'mongodb-org-unstable-server' is not installed, so not removed
+Package 'mongodb-org-unstable-shell' is not installed, so not removed
+Package 'mongodb-org-unstable-tools' is not installed, so not removed
+Package 'mongodb-org-unstable-database-tools-extra' is not installed, so not removed
+Package 'mongodb-org' is not installed, so not removed
+Package 'mongodb-org-database' is not installed, so not removed
+Package 'mongodb-org-database-tools-extra' is not installed, so not removed
+Package 'mongodb-org-mongos' is not installed, so not removed
+Package 'mongodb-org-server' is not installed, so not removed
+Package 'mongodb-org-shell' is not installed, so not removed
+Package 'mongodb-org-tools' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  libboost-program-options1.71.0 libgoogle-perftools4 libpcrecpp0v5
+  libtcmalloc-minimal4 libyaml-cpp0.6 mongo-tools mongodb-mongosh
+  mongodb-server-core
+Use 'sudo apt autoremove' to remove them.
+E: Could not get lock /var/cache/apt/archives/lock. It is held by process 22150 (apt)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to lock directory /var/cache/apt/archives/
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo autoremove
+sudo: autoremove: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ apt autoremove
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Could not get lock /var/cache/apt/archives/lock. It is held by process 22150 (apt)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to lock directory /var/cache/apt/archives/
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /var/cache/apt/archives/lock
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /var/cache/apt/archives/
+rm: cannot remove '/var/cache/apt/archives/': Is a directory
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt autoremove
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  libboost-program-options1.71.0 libgoogle-perftools4 libpcrecpp0v5
+  libtcmalloc-minimal4 libyaml-cpp0.6 mongo-tools mongodb-mongosh
+  mongodb-server-core
+0 upgraded, 0 newly installed, 8 to remove and 0 not upgraded.
+109 not fully installed or removed.
+After this operation, 362 MB disk space will be freed.
+Do you want to continue? [Y/n] y
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable
+(Reading database ... 358999 files and directories currently installed.)
+Removing mongodb-server-core (1:3.6.9+really3.6.8+90~g8e540c0b6d-0ubuntu5.3) ...
+Removing libboost-program-options1.71.0:amd64 (1.71.0-6ubuntu6) ...
+Removing libgoogle-perftools4:amd64 (2.7-1ubuntu2) ...
+Removing libpcrecpp0v5:amd64 (2:8.39-12build1) ...
+Removing libtcmalloc-minimal4:amd64 (2.7-1ubuntu2) ...
+Removing libyaml-cpp0.6:amd64 (0.6.2-4ubuntu1) ...
+Removing mongo-tools (3.6.3-0ubuntu1) ...
+Removing mongodb-mongosh (1.4.1) ...
+Setting up linux-image-generic (5.4.0.110.114) ...
+Setting up linux-headers-5.4.0-110-generic (5.4.0-110.124) ...
+/etc/kernel/header_postinst.d/dkms:
+ * dkms: running auto installation service for kernel 5.4.0-110-generic
+
+nvidia.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.4.0-110-generic/kernel/drivers/char/drm/
+
+nvidia-modeset.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.4.0-110-generic/kernel/drivers/char/drm/
+
+nvidia-drm.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.4.0-110-generic/kernel/drivers/char/drm/
+
+nvidia-uvm.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.4.0-110-generic/kernel/drivers/char/drm/
+
+nvidia-peermem.ko:
+Running module version sanity check.
+ - Original module
+   - No original module exists within this kernel
+ - Installation
+   - Installing to /lib/modules/5.4.0-110-generic/kernel/drivers/char/drm/
+
+depmod...
+
+DKMS: install completed.
+   ...done.
+Setting up thingy (1.0.6) ...
+Setting up openjdk-11-jre-headless:amd64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Installing new version of config file /etc/java-11-openjdk/net.properties ...
+Installing new version of config file /etc/java-11-openjdk/security/default.poli
+cy ...
+Installing new version of config file /etc/java-11-openjdk/security/java.securit
+y ...
+Setting up libfwupd2:amd64 (1.7.5-3~20.04.1) ...
+Setting up xserver-xorg-core (2:1.20.13-1ubuntu1~20.04.2) ...
+Setting up libcvc-dbg:amd64 (5.2.1+una) ...
+Setting up samba-libs:amd64 (2:4.13.17~dfsg-0ubuntu0.21.04.2) ...
+Setting up lintian (2.62.0ubuntu2) ...
+Setting up openjdk-11-jre:amd64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Setting up network-manager (1.22.10-1ubuntu2.3) ...
+Setting up ghostscript-x (9.50~dfsg-5ubuntu4.5) ...
+Setting up linux-headers-generic (5.4.0.110.114) ...
+Setting up vim-tiny (2:8.1.2269-1ubuntu5.7) ...
+Setting up pulseaudio (1:13.99.1-1ubuntu3.13) ...
+Setting up fdisk (2.34-0.1ubuntu9.3) ...
+Setting up libqt5network5:amd64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libinput-bin (1.15.5-1ubuntu0.3) ...
+Setting up bluez (5.53-0ubuntu3.5) ...
+Setting up xserver-xephyr (2:1.20.13-1ubuntu1~20.04.2) ...
+Setting up command-not-found (20.04.6) ...
+Setting up thunderbird-gnome-support (1:91.8.1+build1-0ubuntu0.20.04.1) ...
+Setting up gvfs-bin (1.44.1-1ubuntu1.1) ...
+Setting up gvfs-libs:amd64 (1.44.1-1ubuntu1.1) ...
+Setting up pulseaudio-module-bluetooth (1:13.99.1-1ubuntu3.13) ...
+Setting up libsmbclient:amd64 (2:4.13.17~dfsg-0ubuntu0.21.04.2) ...
+Setting up smbclient (2:4.13.17~dfsg-0ubuntu0.21.04.2) ...
+Setting up bind9-dnsutils (1:9.16.1-0ubuntu2.10) ...
+Setting up initramfs-tools-core (0.136ubuntu6.7) ...
+Setting up libfwupdplugin5:amd64 (1.7.5-3~20.04.1) ...
+Setting up fwupd (1.7.5-3~20.04.1) ...
+Installing new version of config file /etc/fwupd/daemon.conf ...
+Installing new version of config file /etc/fwupd/redfish.conf ...
+Installing new version of config file /etc/fwupd/remotes.d/lvfs-testing.conf ...
+Installing new version of config file /etc/fwupd/uefi_capsule.conf ...
+Installing new version of config file /etc/update-motd.d/85-fwupd ...
+fwupd-offline-update.service is a disabled or a static unit not running, not sta
+rting it.
+fwupd-refresh.service is a disabled or a static unit not running, not starting i
+t.
+fwupd.service is a disabled or a static unit not running, not starting it.
+Setting up bluetooth (5.53-0ubuntu3.5) ...
+Setting up python3-samba (2:4.13.17~dfsg-0ubuntu0.21.04.2) ...
+Setting up libinput10:amd64 (1.15.5-1ubuntu0.3) ...
+Setting up initramfs-tools (0.136ubuntu6.7) ...
+update-initramfs: deferring update (trigger activated)
+Setting up linux-generic (5.4.0.110.114) ...
+Setting up libqt5gui5:amd64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up network-manager-config-connectivity-ubuntu (1.22.10-1ubuntu2.3) ...
+Setting up libqt5widgets5:amd64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up qt5-gtk-platformtheme:amd64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up gvfs-daemons (1.44.1-1ubuntu1.1) ...
+Setting up samba-common-bin (2:4.13.17~dfsg-0ubuntu0.21.04.2) ...
+Checking smb.conf with testparm
+Load smb config files from /etc/samba/smb.conf
+Loaded services file OK.
+Weak crypto is allowed
+WARNING: The 'netbios name' is too long (max. 15 chars).
+
+Server role: ROLE_STANDALONE
+
+Done
+Setting up cryptsetup-initramfs (2:2.2.2-3ubuntu2.4) ...
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another p
+rocess: Resource temporarily unavailable
+dpkg: error processing package cryptsetup-initramfs (--configure):
+ installed cryptsetup-initramfs package post-installation script subprocess retu
+rned error exit status 1
+Setting up gvfs:amd64 (1.44.1-1ubuntu1.1) ...
+Setting up gvfs-backends (1.44.1-1ubuntu1.1) ...
+Setting up gvfs-fuse (1.44.1-1ubuntu1.1) ...
+Setting up language-pack-en (1:20.04+20220211) ...
+Setting up libuno-salhelpergcc3-3 (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up language-pack-gnome-en (1:20.04+20220211) ...
+Setting up language-pack-en-base (1:20.04+20220211) ...
+Generating locales (this might take a while)...
+Generation complete.
+Setting up libuno-cppu3 (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up language-pack-gnome-en-base (1:20.04+20220211) ...
+Setting up libuno-purpenvhelpergcc3-3 (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up uno-libs-private (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up ure (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libuno-cppuhelpergcc3-3 (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libjurt-java (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-common (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libjuh-java (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-ru (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-de (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-core (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-zh-tw (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-math (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-gtk3 (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-en-za (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-fr (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-draw (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-java-common (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-base-drivers (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-zh-cn (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-it (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-pt (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-pt-br (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-common (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-es (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-zh-tw (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-l10n-en-gb (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-de (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-it (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-ru (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-gnome (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-impress (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-base-core (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-en-us (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up python3-uno (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-fr (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-zh-cn (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-calc (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-base (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-en-gb (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-sdbc-hsqldb (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-writer (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-pt-br (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-pt (1:6.4.7-0ubuntu0.20.04.4) ...
+Setting up libreoffice-help-es (1:6.4.7-0ubuntu0.20.04.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for gnome-icon-theme (3.12.0-3) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.2) ...
+Processing triggers for shared-mime-info (1.15-1) ...
+Processing triggers for mintsystem (8.5.3) ...
+Processing triggers for linux-image-5.4.0-110-generic (5.4.0-110.124) ...
+/etc/kernel/postinst.d/dkms:
+ * dkms: running auto installation service for kernel 5.4.0-110-generic
+   ...done.
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-5.4.0-110-generic
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/50_linuxmint.cfg'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.8.0-63-generic
+Found initrd image: /boot/initrd.img-5.8.0-63-generic
+Found linux image: /boot/vmlinuz-5.4.0-110-generic
+Found initrd image: /boot/initrd.img-5.4.0-110-generic
+Found linux image: /boot/vmlinuz-5.4.0-91-generic
+Found initrd image: /boot/initrd.img-5.4.0-91-generic
+Found Windows Boot Manager on /dev/nvme0n1p1@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for UEFI Firmware Settings
+done
+Processing triggers for ubuntu-system-adjustments (2021.12.17-una) ...
+Reloading systemd
+Removed /etc/systemd/system/multi-user.target.wants/hddtemp.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/hddtemp.service → /e
+tc/systemd/system/hddtemp.service.
+Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+Processing triggers for fontconfig (2.13.1-2ubuntu3) ...
+Processing triggers for desktop-file-utils (0.24+linuxmint1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for doc-base (0.10.9) ...
+Processing 13 changed doc-base files...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Setting up grub2-common (2.04-1ubuntu26.15) ...
+Processing triggers for libglib2.0-0:amd64 (2.64.6-1~ubuntu20.04.4) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+Setting up grub-pc-bin (2.04-1ubuntu26.15) ...
+Setting up grub-pc (2.04-1ubuntu26.15) ...
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another p
+rocess: Resource temporarily unavailable
+dpkg: error processing package grub-pc (--configure):
+ installed grub-pc package post-installation script subprocess returned error ex
+it status 1
+Setting up libcinnamon-desktop4:amd64 (5.2.1+una) ...
+Setting up gir1.2-cinnamondesktop-3.0 (5.2.1+una) ...
+Setting up libmuffin0 (5.2.1+una) ...
+Setting up nemo (5.2.4+una) ...
+Setting up muffin (5.2.1+una) ...
+Setting up cinnamon-screensaver (5.2.1+una) ...
+Setting up muffin-dbg (5.2.1+una) ...
+Setting up nemo-dbg (5.2.4+una) ...
+Setting up libcinnamon-desktop-dbg:amd64 (5.2.1+una) ...
+Setting up gir1.2-meta-muffin-0.0 (5.2.1+una) ...
+Processing triggers for initramfs-tools (0.136ubuntu6.7) ...
+update-initramfs: Generating /boot/initrd.img-5.8.0-63-generic
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Errors were encountered while processing:
+ cryptsetup-initramfs
+ grub-pc
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /usr/bin/dpkg
+syafak@syafak-IdeaPad-5-14ITL05:~$ apt update
+Err:1 http://archive.ubuntu.com/ubuntu focal InRelease
+  Could not resolve 'archive.ubuntu.com'
+Err:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+  Could not resolve 'security.ubuntu.com'
+Err:3 http://archive.canonical.com/ubuntu focal InRelease
+  Could not resolve 'archive.canonical.com'
+Err:4 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease
+  Could not resolve 'ppa.launchpad.net'
+Err:5 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease      
+  Could not resolve 'repo.mongodb.org'
+Err:6 http://packages.linuxmint.com una InRelease                              
+  Could not resolve 'packages.linuxmint.com'
+Err:7 http://packages.microsoft.com/repos/code stable InRelease                
+  Could not resolve 'packages.microsoft.com'
+Err:8 http://archive.ubuntu.com/ubuntu focal-updates InRelease                 
+  Could not resolve 'archive.ubuntu.com'
+Err:9 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+  Could not resolve 'archive.ubuntu.com'
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+W: Failed to fetch http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu/dists/focal/InRelease  Could not resolve 'ppa.launchpad.net'
+W: Failed to fetch https://repo.mongodb.org/apt/ubuntu/dists/focal/mongodb-org/5.0/InRelease  Could not resolve 'repo.mongodb.org'
+W: Failed to fetch http://packages.linuxmint.com/dists/una/InRelease  Could not resolve 'packages.linuxmint.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Could not resolve 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Could not resolve 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Could not resolve 'archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Could not resolve 'security.ubuntu.com'
+W: Failed to fetch http://archive.canonical.com/ubuntu/dists/focal/InRelease  Could not resolve 'archive.canonical.com'
+W: Failed to fetch http://packages.microsoft.com/repos/code/dists/stable/InRelease  Could not resolve 'packages.microsoft.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -h gedit 
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -H gedit /etc/apt/sources.list.d/pgdg.list
+sudo: gedit: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -h gedit /etc/apt/sources.list.d/pgdg.list
+sudo: /etc/apt/sources.list.d/pgdg.list: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -v gedit /etc/apt/sources.list.d/pgdg.list
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -H gedit /etc/apt/sources.list.d/pgdg.list
+sudo: gedit: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ apt update
+Err:1 http://archive.ubuntu.com/ubuntu focal InRelease                         
+  Could not resolve 'archive.ubuntu.com'
+Err:2 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease
+  Could not resolve 'ppa.launchpad.net'
+Err:3 http://archive.canonical.com/ubuntu focal InRelease                      
+  Could not resolve 'archive.canonical.com'
+Err:4 http://security.ubuntu.com/ubuntu focal-security InRelease               
+  Could not resolve 'security.ubuntu.com'
+Err:5 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease      
+  Could not resolve 'repo.mongodb.org'
+Err:6 http://packages.linuxmint.com una InRelease                              
+  Could not resolve 'packages.linuxmint.com'
+Err:7 http://packages.microsoft.com/repos/code stable InRelease                
+  Could not resolve 'packages.microsoft.com'
+Err:8 http://archive.ubuntu.com/ubuntu focal-updates InRelease                 
+  Could not resolve 'archive.ubuntu.com'
+Err:9 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+  Could not resolve 'archive.ubuntu.com'
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+W: Failed to fetch http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu/dists/focal/InRelease  Could not resolve 'ppa.launchpad.net'
+W: Failed to fetch https://repo.mongodb.org/apt/ubuntu/dists/focal/mongodb-org/5.0/InRelease  Could not resolve 'repo.mongodb.org'
+W: Failed to fetch http://packages.linuxmint.com/dists/una/InRelease  Could not resolve 'packages.linuxmint.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Could not resolve 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Could not resolve 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Could not resolve 'archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Could not resolve 'security.ubuntu.com'
+W: Failed to fetch http://archive.canonical.com/ubuntu/dists/focal/InRelease  Could not resolve 'archive.canonical.com'
+W: Failed to fetch http://packages.microsoft.com/repos/code/dists/stable/InRelease  Could not resolve 'packages.microsoft.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+syafak@syafak-IdeaPad-5-14ITL05:~$ wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+gpg: no valid OpenPGP data found.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install gnupg
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gnupg is already the newest version (2.2.19-3ubuntu2.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2 not fully installed or removed.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable
+Could not exec dpkg!
+E: Sub-process /usr/bin/dpkg returned an error code (100)
+syafak@syafak-IdeaPad-5-14ITL05:~$ mkdir dpkg
+syafak@syafak-IdeaPad-5-14ITL05:~$ cd dpkg
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ wget http://security.ubuntu.com/ubuntu/pool/main/d/dpkg/ 
+--2022-05-13 16:52:39--  http://security.ubuntu.com/ubuntu/pool/main/d/dpkg/
+Resolving security.ubuntu.com (security.ubuntu.com)... 91.189.91.39, 185.125.190.36, 91.189.91.38, ...
+Connecting to security.ubuntu.com (security.ubuntu.com)|91.189.91.39|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘index.html’
+
+index.html                  [  <=>                         ]  31,83K  96,2KB/s    in 0,3s    
+
+2022-05-13 16:52:40 (96,2 KB/s) - ‘index.html’ saved [32591]
+
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ wget http://security.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.17.5ubuntu5.8_amd64.
+--2022-05-13 16:53:16--  http://security.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.17.5ubuntu5.8_amd64.
+Resolving security.ubuntu.com (security.ubuntu.com)... 185.125.190.39, 91.189.91.38, 185.125.190.36, ...
+Connecting to security.ubuntu.com (security.ubuntu.com)|185.125.190.39|:80... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-05-13 16:53:17 ERROR 404: Not Found.
+
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ dpkg_1.17.5ubuntu5.8_amd64.deb 
+dpkg_1.17.5ubuntu5.8_amd64.deb: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ 
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ 
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt list --installed
+[sudo] password for syafak:       
+Listing... Done
+accountsservice/focal-updates,focal-security,now 0.6.55-0ubuntu12~20.04.5 amd64 [installed]
+acl/focal,now 2.2.53-6 amd64 [installed]
+acpi-support/focal,now 0.143 amd64 [installed]
+acpid/focal,now 1:2.0.32-1ubuntu1 amd64 [installed]
+add-apt-key/focal,now 1.0-0.5 all [installed]
+adduser/focal,now 3.118ubuntu2 all [installed]
+adwaita-icon-theme-full/focal-updates,now 3.36.1-2ubuntu0.20.04.2 all [installed]
+adwaita-icon-theme/focal-updates,now 3.36.1-2ubuntu0.20.04.2 all [installed]
+alsa-base/focal,now 1.0.25+dfsg-0ubuntu5 all [installed]
+alsa-topology-conf/focal,now 1.2.2-1 all [installed]
+alsa-ucm-conf/focal-updates,now 1.2.2-1ubuntu0.13 all [installed]
+alsa-utils/focal-updates,now 1.2.2-1ubuntu2.1 amd64 [installed]
+amd64-microcode/focal,now 3.20191218.1ubuntu1 amd64 [installed]
+anacron/focal,now 2.3-29 amd64 [installed]
+apg/focal,now 2.2.3.dfsg.1-5 amd64 [installed]
+app-install-data/focal,now 15.10 all [installed]
+apparmor/focal-updates,now 2.13.3-7ubuntu5.1 amd64 [installed]
+appstream/focal,now 0.12.10-2 amd64 [installed]
+apt-clone/focal,now 0.4.1ubuntu3 all [installed]
+apt-utils/focal-updates,now 2.0.6 amd64 [installed]
+apt/focal-updates,now 2.0.6 amd64 [installed]
+aptdaemon-data/focal-updates,focal-security,now 1.1.1+bzr982-0ubuntu32.3 all [installed]
+aptdaemon/focal-updates,focal-security,now 1.1.1+bzr982-0ubuntu32.3 all [installed]
+aptitude-common/focal,now 0.8.12-1ubuntu4 all [installed]
+aptitude/focal,now 0.8.12-1ubuntu4 amd64 [installed]
+apturl-common/una,now 0.5.2+linuxmint11 all [installed]
+apturl/una,now 0.5.2+linuxmint11 all [installed]
+archdetect-deb/focal,now 1.117ubuntu7 amd64 [installed]
+aspell-en/focal,now 2018.04.16-0-1 all [installed]
+aspell/focal-updates,focal-security,now 0.60.8-1ubuntu0.1 amd64 [installed]
+at-spi2-core/focal,now 2.36.0-2 amd64 [installed]
+attr/focal,now 1:2.4.48-5 amd64 [installed]
+avahi-autoipd/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+avahi-daemon/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+avahi-utils/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+baobab/focal,now 3.34.0-1 amd64 [installed]
+base-files/una,now 20.3.0 amd64 [installed]
+base-passwd/focal,now 3.5.47 amd64 [installed]
+bash-completion/focal,now 1:2.10-1ubuntu1 all [installed]
+bash/focal-updates,focal-security,now 5.0-6ubuntu1.2 amd64 [installed]
+bc/focal,now 1.07.1-2build1 amd64 [installed]
+bind9-dnsutils/focal-updates,focal-security,now 1:9.16.1-0ubuntu2.10 amd64 [installed]
+bind9-host/focal-updates,focal-security,now 1:9.16.1-0ubuntu2.10 amd64 [installed]
+bind9-libs/focal-updates,focal-security,now 1:9.16.1-0ubuntu2.10 amd64 [installed]
+binutils-common/focal-updates,focal-security,now 2.34-6ubuntu1.3 amd64 [installed]
+binutils-x86-64-linux-gnu/focal-updates,focal-security,now 2.34-6ubuntu1.3 amd64 [installed]
+binutils/focal-updates,focal-security,now 2.34-6ubuntu1.3 amd64 [installed]
+bison/focal,now 2:3.5.1+dfsg-1 amd64 [installed]
+blueberry/una,now 1.4.7 all [installed]
+bluetooth/focal-updates,focal-security,now 5.53-0ubuntu3.5 all [installed]
+bluez-cups/focal-updates,focal-security,now 5.53-0ubuntu3.5 amd64 [installed]
+bluez-obexd/focal-updates,focal-security,now 5.53-0ubuntu3.5 amd64 [installed]
+bluez-tools/focal,now 2.0~20170911.0.7cb788c-2build1 amd64 [installed]
+bluez/focal-updates,focal-security,now 5.53-0ubuntu3.5 amd64 [installed]
+bolt/focal-updates,now 0.9.1-2~ubuntu20.04.1 amd64 [installed]
+brightness-controller-simple/focal,now 1.2.8-0~202002020713~ubuntu20.04.1 all [installed]
+brightness-controller/focal,now 2.3.4-2~ubuntu20.04.1 all [installed]
+brltty/focal,now 6.0+dfsg-4ubuntu6 amd64 [installed]
+bsdmainutils/focal,now 11.1.2ubuntu3 amd64 [installed]
+bsdutils/focal-updates,focal-security,now 1:2.34-0.1ubuntu9.3 amd64 [installed]
+btrfs-progs/focal,now 5.4.1-2 amd64 [installed]
+bubblewrap/focal,now 0.4.0-1ubuntu4 amd64 [installed]
+build-essential/focal-updates,now 12.8ubuntu1.1 amd64 [installed,automatic]
+bulky/una,now 2.1 all [installed]
+busybox-initramfs/focal-updates,focal-security,now 1:1.30.1-4ubuntu6.4 amd64 [installed]
+busybox-static/focal-updates,focal-security,now 1:1.30.1-4ubuntu6.4 amd64 [installed]
+bzip2/focal,now 1.0.8-2 amd64 [installed]
+ca-certificates-java/focal,now 20190405ubuntu1 all [installed]
+ca-certificates/focal-updates,focal-security,now 20210119~20.04.2 all [installed]
+caribou/una,now 0.4.21+mint1+ulyssa amd64 [installed]
+casper/focal-updates,now 1.445.1 amd64 [installed]
+catdoc/focal,now 1:0.95-4.1 amd64 [installed]
+celluloid/una,now 0.21-linuxmint1+uma amd64 [installed]
+cifs-utils/focal-updates,now 2:6.9-1ubuntu0.1 amd64 [installed]
+cinnamon-common/una,now 5.2.7+una all [installed]
+cinnamon-control-center-data/una,now 5.2.1+una all [installed]
+cinnamon-control-center-dbg/una,now 5.2.1+una amd64 [installed]
+cinnamon-control-center/una,now 5.2.1+una amd64 [installed]
+cinnamon-dbg/una,now 5.2.7+una amd64 [installed]
+cinnamon-desktop-data/una,now 5.2.1+una all [installed]
+cinnamon-l10n/una,now 5.2.2 all [installed]
+cinnamon-screensaver/una,now 5.2.1+una amd64 [installed]
+cinnamon-session-common/una,now 5.2.0+una all [installed]
+cinnamon-session/una,now 5.2.0+una amd64 [installed]
+cinnamon-settings-daemon/una,now 5.2.0+una amd64 [installed]
+cinnamon/una,now 5.2.7+una amd64 [installed]
+cjs/una,now 5.2.0+una amd64 [installed]
+code/stable,now 1.67.1-1651841865 amd64 [installed]
+colord-data/focal,now 1.4.4-2 all [installed]
+colord/focal,now 1.4.4-2 amd64 [installed]
+command-not-found/focal-updates,now 20.04.6 all [installed]
+console-setup-linux/una,now 1.194ubuntu3mint1 all [installed]
+console-setup/una,now 1.194ubuntu3mint1 all [installed]
+coreutils/focal,now 8.30-3ubuntu2 amd64 [installed]
+cpio/focal-updates,focal-security,now 2.13+dfsg-2ubuntu0.3 amd64 [installed]
+cpp-9/focal-updates,focal-security,now 9.4.0-1ubuntu1~20.04.1 amd64 [installed]
+cpp/focal,now 4:9.3.0-1ubuntu2 amd64 [installed]
+cracklib-runtime/focal,now 2.9.6-3.2 amd64 [installed]
+crda/focal,now 3.18-1build1 amd64 [installed]
+cron/focal,now 3.0pl1-136ubuntu1 amd64 [installed]
+cryptsetup-bin/focal-updates,focal-security,now 2:2.2.2-3ubuntu2.4 amd64 [installed]
+cryptsetup-initramfs/focal-updates,focal-security,now 2:2.2.2-3ubuntu2.4 all [installed]
+cryptsetup/focal-updates,focal-security,now 2:2.2.2-3ubuntu2.4 amd64 [installed]
+cups-browsed/focal,now 1.27.4-1 amd64 [installed]
+cups-bsd/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+cups-client/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+cups-common/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 all [installed]
+cups-core-drivers/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+cups-daemon/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+cups-filters-core-drivers/focal,now 1.27.4-1 amd64 [installed]
+cups-filters/focal,now 1.27.4-1 amd64 [installed]
+cups-ipp-utils/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+cups-pk-helper/focal,now 0.2.6-1ubuntu3 amd64 [installed]
+cups-ppdc/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+cups-server-common/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 all [installed]
+cups/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+curl/focal-updates,focal-security,now 7.68.0-1ubuntu2.11 amd64 [installed]
+dash/focal,now 0.5.10.2-6 amd64 [installed]
+dbus-user-session/focal-updates,focal-security,now 1.12.16-2ubuntu2.2 amd64 [installed]
+dbus-x11/focal-updates,focal-security,now 1.12.16-2ubuntu2.2 amd64 [installed]
+dbus/focal-updates,focal-security,now 1.12.16-2ubuntu2.2 amd64 [installed]
+dc/focal,now 1.07.1-2build1 amd64 [installed]
+dconf-cli/focal,now 0.36.0-1 amd64 [installed]
+dconf-gsettings-backend/focal,now 0.36.0-1 amd64 [installed]
+dconf-service/focal,now 0.36.0-1 amd64 [installed]
+dcraw/focal,now 9.28-2 amd64 [installed]
+dctrl-tools/focal,now 2.24-3 amd64 [installed]
+debconf-i18n/focal,now 1.5.73 all [installed]
+debconf/focal,now 1.5.73 all [installed]
+debianutils/focal,now 4.9.1 amd64 [installed]
+default-jre-headless/focal,now 2:1.11-72 amd64 [installed]
+default-jre/focal,now 2:1.11-72 amd64 [installed]
+desktop-file-utils/una,now 0.24+linuxmint1 amd64 [installed]
+dialog/focal,now 1.3-20190808-1 amd64 [installed]
+dictionaries-common/focal,now 1.28.1 all [installed]
+diffstat/focal,now 1.63-1 amd64 [installed]
+diffutils/focal,now 1:3.7-3 amd64 [installed]
+dirmngr/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+distro-info-data/focal-updates,focal-security,now 0.43ubuntu1.10 all [installed]
+distro-info/focal,now 0.23ubuntu1 amd64 [installed]
+dkms/focal-updates,now 2.8.1-5ubuntu2 all [installed]
+dmeventd/focal,now 2:1.02.167-1ubuntu1 amd64 [installed]
+dmidecode/focal,now 3.2-3 amd64 [installed]
+dmraid/focal,now 1.0.0.rc16-8ubuntu3 amd64 [installed]
+dmsetup/focal,now 2:1.02.167-1ubuntu1 amd64 [installed]
+dmz-cursor-theme/focal,now 0.4.5ubuntu1 all [installed]
+dns-root-data/focal,now 2019052802 all [installed]
+dnsmasq-base/focal-updates,focal-security,now 2.80-1.1ubuntu1.5 amd64 [installed]
+doc-base/focal,now 0.10.9 all [installed]
+docbook-xml/focal,now 4.5-9 all [installed]
+dosfstools/focal,now 4.1-2 amd64 [installed]
+dpkg-dev/focal,now 1.19.7ubuntu3 all [installed]
+dpkg-repack/focal,now 1.46 all [installed]
+dpkg/focal,now 1.19.7ubuntu3 amd64 [installed]
+drawing/una,now 0.8.4 all [installed]
+e2fsprogs/focal,now 1.45.5-2ubuntu1 amd64 [installed]
+ecryptfs-utils/focal,now 111-0ubuntu7 amd64 [installed]
+ed/focal,now 1.16-1 amd64 [installed]
+efibootmgr/focal,now 17-1 amd64 [installed]
+eject/focal,now 2.1.5+deb1+cvs20081104-14 amd64 [installed]
+emacsen-common/focal,now 3.0.4 all [installed]
+enchant-2/focal-updates,now 2.2.8-1ubuntu0.20.04.1 amd64 [installed]
+espeak-ng-data/focal,now 1.50+dfsg-6 amd64 [installed]
+ethtool/focal,now 1:5.4-1 amd64 [installed]
+evolution-data-server-common/focal-updates,now 3.36.5-0ubuntu1 all [installed]
+evolution-data-server/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+exfat-fuse/focal,now 1.3.0-1 amd64 [installed]
+exfat-utils/focal,now 1.3.0-1 amd64 [installed]
+exif/focal,now 0.6.21-2 amd64 [installed]
+fakeroot/focal,now 1.24-1 amd64 [installed]
+fdisk/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+ffmpegthumbnailer/focal,now 2.1.1-0.2build2 amd64 [installed]
+file-roller/focal-updates,focal-security,now 3.36.3-0ubuntu1.1 amd64 [installed]
+file/focal,now 1:5.38-4 amd64 [installed]
+finalrd/focal-updates,now 6~ubuntu20.04.1 all [installed]
+findutils/focal,now 4.7.0-1ubuntu1 amd64 [installed]
+firefox-locale-en/una,now 100.0+linuxmint1+una amd64 [installed]
+firefox/una,now 100.0+linuxmint1+una amd64 [installed]
+flatpak/una,now 1.12.2-1flatpak1~20.04 amd64 [installed]
+flex/focal,now 2.6.4-6.2 amd64 [installed]
+folder-color-switcher/una,now 1.5.0 all [installed]
+fontconfig-config/focal,now 2.13.1-2ubuntu3 all [installed]
+fontconfig/focal,now 2.13.1-2ubuntu3 amd64 [installed]
+fonts-beng-extra/focal,now 1.0-7 all [installed]
+fonts-beng/focal,now 2:1.2 all [installed]
+fonts-dejavu-core/focal,now 2.37-1 all [installed]
+fonts-deva-extra/focal,now 3.0-5 all [installed]
+fonts-deva/focal,now 2:1.2 all [installed]
+fonts-droid-fallback/focal,now 1:6.0.1r16-1.1 all [installed]
+fonts-freefont-ttf/focal,now 20120503-10 all [installed]
+fonts-gargi/focal,now 2.0-4 all [installed]
+fonts-gubbi/focal,now 1.3-3 all [installed]
+fonts-gujr-extra/focal,now 1.0.1-1 all [installed]
+fonts-gujr/focal,now 2:1.3 all [installed]
+fonts-guru-extra/focal,now 2.0-5 all [installed]
+fonts-guru/focal,now 2:1.2 all [installed]
+fonts-indic/focal,now 2:1.3 all [installed]
+fonts-kacst-one/focal,now 5.0+svn11846-10 all [installed]
+fonts-kacst/focal,now 2.01+mry-14 all [installed]
+fonts-kalapi/focal,now 1.0-3 all [installed]
+fonts-khmeros-core/focal,now 5.0-7ubuntu1 all [installed]
+fonts-knda/focal,now 2:1.2 all [installed]
+fonts-lao/focal,now 0.0.20060226-9ubuntu1 all [installed]
+fonts-liberation2/focal,now 2.1.0-1 all [installed]
+fonts-liberation/focal,now 1:1.07.4-11 all [installed]
+fonts-lklug-sinhala/focal,now 0.6-3 all [installed]
+fonts-lohit-beng-assamese/focal,now 2.91.5-1 all [installed]
+fonts-lohit-beng-bengali/focal,now 2.91.5-1 all [installed]
+fonts-lohit-deva/focal,now 2.95.4-4 all [installed]
+fonts-lohit-gujr/focal,now 2.92.4-4 all [installed]
+fonts-lohit-guru/focal,now 2.91.2-1 all [installed]
+fonts-lohit-knda/focal,now 2.5.4-2 all [installed]
+fonts-lohit-mlym/focal,now 2.92.2-1 all [installed]
+fonts-lohit-orya/focal,now 2.91.2-1 all [installed]
+fonts-lohit-taml-classical/focal,now 2.5.4-1 all [installed]
+fonts-lohit-taml/focal,now 2.91.3-1 all [installed]
+fonts-lohit-telu/focal,now 2.5.5-1 all [installed]
+fonts-mathjax/focal,now 2.7.4+dfsg-1 all [installed]
+fonts-mlym/focal,now 2:1.2 all [installed]
+fonts-nakula/focal,now 1.0-3 all [installed]
+fonts-navilu/focal,now 1.2-2 all [installed]
+fonts-noto-cjk/focal,now 1:20190410+repack1-2 all [installed]
+fonts-noto-color-emoji/focal-updates,now 0~20200916-1~ubuntu20.04.1 all [installed]
+fonts-noto-mono/focal-updates,now 20200323-1build1~ubuntu20.04.1 all [installed]
+fonts-opensymbol/focal-updates,focal-security,now 2:102.11+LibO6.4.7-0ubuntu0.20.04.4 all [installed]
+fonts-orya-extra/focal,now 2.0-6 all [installed]
+fonts-orya/focal,now 2:1.2 all [installed]
+fonts-pagul/focal,now 1.0-7 all [installed]
+fonts-sahadeva/focal,now 1.0-4 all [installed]
+fonts-samyak-deva/focal,now 1.2.2-4 all [installed]
+fonts-samyak-gujr/focal,now 1.2.2-4 all [installed]
+fonts-samyak-mlym/focal,now 1.2.2-4 all [installed]
+fonts-samyak-taml/focal,now 1.2.2-4 all [installed]
+fonts-sarai/focal,now 1.0-2 all [installed]
+fonts-sil-abyssinica/focal,now 2.000-1 all [installed]
+fonts-sil-padauk/focal,now 4.000-1 all [installed]
+fonts-smc-anjalioldlipi/focal,now 7.1.2-1 all [installed]
+fonts-smc-chilanka/focal,now 1.400-1 all [installed]
+fonts-smc-dyuthi/focal,now 3.0.2-1 all [installed]
+fonts-smc-gayathri/focal,now 1.100-1 all [installed]
+fonts-smc-karumbi/focal,now 1.1.2-1 all [installed]
+fonts-smc-keraleeyam/focal,now 3.0.2-1 all [installed]
+fonts-smc-manjari/focal,now 1.710-1 all [installed]
+fonts-smc-meera/focal,now 7.0.3-1 all [installed]
+fonts-smc-rachana/focal,now 7.0.2-1 all [installed]
+fonts-smc-raghumalayalamsans/focal,now 2.2.1-1 all [installed]
+fonts-smc-suruma/focal,now 3.2.3-1 all [installed]
+fonts-smc-uroob/focal,now 2.0.2-1 all [installed]
+fonts-smc/focal,now 1:7.1 all [installed]
+fonts-taml/focal,now 2:1.3 all [installed]
+fonts-telu-extra/focal,now 2.0-4 all [installed]
+fonts-telu/focal,now 2:1.2 all [installed]
+fonts-thai-tlwg/focal,now 1:0.7.1-3 all [installed]
+fonts-tibetan-machine/focal,now 1.901b-5 all [installed]
+fonts-tlwg-garuda-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-garuda/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-kinnari-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-kinnari/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-laksaman-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-laksaman/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-loma-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-loma/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-mono-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-mono/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-norasi-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-norasi/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-purisa-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-purisa/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-sawasdee-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-sawasdee/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-typewriter-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-typewriter/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-typist-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-typist/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-typo-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-typo/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-umpush-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-umpush/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-waree-ttf/focal,now 1:0.7.1-3 all [installed]
+fonts-tlwg-waree/focal,now 1:0.7.1-3 all [installed]
+fonts-ubuntu/focal,now 0.83-4ubuntu1 all [installed]
+fonts-urw-base35/focal,now 20170801.1-3 all [installed]
+fonts-yrsa-rasa/focal,now 1.002-2 all [installed]
+foomatic-db-compressed-ppds/focal,now 20200401-1 all [installed]
+fprintd/focal-updates,now 1.90.9-1~ubuntu20.04.1 amd64 [installed]
+friendly-recovery/focal-updates,now 0.2.41ubuntu0.20.04.1 all [installed]
+ftp/focal,now 0.17-34.1 amd64 [installed]
+fuse/focal,now 2.9.9-3 amd64 [installed]
+fwupd-signed/focal-updates,now 1.27.1ubuntu7+1.2-2~20.04.1 amd64 [installed]
+fwupd/focal-updates,now 1.7.5-3~20.04.1 amd64 [installed]
+g++-9/focal-updates,focal-security,now 9.4.0-1ubuntu1~20.04.1 amd64 [installed,automatic]
+g++/focal,now 4:9.3.0-1ubuntu2 amd64 [installed,automatic]
+galera-3/focal,now 25.3.29-1 amd64 [installed,automatic]
+gamemode/focal-updates,now 1.5.1-0ubuntu3.1 amd64 [installed]
+gawk/focal,now 1:5.0.1+dfsg-1 amd64 [installed]
+gcc-10-base/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+gcc-10-base/now 10.3.0-1ubuntu1~20.04 i386 [installed,local]
+gcc-9-base/focal-updates,focal-security,now 9.4.0-1ubuntu1~20.04.1 amd64 [installed]
+gcc-9/focal-updates,focal-security,now 9.4.0-1ubuntu1~20.04.1 amd64 [installed]
+gcc/focal,now 4:9.3.0-1ubuntu2 amd64 [installed]
+gconf-service-backend/focal,now 3.2.6-6ubuntu1 amd64 [installed,automatic]
+gconf-service/focal,now 3.2.6-6ubuntu1 amd64 [installed,automatic]
+gconf2-common/focal,now 3.2.6-6ubuntu1 all [installed,automatic]
+gcr/focal,now 3.36.0-2build1 amd64 [installed]
+gdb/focal-updates,now 9.2-0ubuntu1~20.04.1 amd64 [installed]
+gdbserver/focal-updates,now 9.2-0ubuntu1~20.04.1 amd64 [installed]
+gdebi-core/una,now 0.9.5.7xmint10 all [installed]
+gdebi/una,now 0.9.5.7xmint10 all [installed]
+gdisk/focal,now 1.0.5-1 amd64 [installed]
+genisoimage/focal,now 9:1.1.11-3.1ubuntu1 amd64 [installed]
+geoclue-2.0/focal,now 2.5.6-0ubuntu1 amd64 [installed]
+geoip-database/focal,now 20191224-2 all [installed]
+gettext-base/focal,now 0.19.8.1-10build1 amd64 [installed]
+gettext/focal,now 0.19.8.1-10build1 amd64 [installed]
+ghostscript-x/focal-updates,focal-security,now 9.50~dfsg-5ubuntu4.5 amd64 [installed]
+ghostscript/focal-updates,focal-security,now 9.50~dfsg-5ubuntu4.5 amd64 [installed]
+gir1.2-accountsservice-1.0/focal-updates,focal-security,now 0.6.55-0ubuntu12~20.04.5 amd64 [installed]
+gir1.2-appindicator3-0.1/focal,now 12.10.1+20.04.20200408.1-0ubuntu1 amd64 [installed]
+gir1.2-appstream-1.0/focal,now 0.12.10-2 amd64 [installed]
+gir1.2-appstreamglib-1.0/focal,now 0.7.16-1ubuntu1 amd64 [installed]
+gir1.2-atk-1.0/focal,now 2.35.1-1ubuntu2 amd64 [installed]
+gir1.2-atspi-2.0/focal,now 2.36.0-2 amd64 [installed]
+gir1.2-camel-1.2/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+gir1.2-caribou-1.0/una,now 0.4.21+mint1+ulyssa amd64 [installed]
+gir1.2-cinnamondesktop-3.0/una,now 5.2.1+una amd64 [installed]
+gir1.2-clutter-1.0/focal,now 1.26.4+dfsg-1 amd64 [installed]
+gir1.2-clutter-gst-3.0/focal,now 3.0.27-1 amd64 [installed]
+gir1.2-cmenu-3.0/una,now 5.2.0+una amd64 [installed]
+gir1.2-cogl-1.0/focal,now 1.22.6-1 amd64 [installed]
+gir1.2-coglpango-1.0/focal,now 1.22.6-1 amd64 [installed]
+gir1.2-cvc-1.0/una,now 5.2.1+una amd64 [installed]
+gir1.2-dbusmenu-glib-0.4/focal,now 16.04.1+18.10.20180917-0ubuntu6 amd64 [installed]
+gir1.2-dee-1.0/focal,now 1.2.7+17.10.20170616-4ubuntu6 amd64 [installed]
+gir1.2-ecal-2.0/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+gir1.2-edataserver-1.2/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+gir1.2-flatpak-1.0/una,now 1.12.2-1flatpak1~20.04 amd64 [installed]
+gir1.2-freedesktop/focal-updates,now 1.64.1-1~ubuntu20.04.1 amd64 [installed]
+gir1.2-gdesktopenums-3.0/focal,now 3.36.0-1ubuntu1 amd64 [installed]
+gir1.2-gdkpixbuf-2.0/focal-updates,focal-security,now 2.40.0+dfsg-3ubuntu0.2 amd64 [installed]
+gir1.2-gkbd-3.0/focal,now 3.26.1-1 amd64 [installed]
+gir1.2-glib-2.0/focal-updates,now 1.64.1-1~ubuntu20.04.1 amd64 [installed]
+gir1.2-gnomebluetooth-1.0/focal-updates,now 3.34.3-0ubuntu1 amd64 [installed]
+gir1.2-gnomedesktop-3.0/focal-updates,now 3.36.8-0ubuntu1 amd64 [installed]
+gir1.2-goa-1.0/una,now 3.36.1-linuxmint1+uma amd64 [installed]
+gir1.2-gspell-1/focal,now 1.8.3-1 amd64 [installed]
+gir1.2-gst-plugins-base-1.0/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+gir1.2-gstreamer-1.0/focal,now 1.16.2-2 amd64 [installed]
+gir1.2-gtk-3.0/focal-updates,now 3.24.20-0ubuntu1.1 amd64 [installed]
+gir1.2-gtkclutter-1.0/focal,now 1.8.4-4 amd64 [installed]
+gir1.2-gtksource-3.0/focal,now 3.24.11-2 amd64 [installed]
+gir1.2-gtksource-4/focal,now 4.6.0-1 amd64 [installed]
+gir1.2-gtop-2.0/focal,now 2.40.0-2 amd64 [installed]
+gir1.2-gudev-1.0/focal,now 1:233-1 amd64 [installed]
+gir1.2-ibus-1.0/focal-updates,now 1.5.22-2ubuntu2.1 amd64 [installed]
+gir1.2-ical-3.0/focal,now 3.0.8-1 amd64 [installed]
+gir1.2-javascriptcoregtk-4.0/focal-updates,focal-security,now 2.36.0-0ubuntu0.20.04.3 amd64 [installed]
+gir1.2-json-1.0/focal,now 1.4.4-2ubuntu2 amd64 [installed]
+gir1.2-keybinder-3.0/focal,now 0.3.2-1ubuntu1 amd64 [installed]
+gir1.2-matedesktop-2.0/una,now 1.26.0-0ubuntu1~focal2.1 amd64 [installed]
+gir1.2-matemenu-2.0/una,now 1.26.0-linuxmint2 amd64 [installed]
+gir1.2-matepanelapplet-4.0/una,now 1.26.1.1mint1+una amd64 [installed]
+gir1.2-meta-muffin-0.0/una,now 5.2.1+una amd64 [installed]
+gir1.2-nemo-3.0/una,now 5.2.4+una amd64 [installed]
+gir1.2-nm-1.0/focal-updates,now 1.22.10-1ubuntu2.3 amd64 [installed]
+gir1.2-nma-1.0/una,now 1.8.24-linuxmint4 amd64 [installed]
+gir1.2-notify-0.7/focal,now 0.7.9-1ubuntu2 amd64 [installed]
+gir1.2-packagekitglib-1.0/focal-updates,focal-security,now 1.1.13-2ubuntu1.1 amd64 [installed]
+gir1.2-pango-1.0/focal,now 1.44.7-2ubuntu4 amd64 [installed]
+gir1.2-peas-1.0/focal,now 1.26.0-2 amd64 [installed]
+gir1.2-polkit-1.0/focal-updates,focal-security,now 0.105-26ubuntu1.3 amd64 [installed]
+gir1.2-rb-3.0/focal,now 3.4.4-1ubuntu2 amd64 [installed]
+gir1.2-secret-1/focal-updates,now 0.20.4-0ubuntu1 amd64 [installed]
+gir1.2-soup-2.4/focal,now 2.70.0-1 amd64 [installed]
+gir1.2-timezonemap-1.0/focal,now 0.4.6-2 amd64 [installed]
+gir1.2-udisks-2.0/focal-updates,now 2.8.4-1ubuntu2 amd64 [installed]
+gir1.2-upowerglib-1.0/focal,now 0.99.11-1build2 amd64 [installed]
+gir1.2-vte-2.91/focal-updates,now 0.60.3-0ubuntu1~20.04 amd64 [installed]
+gir1.2-webkit2-4.0/focal-updates,focal-security,now 2.36.0-0ubuntu0.20.04.3 amd64 [installed]
+gir1.2-wnck-3.0/focal,now 3.36.0-1 amd64 [installed]
+gir1.2-xapp-1.0/una,now 2.2.8+una amd64 [installed]
+gir1.2-xkl-1.0/focal,now 5.4-4 amd64 [installed]
+gir1.2-xreader/una,now 3.2.2+una amd64 [installed]
+git-man/focal-updates,focal-security,now 1:2.25.1-1ubuntu3.4 all [installed,automatic]
+git/focal-updates,focal-security,now 1:2.25.1-1ubuntu3.4 amd64 [installed]
+gkbd-capplet/focal,now 3.26.1-1 amd64 [installed]
+glib-networking-common/focal-updates,focal-security,now 2.64.2-1ubuntu0.1 all [installed]
+glib-networking-services/focal-updates,focal-security,now 2.64.2-1ubuntu0.1 amd64 [installed]
+glib-networking/focal-updates,focal-security,now 2.64.2-1ubuntu0.1 amd64 [installed]
+gnome-accessibility-themes/focal,now 3.28-1ubuntu1 all [installed]
+gnome-bluetooth/focal-updates,now 3.34.3-0ubuntu1 amd64 [installed]
+gnome-calculator/focal,now 1:3.36.0-1ubuntu1 amd64 [installed]
+gnome-calendar/una,now 3.36.2-linuxmint3+una amd64 [installed]
+gnome-desktop3-data/focal-updates,now 3.36.8-0ubuntu1 all [installed]
+gnome-disk-utility/una,now 3.38.2+mint1+una amd64 [installed]
+gnome-font-viewer/una,now 3.34.0+mint1-3.28-backport+ulyssa amd64 [installed]
+gnome-icon-theme/focal,now 3.12.0-3 all [installed]
+gnome-keyring-pkcs11/focal,now 3.36.0-1ubuntu1 amd64 [installed]
+gnome-keyring/focal,now 3.36.0-1ubuntu1 amd64 [installed]
+gnome-logs/una,now 3.34.0-linuxmint2+ulyana amd64 [installed]
+gnome-menus/focal,now 3.36.0-1ubuntu1 amd64 [installed]
+gnome-online-accounts/una,now 3.36.1-linuxmint1+uma amd64 [installed]
+gnome-power-manager/focal,now 3.32.0-2 amd64 [installed]
+gnome-screenshot/una,now 3.36.0-linuxmint4+una amd64 [installed]
+gnome-session-bin/focal,now 3.36.0-2ubuntu1 amd64 [installed]
+gnome-session-canberra/focal,now 0.30-7ubuntu1 amd64 [installed]
+gnome-settings-daemon-common/focal-updates,now 3.36.1-0ubuntu1.1 all [installed]
+gnome-settings-daemon/focal-updates,now 3.36.1-0ubuntu1.1 amd64 [installed]
+gnome-system-monitor/focal-updates,now 3.36.1-0ubuntu0.20.04.1 amd64 [installed]
+gnome-terminal-data/una,now 3.36.2-linuxmint1+ulyana all [installed]
+gnome-terminal/una,now 3.36.2-linuxmint1+ulyana amd64 [installed]
+gnome-themes-extra-data/focal,now 3.28-1ubuntu1 all [installed]
+gnome-themes-extra/focal,now 3.28-1ubuntu1 amd64 [installed]
+gnupg-l10n/focal-updates,now 2.2.19-3ubuntu2.1 all [installed]
+gnupg-utils/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+gnupg/focal-updates,now 2.2.19-3ubuntu2.1 all [installed]
+gpg-agent/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+gpg-wks-client/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+gpg-wks-server/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+gpg/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+gpgconf/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+gpgsm/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+gpgv/focal-updates,now 2.2.19-3ubuntu2.1 amd64 [installed]
+grep/focal,now 3.4-1 amd64 [installed]
+groff-base/focal,now 1.22.4-4build1 amd64 [installed]
+growisofs/focal,now 7.1-14build1 amd64 [installed]
+grub-common/focal-updates,now 2.04-1ubuntu26.15 amd64 [installed]
+grub-efi-amd64-bin/focal-updates,focal-security,now 2.04-1ubuntu44.2 amd64 [installed,automatic]
+grub-efi-amd64-signed/focal-updates,focal-security,now 1.167.2+2.04-1ubuntu44.2 amd64 [installed]
+grub-gfxpayload-lists/focal,now 0.7 amd64 [installed]
+grub-pc-bin/focal-updates,now 2.04-1ubuntu26.15 amd64 [installed]
+grub-pc/focal-updates,now 2.04-1ubuntu26.15 amd64 [installed]
+grub2-common/focal-updates,now 2.04-1ubuntu26.15 amd64 [installed]
+gsettings-desktop-schemas/focal,now 3.36.0-1ubuntu1 all [installed]
+gsfonts/focal,now 1:8.11+urwcyr1.0.7~pre44-4.4 all [installed]
+gstreamer1.0-alsa/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+gstreamer1.0-clutter-3.0/focal,now 3.0.27-1 amd64 [installed]
+gstreamer1.0-gl/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+gstreamer1.0-packagekit/focal-updates,focal-security,now 1.1.13-2ubuntu1.1 amd64 [installed]
+gstreamer1.0-plugins-base-apps/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+gstreamer1.0-plugins-base/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+gstreamer1.0-plugins-good/focal-updates,focal-security,now 1.16.2-1ubuntu2.1 amd64 [installed]
+gstreamer1.0-pulseaudio/focal-updates,focal-security,now 1.16.2-1ubuntu2.1 amd64 [installed]
+gstreamer1.0-tools/focal,now 1.16.2-2 amd64 [installed]
+gstreamer1.0-x/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+gtk-update-icon-cache/focal-updates,now 3.24.20-0ubuntu1.1 amd64 [installed]
+gtk2-engines-murrine/focal,now 0.98.2-3 amd64 [installed]
+gtk2-engines-pixbuf/focal,now 2.24.32-4ubuntu4 amd64 [installed]
+gtk2-engines/focal,now 1:2.20.2-5 amd64 [installed]
+gucharmap/focal,now 1:13.0.1-1 amd64 [installed]
+gufw/focal-updates,now 20.04.1-1ubuntu1 all [installed]
+guile-2.2-libs/focal,now 2.2.7+1-4 amd64 [installed]
+gvfs-backends/focal-updates,now 1.44.1-1ubuntu1.1 amd64 [installed]
+gvfs-bin/focal-updates,now 1.44.1-1ubuntu1.1 amd64 [installed]
+gvfs-common/focal-updates,now 1.44.1-1ubuntu1.1 all [installed]
+gvfs-daemons/focal-updates,now 1.44.1-1ubuntu1.1 amd64 [installed]
+gvfs-fuse/focal-updates,now 1.44.1-1ubuntu1.1 amd64 [installed]
+gvfs-libs/focal-updates,now 1.44.1-1ubuntu1.1 amd64 [installed]
+gvfs/focal-updates,now 1.44.1-1ubuntu1.1 amd64 [installed]
+gzip/focal-updates,focal-security,now 1.10-0ubuntu4.1 amd64 [installed]
+hddtemp/focal,now 0.3-beta15-53 amd64 [installed]
+hdparm/focal,now 9.58+ds-4 amd64 [installed]
+hexchat-common/focal-updates,now 2.14.3-3ubuntu0.20.04.2 all [installed]
+hexchat/focal-updates,now 2.14.3-3ubuntu0.20.04.2 amd64 [installed]
+hfsprogs/focal,now 332.25-11build1 amd64 [installed]
+hicolor-icon-theme/focal,now 0.17-2 all [installed]
+hostname/focal,now 3.23 amd64 [installed]
+hplip-data/una,now 3.21.8+dfsg0-1+klbkfocal all [installed]
+hplip/una,now 3.21.8+dfsg0-1+klbkfocal amd64 [installed]
+hunspell-de-at-frami/focal,now 1:6.4.3-1 all [installed]
+hunspell-de-ch-frami/focal,now 1:6.4.3-1 all [installed]
+hunspell-de-de-frami/focal,now 1:6.4.3-1 all [installed]
+hunspell-en-au/focal,now 1:2018.04.16-1 all [installed]
+hunspell-en-ca/focal,now 1:2018.04.16-1 all [installed]
+hunspell-en-gb/focal,now 1:6.4.3-1 all [installed]
+hunspell-en-us/focal,now 1:2018.04.16-1 all [installed]
+hunspell-en-za/focal,now 1:6.4.3-1 all [installed]
+hunspell-es/focal,now 1:6.4.3-1 all [installed]
+hunspell-fr-classical/focal,now 1:6.4.1-1 all [installed]
+hunspell-fr/focal,now 1:6.4.1-1 all [installed]
+hunspell-it/focal,now 1:6.4.3-1 all [installed]
+hunspell-pt-br/focal,now 1:6.4.3-1 all [installed]
+hunspell-pt-pt/focal,now 1:6.4.3-1 all [installed]
+hunspell-ru/focal,now 1:6.4.3-1 all [installed]
+hwdata/focal,now 0.333-1 all [installed]
+hyphen-de/focal,now 1:6.4.3-1 all [installed]
+hyphen-en-ca/focal,now 0.10 all [installed]
+hyphen-en-gb/focal,now 1:6.4.3-1 all [installed]
+hyphen-en-us/focal,now 2.8.8-7 all [installed]
+hyphen-fr/focal,now 1:6.4.3-1 all [installed]
+hyphen-it/focal,now 1:6.4.3-1 all [installed]
+hyphen-pt-br/focal,now 1:6.4.3-1 all [installed]
+hyphen-pt-pt/focal,now 1:6.4.3-1 all [installed]
+hyphen-ru/focal,now 20030310-1ubuntu3 all [installed]
+hypnotix/una,now 2.6 all [installed]
+i965-va-driver/focal,now 2.4.0-0ubuntu1 amd64 [installed]
+id3/focal,now 1.1.0-3 amd64 [installed]
+ideviceinstaller/focal,now 1.1.0-0ubuntu4 amd64 [installed]
+ieee-data/focal,now 20180805.1 all [installed]
+ifupdown/focal,now 0.8.35ubuntu1 amd64 [installed]
+ifuse/focal,now 1.1.4~git20181007.3b00243-1 amd64 [installed]
+iio-sensor-proxy/focal-updates,now 2.8-1ubuntu2 amd64 [installed]
+im-config/focal-updates,now 0.44-1ubuntu1.3 all [installed]
+info/focal,now 6.7.0.dfsg.2-5 amd64 [installed]
+init-system-helpers/focal,now 1.57 all [installed]
+init/focal,now 1.57 amd64 [installed]
+initramfs-tools-bin/focal-updates,now 0.136ubuntu6.7 amd64 [installed]
+initramfs-tools-core/focal-updates,now 0.136ubuntu6.7 all [installed]
+initramfs-tools/focal-updates,now 0.136ubuntu6.7 all [installed]
+inputattach/focal,now 1:1.7.0-1 amd64 [installed]
+install-info/focal,now 6.7.0.dfsg.2-5 amd64 [installed]
+intel-media-va-driver/focal,now 20.1.1+dfsg1-1 amd64 [installed]
+intel-microcode/focal-updates,focal-security,now 3.20210608.0ubuntu0.20.04.1 amd64 [installed]
+intltool-debian/focal,now 0.35.0+20060710.5 all [installed]
+inxi/focal,now 3.0.38-1-0ubuntu1 all [installed]
+iproute2/focal,now 5.5.0-1ubuntu1 amd64 [installed]
+iptables/focal,now 1.8.4-3ubuntu2 amd64 [installed]
+iputils-arping/focal,now 3:20190709-3 amd64 [installed]
+iputils-ping/focal,now 3:20190709-3 amd64 [installed]
+iputils-tracepath/focal,now 3:20190709-3 amd64 [installed]
+irqbalance/focal,now 1.6.0-3ubuntu1 amd64 [installed]
+isc-dhcp-client/focal-updates,focal-security,now 4.4.1-2.1ubuntu5.20.04.2 amd64 [installed]
+isc-dhcp-common/focal-updates,focal-security,now 4.4.1-2.1ubuntu5.20.04.2 amd64 [installed]
+iso-codes/focal,now 4.4-1 all [installed]
+iso-flag-png/una,now 1.0.2 all [installed]
+iucode-tool/focal,now 2.3.1-1 amd64 [installed]
+iw/focal,now 5.4-1 amd64 [installed]
+java-common/focal,now 0.72 all [installed]
+jfsutils/focal,now 1.1.15-4 amd64 [installed]
+kbd/focal,now 2.0.4-4ubuntu2 amd64 [installed]
+kerneloops/focal,now 0.12+git20140509-6ubuntu2 amd64 [installed]
+keyboard-configuration/una,now 1.194ubuntu3mint1 all [installed]
+keyutils/focal,now 1.6-6ubuntu1 amd64 [installed]
+klibc-utils/focal-updates,focal-security,now 2.0.7-1ubuntu5.1 amd64 [installed]
+kmod/focal,now 27-1ubuntu2 amd64 [installed]
+kpartx-boot/focal,now 0.8.3-1ubuntu2 all [installed]
+kpartx/focal,now 0.8.3-1ubuntu2 amd64 [installed]
+krb5-locales/focal-updates,focal-security,now 1.17-6ubuntu4.1 all [installed]
+language-pack-en-base/focal-updates,now 1:20.04+20220211 all [installed]
+language-pack-en/focal-updates,now 1:20.04+20220211 all [installed]
+language-pack-gnome-en-base/focal-updates,now 1:20.04+20220211 all [installed]
+language-pack-gnome-en/focal-updates,now 1:20.04+20220211 all [installed]
+laptop-detect/focal,now 0.16 all [installed]
+less/focal-updates,now 551-1ubuntu0.1 amd64 [installed]
+libaa1/focal,now 1.4p5-46 amd64 [installed]
+libabw-0.1-1/focal,now 0.1.3-1build1 amd64 [installed]
+libaccountsservice0/focal-updates,focal-security,now 0.6.55-0ubuntu12~20.04.5 amd64 [installed]
+libacl1/focal,now 2.2.53-6 amd64 [installed]
+libaio1/focal,now 0.3.112-5 amd64 [installed]
+libao-common/focal,now 1.2.2+20180113-1ubuntu1 all [installed]
+libao4/focal,now 1.2.2+20180113-1ubuntu1 amd64 [installed]
+libaom0/focal,now 1.0.0.errata1-3build1 amd64 [installed]
+libapparmor1/focal-updates,now 2.13.3-7ubuntu5.1 amd64 [installed]
+libappindicator3-1/focal,now 12.10.1+20.04.20200408.1-0ubuntu1 amd64 [installed]
+libappstream-glib8/focal,now 0.7.16-1ubuntu1 amd64 [installed]
+libappstream4/focal,now 0.12.10-2 amd64 [installed]
+libapt-pkg-perl/focal,now 0.1.36build3 amd64 [installed]
+libapt-pkg6.0/focal-updates,now 2.0.6 amd64 [installed]
+libarchive-zip-perl/focal,now 1.67-2 all [installed]
+libarchive13/focal-updates,focal-security,now 3.4.0-2ubuntu1.2 amd64 [installed]
+libargon2-1/focal,now 0~20171227-0.2 amd64 [installed]
+libasan5/focal-updates,focal-security,now 9.4.0-1ubuntu1~20.04.1 amd64 [installed]
+libasn1-8-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libasound2-data/focal-updates,now 1.2.2-2.1ubuntu2.5 all [installed]
+libasound2-plugins/focal,now 1.2.2-1ubuntu1 amd64 [installed]
+libasound2/focal-updates,now 1.2.2-2.1ubuntu2.5 amd64 [installed]
+libaspell15/focal-updates,focal-security,now 0.60.8-1ubuntu0.1 amd64 [installed]
+libass9/focal,now 1:0.14.0-2 amd64 [installed]
+libassuan0/focal,now 2.5.3-7ubuntu2 amd64 [installed]
+libasyncns0/focal,now 0.8-6 amd64 [installed]
+libatasmart4/focal,now 0.19-5 amd64 [installed]
+libatk-adaptor/focal-updates,now 2.34.2-0ubuntu2~20.04.1 amd64 [installed]
+libatk-bridge2.0-0/focal-updates,now 2.34.2-0ubuntu2~20.04.1 amd64 [installed]
+libatk1.0-0/focal,now 2.35.1-1ubuntu2 amd64 [installed]
+libatk1.0-data/focal,now 2.35.1-1ubuntu2 all [installed]
+libatkmm-1.6-1v5/focal,now 2.28.0-2build1 amd64 [installed]
+libatm1/focal,now 1:2.5.1-4 amd64 [installed]
+libatomic1/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libatomic1/now 10.3.0-1ubuntu1~20.04 i386 [installed,local]
+libatopology2/focal-updates,now 1.2.2-2.1ubuntu2.5 amd64 [installed]
+libatspi2.0-0/focal,now 2.36.0-2 amd64 [installed]
+libattr1/focal,now 1:2.4.48-5 amd64 [installed]
+libaudit-common/focal,now 1:2.8.5-2ubuntu6 all [installed]
+libaudit1/focal,now 1:2.8.5-2ubuntu6 amd64 [installed]
+libauthen-sasl-perl/focal,now 2.1600-1 all [installed]
+libavahi-client3/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+libavahi-common-data/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+libavahi-common3/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+libavahi-core7/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+libavahi-glib1/focal-updates,focal-security,now 0.7-4ubuntu7.1 amd64 [installed]
+libavc1394-0/focal,now 0.5.4-5 amd64 [installed]
+libavcodec58/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libavdevice58/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libavfilter7/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libavformat58/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libavutil56/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libb-hooks-endofscope-perl/focal,now 0.24-1 all [installed]
+libb-hooks-op-check-perl/focal,now 0.22-1build2 amd64 [installed]
+libbabeltrace1/focal,now 1.5.8-1build1 amd64 [installed]
+libbinutils/focal-updates,focal-security,now 2.34-6ubuntu1.3 amd64 [installed]
+libblkid1/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+libblockdev-crypto2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libblockdev-fs2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libblockdev-loop2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libblockdev-part-err2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libblockdev-part2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libblockdev-swap2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libblockdev-utils2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libblockdev2/focal,now 2.23-2ubuntu3 amd64 [installed]
+libbluetooth3/focal-updates,focal-security,now 5.53-0ubuntu3.5 amd64 [installed]
+libbluray2/focal,now 1:1.2.0-1 amd64 [installed]
+libboost-date-time1.71.0/focal,now 1.71.0-6ubuntu6 amd64 [installed]
+libboost-filesystem1.71.0/focal,now 1.71.0-6ubuntu6 amd64 [installed]
+libboost-iostreams1.71.0/focal,now 1.71.0-6ubuntu6 amd64 [installed]
+libboost-locale1.71.0/focal,now 1.71.0-6ubuntu6 amd64 [installed]
+libboost-thread1.71.0/focal,now 1.71.0-6ubuntu6 amd64 [installed]
+libbrlapi0.7/focal,now 6.0+dfsg-4ubuntu6 amd64 [installed]
+libbrotli1/focal-updates,focal-security,now 1.0.7-6ubuntu0.1 amd64 [installed]
+libbs2b0/focal,now 3.1.0+dfsg-2.2build1 amd64 [installed]
+libbsd0/focal,now 0.10.0-1 amd64 [installed]
+libbsd0/now 0.10.0-1 i386 [installed,local]
+libbz2-1.0/focal,now 1.0.8-2 amd64 [installed]
+libc-ares2/focal-updates,focal-security,now 1.15.0-1ubuntu0.1 amd64 [installed]
+libc-bin/focal-updates,now 2.31-0ubuntu9.9 amd64 [installed]
+libc-dev-bin/focal-updates,now 2.31-0ubuntu9.9 amd64 [installed,automatic]
+libc6-dbg/focal-updates,now 2.31-0ubuntu9.9 amd64 [installed]
+libc6-dev/focal-updates,now 2.31-0ubuntu9.9 amd64 [installed,automatic]
+libc6/focal-updates,now 2.31-0ubuntu9.9 amd64 [installed]
+libc6/now 2.31-0ubuntu9.9 i386 [installed,local]
+libcaca0/focal-updates,focal-security,now 0.99.beta19-2.1ubuntu1.20.04.2 amd64 [installed]
+libcairo-gobject-perl/focal,now 1.005-2 amd64 [installed]
+libcairo-gobject2/focal,now 1.16.0-4ubuntu1 amd64 [installed]
+libcairo-perl/focal,now 1.107-1 amd64 [installed]
+libcairo2/focal,now 1.16.0-4ubuntu1 amd64 [installed]
+libcairomm-1.0-1v5/focal,now 1.12.2-4build1 amd64 [installed]
+libcamel-1.2-62/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libcanberra-gtk3-0/focal,now 0.30-7ubuntu1 amd64 [installed]
+libcanberra-gtk3-module/focal,now 0.30-7ubuntu1 amd64 [installed]
+libcanberra-pulse/focal,now 0.30-7ubuntu1 amd64 [installed]
+libcanberra0/focal,now 0.30-7ubuntu1 amd64 [installed]
+libcap-ng0/focal,now 0.7.9-2.1build1 amd64 [installed]
+libcap2-bin/focal,now 1:2.32-1 amd64 [installed]
+libcap2/focal,now 1:2.32-1 amd64 [installed]
+libcapture-tiny-perl/focal,now 0.48-1 all [installed]
+libcaribou-common/una,now 0.4.21+mint1+ulyssa all [installed]
+libcaribou0/una,now 0.4.21+mint1+ulyssa amd64 [installed]
+libcbor0.6/focal,now 0.6.0-0ubuntu1 amd64 [installed]
+libcc1-0/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libcdio-cdda2/focal,now 10.2+2.0.0-1 amd64 [installed]
+libcdio-paranoia2/focal,now 10.2+2.0.0-1 amd64 [installed]
+libcdio18/focal,now 2.0.0-2 amd64 [installed]
+libcdparanoia0/focal,now 3.10.2+debian-13 amd64 [installed]
+libcdr-0.1-1/focal,now 0.1.6-1build2 amd64 [installed]
+libcgi-fast-perl/focal,now 1:2.15-1 all [installed]
+libcgi-pm-perl/focal,now 4.46-1 all [installed]
+libchamplain-0.12-0/focal,now 0.12.20-1 amd64 [installed]
+libchamplain-gtk-0.12-0/focal,now 0.12.20-1 amd64 [installed]
+libchromaprint1/focal,now 1.4.3-3build1 amd64 [installed]
+libcinnamon-control-center1/una,now 5.2.1+una amd64 [installed]
+libcinnamon-desktop-dbg/una,now 5.2.1+una amd64 [installed]
+libcinnamon-desktop4/una,now 5.2.1+una amd64 [installed]
+libcinnamon-menu-3-0-dbg/una,now 5.2.0+una amd64 [installed]
+libcinnamon-menu-3-0/una,now 5.2.0+una amd64 [installed]
+libcjs-dbg/una,now 5.2.0+una amd64 [installed]
+libcjs0f/una,now 5.2.0+una amd64 [installed]
+libclass-method-modifiers-perl/focal,now 2.13-1 all [installed]
+libclass-xsaccessor-perl/focal,now 1.19-3build3 amd64 [installed]
+libclone-perl/focal,now 0.43-2 amd64 [installed]
+libclucene-contribs1v5/focal,now 2.3.3.4+dfsg-1build1 amd64 [installed]
+libclucene-core1v5/focal,now 2.3.3.4+dfsg-1build1 amd64 [installed]
+libclutter-1.0-0/focal,now 1.26.4+dfsg-1 amd64 [installed]
+libclutter-1.0-common/focal,now 1.26.4+dfsg-1 all [installed]
+libclutter-gst-3.0-0/focal,now 3.0.27-1 amd64 [installed]
+libclutter-gtk-1.0-0/focal,now 1.8.4-4 amd64 [installed]
+libcmis-0.5-5v5/focal,now 0.5.2-1ubuntu1 amd64 [installed]
+libcodec2-0.9/focal,now 0.9.2-2 amd64 [installed]
+libcogl-common/focal,now 1.22.6-1 all [installed]
+libcogl-pango20/focal,now 1.22.6-1 amd64 [installed]
+libcogl-path20/focal,now 1.22.6-1 amd64 [installed]
+libcogl20/focal,now 1.22.6-1 amd64 [installed]
+libcolamd2/focal,now 1:5.7.1+dfsg-2 amd64 [installed]
+libcolord2/focal,now 1.4.4-2 amd64 [installed]
+libcolorhug2/focal,now 1.4.4-2 amd64 [installed]
+libcom-err2/focal,now 1.45.5-2ubuntu1 amd64 [installed]
+libconfig-inifiles-perl/focal,now 3.000002-1 all [installed,automatic]
+libcpanel-json-xs-perl/focal,now 4.19-1build1 amd64 [installed]
+libcrack2/focal,now 2.9.6-3.2 amd64 [installed]
+libcroco3/focal,now 0.6.13-1 amd64 [installed]
+libcrypt-dev/focal,now 1:4.4.10-10ubuntu4 amd64 [installed,automatic]
+libcrypt1/focal,now 1:4.4.10-10ubuntu4 amd64 [installed]
+libcrypt1/now 1:4.4.10-10ubuntu4 i386 [installed,local]
+libcryptsetup12/focal-updates,focal-security,now 2:2.2.2-3ubuntu2.4 amd64 [installed]
+libcscreensaver0/una,now 5.2.1+una amd64 [installed]
+libctf-nobfd0/focal-updates,focal-security,now 2.34-6ubuntu1.3 amd64 [installed]
+libctf0/focal-updates,focal-security,now 2.34-6ubuntu1.3 amd64 [installed]
+libcups2/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+libcupsfilters1/focal,now 1.27.4-1 amd64 [installed]
+libcupsimage2/focal-updates,focal-security,now 2.3.1-9ubuntu1.1 amd64 [installed]
+libcurl3-gnutls/focal-updates,focal-security,now 7.68.0-1ubuntu2.11 amd64 [installed]
+libcurl4/focal-updates,focal-security,now 7.68.0-1ubuntu2.11 amd64 [installed]
+libcvc-dbg/una,now 5.2.1+una amd64 [installed]
+libcvc0/una,now 5.2.1+una amd64 [installed]
+libcwidget4/focal,now 0.5.18-5build1 amd64 [installed]
+libdaemon0/focal,now 0.14-7 amd64 [installed]
+libdata-dump-perl/focal,now 1.23-1 all [installed]
+libdatrie1/focal,now 0.2.12-3 amd64 [installed]
+libdazzle-1.0-0/focal,now 3.36.0-1 amd64 [installed]
+libdb5.3/focal,now 5.3.28+dfsg1-0.6ubuntu2 amd64 [installed]
+libdbd-mysql-perl/focal,now 4.050-3 amd64 [installed,automatic]
+libdbi-perl/focal-updates,focal-security,now 1.643-1ubuntu0.1 amd64 [installed,automatic]
+libdbus-1-3/focal-updates,focal-security,now 1.12.16-2ubuntu2.2 amd64 [installed]
+libdbus-glib-1-2/focal,now 0.110-5fakssync1 amd64 [installed]
+libdbusmenu-glib4/focal,now 16.04.1+18.10.20180917-0ubuntu6 amd64 [installed]
+libdbusmenu-gtk3-4/focal,now 16.04.1+18.10.20180917-0ubuntu6 amd64 [installed]
+libdc1394-22/focal,now 2.2.5-2.1 amd64 [installed]
+libdconf1/focal,now 0.36.0-1 amd64 [installed]
+libdebconfclient0/focal,now 0.251ubuntu1 amd64 [installed]
+libdebian-installer4/focal,now 0.110ubuntu3 amd64 [installed]
+libdee-1.0-4/focal,now 1.2.7+17.10.20170616-4ubuntu6 amd64 [installed]
+libdevel-callchecker-perl/focal,now 0.008-1ubuntu1 amd64 [installed]
+libdevel-size-perl/focal,now 0.83-1build1 amd64 [installed]
+libdevmapper-event1.02.1/focal,now 2:1.02.167-1ubuntu1 amd64 [installed]
+libdevmapper1.02.1/focal,now 2:1.02.167-1ubuntu1 amd64 [installed]
+libdigest-hmac-perl/focal,now 1.03+dfsg-2 all [installed]
+libdjvulibre-text/focal-updates,focal-security,now 3.5.27.1-14ubuntu0.1 all [installed]
+libdjvulibre21/focal-updates,focal-security,now 3.5.27.1-14ubuntu0.1 amd64 [installed]
+libdmapsharing-3.0-2/focal,now 2.9.39-6 amd64 [installed]
+libdmraid1.0.0.rc16/focal,now 1.0.0.rc16-8ubuntu3 amd64 [installed]
+libdns-export1109/focal-updates,now 1:9.11.16+dfsg-3~ubuntu1 amd64 [installed]
+libdotconf0/focal,now 1.3-0.3fakesync1 amd64 [installed]
+libdouble-conversion3/focal,now 3.1.5-4ubuntu1 amd64 [installed]
+libdpkg-perl/focal,now 1.19.7ubuntu3 all [installed]
+libdrm-amdgpu1/focal-updates,focal-security,now 2.4.107-8ubuntu1~20.04.2 amd64 [installed]
+libdrm-amdgpu1/now 2.4.107-8ubuntu1~20.04.2 i386 [installed,local]
+libdrm-common/focal-updates,focal-security,now 2.4.107-8ubuntu1~20.04.2 all [installed]
+libdrm-intel1/focal-updates,focal-security,now 2.4.107-8ubuntu1~20.04.2 amd64 [installed]
+libdrm-intel1/now 2.4.107-8ubuntu1~20.04.2 i386 [installed,local]
+libdrm-nouveau2/focal-updates,focal-security,now 2.4.107-8ubuntu1~20.04.2 amd64 [installed]
+libdrm-nouveau2/now 2.4.107-8ubuntu1~20.04.2 i386 [installed,local]
+libdrm-radeon1/focal-updates,focal-security,now 2.4.107-8ubuntu1~20.04.2 amd64 [installed]
+libdrm-radeon1/now 2.4.107-8ubuntu1~20.04.2 i386 [installed,local]
+libdrm2/focal-updates,focal-security,now 2.4.107-8ubuntu1~20.04.2 amd64 [installed]
+libdrm2/now 2.4.107-8ubuntu1~20.04.2 i386 [installed,local]
+libdv4/focal,now 1.0.0-12 amd64 [installed]
+libdvdnav4/focal,now 6.0.1-1build1 amd64 [installed]
+libdvdread7/focal,now 6.1.0+really6.0.2-1 amd64 [installed]
+libdw1/focal,now 0.176-1.1build1 amd64 [installed]
+libdynaloader-functions-perl/focal,now 0.003-1 all [installed]
+libe-book-0.1-1/focal,now 0.1.3-1build3 amd64 [installed]
+libebackend-1.2-10/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libebook-1.2-20/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libebook-contacts-1.2-3/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libecal-2.0-1/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libecryptfs1/focal,now 111-0ubuntu7 amd64 [installed]
+libedata-book-1.2-26/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libedata-cal-2.0-1/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libedataserver-1.2-24/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libedataserverui-1.2-2/focal-updates,now 3.36.5-0ubuntu1 amd64 [installed]
+libedit2/focal,now 3.1-20191231-1 amd64 [installed]
+libedit2/now 3.1-20191231-1 i386 [installed,local]
+libefiboot1/focal-updates,now 37-2ubuntu2.2 amd64 [installed]
+libefivar1/focal-updates,now 37-2ubuntu2.2 amd64 [installed]
+libegl-mesa0/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+libegl1/focal-updates,focal-security,now 1.3.2-1~ubuntu0.20.04.2 amd64 [installed]
+libel-api-java/focal,now 3.0.0-2 all [installed]
+libelf1/focal,now 0.176-1.1build1 amd64 [installed]
+libelf1/now 0.176-1.1build1 i386 [installed,local]
+libemail-valid-perl/focal,now 1.202-1 all [installed]
+libenchant-2-2/focal-updates,now 2.2.8-1ubuntu0.20.04.1 amd64 [installed]
+libencode-locale-perl/focal,now 1.05-1 all [installed]
+libeot0/focal,now 0.01-5 amd64 [installed]
+libepoxy0/focal,now 1.5.4-1 amd64 [installed]
+libept1.6.0/focal,now 1.1+nmu3ubuntu3 amd64 [installed]
+libepubgen-0.1-1/focal,now 0.1.1-1ubuntu2 amd64 [installed]
+liberror-perl/focal,now 0.17029-1 all [installed,automatic]
+libespeak-ng1/focal,now 1.50+dfsg-6 amd64 [installed]
+libestr0/focal,now 0.1.10-2.1 amd64 [installed]
+libetonyek-0.1-1/focal,now 0.1.9-3 amd64 [installed]
+libevdev2/focal-updates,focal-security,now 1.9.0+dfsg-1ubuntu0.2 amd64 [installed]
+libevent-2.1-7/focal,now 2.1.11-stable-1 amd64 [installed]
+libexempi8/focal,now 2.5.1-1build1 amd64 [installed]
+libexif12/focal-updates,focal-security,now 0.6.21-6ubuntu0.4 amd64 [installed]
+libexiv2-27/focal-updates,focal-security,now 0.27.2-8ubuntu2.7 amd64 [installed]
+libexpat1-dev/focal-updates,focal-security,now 2.2.9-1ubuntu0.4 amd64 [installed,automatic]
+libexpat1/focal-updates,focal-security,now 2.2.9-1ubuntu0.4 amd64 [installed]
+libexpat1/now 2.2.9-1ubuntu0.4 i386 [installed,local]
+libexporter-tiny-perl/focal,now 1.002001-1 all [installed]
+libext2fs2/focal,now 1.45.5-2ubuntu1 amd64 [installed]
+libexttextcat-2.0-0/focal,now 3.4.5-1 amd64 [installed]
+libexttextcat-data/focal,now 3.4.5-1 all [installed]
+libextutils-depends-perl/focal,now 0.8000-1 all [installed]
+libextutils-pkgconfig-perl/focal,now 1.16-1 all [installed]
+libfakeroot/focal,now 1.24-1 amd64 [installed]
+libfastjson4/focal,now 0.99.8-2 amd64 [installed]
+libfcgi-perl/focal,now 0.79-1 amd64 [installed]
+libfdisk1/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+libffi7/focal,now 3.3-4 amd64 [installed]
+libffi7/now 3.3-4 i386 [installed,local]
+libffmpegthumbnailer4v5/focal,now 2.1.1-0.2build2 amd64 [installed]
+libfftw3-double3/focal,now 3.3.8-2ubuntu1 amd64 [installed]
+libfftw3-single3/focal,now 3.3.8-2ubuntu1 amd64 [installed]
+libfido2-1/focal,now 1.3.1-1ubuntu2 amd64 [installed]
+libfile-basedir-perl/focal,now 0.08-1 all [installed]
+libfile-desktopentry-perl/focal,now 0.22-1 all [installed]
+libfile-fcntllock-perl/focal,now 0.22-3build4 amd64 [installed]
+libfile-find-rule-perl/focal,now 0.34-1 all [installed]
+libfile-listing-perl/focal,now 6.04-1 all [installed]
+libfile-mimeinfo-perl/focal,now 0.29-1 all [installed]
+libflac8/focal,now 1.3.3-1build1 amd64 [installed]
+libflatpak0/una,now 1.12.2-1flatpak1~20.04 amd64 [installed]
+libflite1/focal,now 2.1-release-3 amd64 [installed]
+libfont-afm-perl/focal,now 1.20-2 all [installed]
+libfont-ttf-perl/focal,now 1.06-1 all [installed]
+libfontconfig1/focal,now 2.13.1-2ubuntu3 amd64 [installed]
+libfontembed1/focal,now 1.27.4-1 amd64 [installed]
+libfontenc1/focal,now 1:1.1.4-0ubuntu1 amd64 [installed]
+libfprint-2-2/focal-updates,now 1:1.90.2+tod1-0ubuntu1~20.04.7 amd64 [installed]
+libfreehand-0.1-1/focal,now 0.1.2-2ubuntu1 amd64 [installed]
+libfreetype6/focal-updates,focal-security,now 2.10.1-2ubuntu0.1 amd64 [installed]
+libfribidi0/focal-updates,focal-security,now 1.0.8-2ubuntu0.1 amd64 [installed]
+libfuse2/focal,now 2.9.9-3 amd64 [installed]
+libfuture-perl/focal,now 0.43-1 all [installed]
+libfwupd2/focal-updates,now 1.7.5-3~20.04.1 amd64 [installed]
+libfwupdplugin1/focal-updates,now 1.5.11-0ubuntu1~20.04.2 amd64 [installed]
+libfwupdplugin5/focal-updates,now 1.7.5-3~20.04.1 amd64 [installed,automatic]
+libgail-3-0/focal-updates,now 3.24.20-0ubuntu1.1 amd64 [installed]
+libgail-common/focal,now 2.24.32-4ubuntu4 amd64 [installed]
+libgail18/focal,now 2.24.32-4ubuntu4 amd64 [installed]
+libgamemode0/focal-updates,now 1.5.1-0ubuntu3.1 amd64 [installed]
+libgamemodeauto0/focal-updates,now 1.5.1-0ubuntu3.1 amd64 [installed]
+libgbm1/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+libgc1c2/focal,now 1:7.6.4-0.4ubuntu1 amd64 [installed]
+libgcab-1.0-0/focal,now 1.4-1 amd64 [installed]
+libgcc-9-dev/focal-updates,focal-security,now 9.4.0-1ubuntu1~20.04.1 amd64 [installed]
+libgcc-s1/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libgcc-s1/now 10.3.0-1ubuntu1~20.04 i386 [installed,local]
+libgck-1-0/focal,now 3.36.0-2build1 amd64 [installed]
+libgconf-2-4/focal,now 3.2.6-6ubuntu1 amd64 [installed,automatic]
+libgcr-base-3-1/focal,now 3.36.0-2build1 amd64 [installed]
+libgcr-ui-3-1/focal,now 3.36.0-2build1 amd64 [installed]
+libgcrypt20/focal-updates,focal-security,now 1.8.5-5ubuntu1.1 amd64 [installed]
+libgd3/focal-updates,focal-security,now 2.2.5-5.2ubuntu2.1 amd64 [installed]
+libgdata-common/focal,now 0.17.12-1 all [installed]
+libgdata22/focal,now 0.17.12-1 amd64 [installed]
+libgdbm-compat4/focal,now 1.18.1-5 amd64 [installed]
+libgdbm6/focal,now 1.18.1-5 amd64 [installed]
+libgdk-pixbuf2.0-0/focal-updates,focal-security,now 2.40.0+dfsg-3ubuntu0.2 amd64 [installed]
+libgdk-pixbuf2.0-bin/focal-updates,focal-security,now 2.40.0+dfsg-3ubuntu0.2 amd64 [installed]
+libgdk-pixbuf2.0-common/focal-updates,focal-security,now 2.40.0+dfsg-3ubuntu0.2 all [installed]
+libgee-0.8-2/focal,now 0.20.3-1 amd64 [installed]
+libgeoclue-2-0/focal,now 2.5.6-0ubuntu1 amd64 [installed]
+libgeocode-glib0/focal,now 3.26.2-2 amd64 [installed]
+libgif7/focal,now 5.1.9-1 amd64 [installed]
+libgirepository-1.0-1/focal-updates,now 1.64.1-1~ubuntu20.04.1 amd64 [installed]
+libgl1-mesa-dri/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+libgl1-mesa-dri/now 21.2.6-0ubuntu0.1~20.04.2 i386 [installed,local]
+libgl1/focal-updates,focal-security,now 1.3.2-1~ubuntu0.20.04.2 amd64 [installed]
+libgl1/now 1.3.2-1~ubuntu0.20.04.2 i386 [installed,local]
+libglapi-mesa/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+libglapi-mesa/now 21.2.6-0ubuntu0.1~20.04.2 i386 [installed,local]
+libgles2/focal-updates,focal-security,now 1.3.2-1~ubuntu0.20.04.2 amd64 [installed]
+libglib-object-introspection-perl/focal,now 0.048-2build1 amd64 [installed]
+libglib-perl/focal,now 3:1.329.2-1 amd64 [installed]
+libglib2.0-0/focal-updates,now 2.64.6-1~ubuntu20.04.4 amd64 [installed]
+libglib2.0-bin/focal-updates,now 2.64.6-1~ubuntu20.04.4 amd64 [installed]
+libglib2.0-data/focal-updates,now 2.64.6-1~ubuntu20.04.4 all [installed]
+libglibmm-2.4-1v5/focal,now 2.64.2-1 amd64 [installed]
+libglu1-mesa/focal,now 9.0.1-1build1 amd64 [installed]
+libglvnd0/focal-updates,focal-security,now 1.3.2-1~ubuntu0.20.04.2 amd64 [installed]
+libglvnd0/now 1.3.2-1~ubuntu0.20.04.2 i386 [installed,local]
+libglx-mesa0/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+libglx-mesa0/now 21.2.6-0ubuntu0.1~20.04.2 i386 [installed,local]
+libglx0/focal-updates,focal-security,now 1.3.2-1~ubuntu0.20.04.2 amd64 [installed]
+libglx0/now 1.3.2-1~ubuntu0.20.04.2 i386 [installed,local]
+libgme0/focal,now 0.6.2-1build1 amd64 [installed]
+libgmp10/focal,now 2:6.2.0+dfsg-4 amd64 [installed]
+libgnome-bluetooth13/focal-updates,now 3.34.3-0ubuntu1 amd64 [installed]
+libgnome-desktop-3-19/focal-updates,now 3.36.8-0ubuntu1 amd64 [installed]
+libgnomekbd-common/focal,now 3.26.1-1 all [installed]
+libgnomekbd8/focal,now 3.26.1-1 amd64 [installed]
+libgnutls30/focal-updates,focal-security,now 3.6.13-2ubuntu1.6 amd64 [installed]
+libgoa-1.0-0b/una,now 3.36.1-linuxmint1+uma amd64 [installed]
+libgoa-1.0-common/una,now 3.36.1-linuxmint1+uma all [installed]
+libgoa-backend-1.0-1/una,now 3.36.1-linuxmint1+uma amd64 [installed]
+libgomp1/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libgpg-error0/focal,now 1.37-1 amd64 [installed]
+libgpgme11/focal,now 1.13.1-7ubuntu2 amd64 [installed]
+libgpgmepp6/focal,now 1.13.1-7ubuntu2 amd64 [installed]
+libgphoto2-6/focal-updates,now 2.5.25-0ubuntu0.1 amd64 [installed]
+libgphoto2-l10n/focal-updates,now 2.5.25-0ubuntu0.1 all [installed]
+libgphoto2-port12/focal-updates,now 2.5.25-0ubuntu0.1 amd64 [installed]
+libgpm2/focal,now 1.20.7-5 amd64 [installed]
+libgpod-common/focal,now 0.8.3-15 amd64 [installed]
+libgpod4/focal,now 0.8.3-15 amd64 [installed]
+libgraphene-1.0-0/focal,now 1.10.0-1build2 amd64 [installed]
+libgraphite2-3/focal,now 1.3.13-11build1 amd64 [installed]
+libgrilo-0.3-0/focal-updates,focal-security,now 0.3.12-1ubuntu0.1 amd64 [installed]
+libgs9-common/focal-updates,focal-security,now 9.50~dfsg-5ubuntu4.5 all [installed]
+libgs9/focal-updates,focal-security,now 9.50~dfsg-5ubuntu4.5 amd64 [installed]
+libgsf-1-114/focal,now 1.14.46-1 amd64 [installed]
+libgsf-1-common/focal,now 1.14.46-1 all [installed]
+libgsf-bin/focal,now 1.14.46-1 amd64 [installed,automatic]
+libgsm1/focal,now 1.0.18-2 amd64 [installed]
+libgspell-1-2/focal,now 1.8.3-1 amd64 [installed]
+libgspell-1-common/focal,now 1.8.3-1 all [installed]
+libgssapi-krb5-2/focal-updates,focal-security,now 1.17-6ubuntu4.1 amd64 [installed]
+libgssapi3-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libgstreamer-gl1.0-0/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+libgstreamer-plugins-base1.0-0/focal-updates,focal-security,now 1.16.2-4ubuntu0.1 amd64 [installed]
+libgstreamer-plugins-good1.0-0/focal-updates,focal-security,now 1.16.2-1ubuntu2.1 amd64 [installed]
+libgstreamer1.0-0/focal,now 1.16.2-2 amd64 [installed]
+libgtk-3-0/focal-updates,now 3.24.20-0ubuntu1.1 amd64 [installed]
+libgtk-3-bin/focal-updates,now 3.24.20-0ubuntu1.1 amd64 [installed]
+libgtk-3-common/focal-updates,now 3.24.20-0ubuntu1.1 all [installed]
+libgtk-layer-shell0/focal,now 0.1.0-3 amd64 [installed]
+libgtk2-perl/focal,now 2:1.24993-1ubuntu2 amd64 [installed]
+libgtk2.0-0/focal,now 2.24.32-4ubuntu4 amd64 [installed]
+libgtk2.0-bin/focal,now 2.24.32-4ubuntu4 amd64 [installed]
+libgtk2.0-common/focal,now 2.24.32-4ubuntu4 all [installed]
+libgtk3-perl/focal,now 0.037-1 all [installed]
+libgtkmm-3.0-1v5/focal,now 3.24.2-1build1 amd64 [installed]
+libgtksourceview-3.0-1/focal,now 3.24.11-2 amd64 [installed]
+libgtksourceview-3.0-common/focal,now 3.24.11-2 all [installed]
+libgtksourceview-4-0/focal,now 4.6.0-1 amd64 [installed]
+libgtksourceview-4-common/focal,now 4.6.0-1 all [installed]
+libgtop-2.0-11/focal,now 2.40.0-2 amd64 [installed]
+libgtop2-common/focal,now 2.40.0-2 all [installed]
+libgucharmap-2-90-7/focal,now 1:13.0.1-1 amd64 [installed]
+libgudev-1.0-0/focal,now 1:233-1 amd64 [installed]
+libgusb2/focal,now 0.3.4-0.1 amd64 [installed]
+libgutenprint-common/focal,now 5.3.3-4 all [installed]
+libgutenprint9/focal,now 5.3.3-4 amd64 [installed]
+libgweather-3-16/focal-updates,now 3.36.1-1~ubuntu20.04.1 amd64 [installed]
+libgweather-common/focal-updates,now 3.36.1-1~ubuntu20.04.1 all [installed]
+libgxps2/focal,now 0.3.1-1 amd64 [installed]
+libhandy-0.0-0/focal,now 0.0.13-1 amd64 [installed]
+libharfbuzz-icu0/focal,now 2.6.4-1ubuntu4 amd64 [installed]
+libharfbuzz0b/focal,now 2.6.4-1ubuntu4 amd64 [installed]
+libhcrypto4-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libheimbase1-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libheimntlm0-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libhogweed5/focal-updates,focal-security,now 3.5.1+really3.5.1-2ubuntu0.2 amd64 [installed]
+libhpmud0/una,now 3.21.8+dfsg0-1+klbkfocal amd64 [installed]
+libhsqldb1.8.0-java/focal,now 1.8.0.10+dfsg-10 all [installed]
+libhtml-form-perl/focal,now 6.07-1 all [installed]
+libhtml-format-perl/focal,now 2.12-1 all [installed]
+libhtml-parser-perl/focal,now 3.72-5 amd64 [installed]
+libhtml-tagset-perl/focal,now 3.20-4 all [installed]
+libhtml-template-perl/focal,now 2.97-1 all [installed,automatic]
+libhtml-tree-perl/focal,now 5.07-2 all [installed]
+libhttp-cookies-perl/focal,now 6.08-1 all [installed]
+libhttp-daemon-perl/focal,now 6.06-1 all [installed]
+libhttp-date-perl/focal,now 6.05-1 all [installed]
+libhttp-message-perl/focal,now 6.22-1 all [installed]
+libhttp-negotiate-perl/focal,now 6.01-1 all [installed]
+libhunspell-1.7-0/focal,now 1.7.0-2build2 amd64 [installed]
+libhx509-5-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libhyphen0/focal,now 2.8.8-7 amd64 [installed]
+libibus-1.0-5/focal-updates,now 1.5.22-2ubuntu2.1 amd64 [installed]
+libical3/focal,now 3.0.8-1 amd64 [installed]
+libice6/focal,now 2:1.0.10-0ubuntu1 amd64 [installed]
+libicu66/focal-updates,focal-security,now 66.1-2ubuntu2.1 amd64 [installed]
+libidn11/focal,now 1.33-2.2ubuntu2 amd64 [installed]
+libidn2-0/focal,now 2.2.0-2 amd64 [installed]
+libidn2-0/now 2.2.0-2 i386 [installed,local]
+libiec61883-0/focal,now 1.2.0-3 amd64 [installed]
+libieee1284-3/focal,now 0.2.11-13build1 amd64 [installed]
+libigdgmm11/focal,now 20.1.1+ds1-1 amd64 [installed]
+libijs-0.35/focal,now 0.35-15 amd64 [installed]
+libimagequant0/focal,now 2.12.2-1.1 amd64 [installed]
+libimobiledevice-utils/focal,now 1.2.1~git20191129.9f79242-1build1 amd64 [installed]
+libimobiledevice6/focal,now 1.2.1~git20191129.9f79242-1build1 amd64 [installed]
+libimport-into-perl/focal,now 1.002005-1 all [installed]
+libinput-bin/focal-updates,focal-security,now 1.15.5-1ubuntu0.3 amd64 [installed]
+libinput10/focal-updates,focal-security,now 1.15.5-1ubuntu0.3 amd64 [installed]
+libio-async-loop-epoll-perl/focal,now 0.20-1 all [installed]
+libio-async-perl/focal,now 0.75-1 all [installed]
+libio-html-perl/focal,now 1.001-1 all [installed]
+libio-pty-perl/focal,now 1:1.12-1 amd64 [installed]
+libio-socket-ssl-perl/focal,now 2.067-1 all [installed]
+libio-string-perl/focal,now 1.08-3 all [installed]
+libip4tc2/focal,now 1.8.4-3ubuntu2 amd64 [installed]
+libip6tc2/focal,now 1.8.4-3ubuntu2 amd64 [installed]
+libipc-run-perl/focal,now 20180523.0-2 all [installed]
+libipc-system-simple-perl/focal,now 1.26-1 all [installed]
+libisc-export1105/focal-updates,now 1:9.11.16+dfsg-3~ubuntu1 amd64 [installed]
+libisl22/focal,now 0.22.1-1 amd64 [installed]
+libitm1/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libiw30/focal,now 30~pre9-13ubuntu1 amd64 [installed]
+libjack-jackd2-0/focal,now 1.9.12~dfsg-2ubuntu2 amd64 [installed]
+libjansson4/focal,now 2.12-1build1 amd64 [installed]
+libjavascriptcoregtk-4.0-18/focal-updates,focal-security,now 2.36.0-0ubuntu0.20.04.3 amd64 [installed]
+libjbig0/focal,now 2.1-3.1build1 amd64 [installed]
+libjbig2dec0/focal,now 0.18-1ubuntu1 amd64 [installed]
+libjcat1/focal-updates,now 0.1.4-0ubuntu0.20.04.1 amd64 [installed]
+libjpeg-turbo8/focal-updates,focal-security,now 2.0.3-0ubuntu1.20.04.1 amd64 [installed]
+libjpeg8/focal,now 8c-2ubuntu8 amd64 [installed]
+libjs-mathjax/focal,now 2.7.4+dfsg-1 all [installed]
+libjson-c4/focal-updates,focal-security,now 0.13.1+dfsg-7ubuntu0.3 amd64 [installed]
+libjson-glib-1.0-0/focal,now 1.4.4-2ubuntu2 amd64 [installed]
+libjson-glib-1.0-common/focal,now 1.4.4-2ubuntu2 all [installed]
+libjson-maybexs-perl/focal,now 1.004000-1 all [installed]
+libjsp-api-java/focal,now 2.3.4-2 all [installed]
+libjuh-java/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libjurt-java/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libk5crypto3/focal-updates,focal-security,now 1.17-6ubuntu4.1 amd64 [installed]
+libkeybinder-3.0-0/focal,now 0.3.2-1ubuntu1 amd64 [installed]
+libkeyutils1/focal,now 1.6-6ubuntu1 amd64 [installed]
+libklibc/focal-updates,focal-security,now 2.0.7-1ubuntu5.1 amd64 [installed]
+libkmod2/focal,now 27-1ubuntu2 amd64 [installed]
+libkpathsea6/focal,now 2019.20190605.51237-3build2 amd64 [installed]
+libkrb5-26-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libkrb5-3/focal-updates,focal-security,now 1.17-6ubuntu4.1 amd64 [installed]
+libkrb5support0/focal-updates,focal-security,now 1.17-6ubuntu4.1 amd64 [installed]
+libksba8/focal,now 1.3.5-2 amd64 [installed]
+liblangtag-common/focal,now 0.6.3-1 all [installed]
+liblangtag1/focal,now 0.6.3-1 amd64 [installed]
+liblcms2-2/focal,now 2.9-4 amd64 [installed]
+liblcms2-utils/focal,now 2.9-4 amd64 [installed]
+libldap-2.4-2/focal-updates,now 2.4.49+dfsg-2ubuntu1.8 amd64 [installed]
+libldap-common/focal-updates,now 2.4.49+dfsg-2ubuntu1.8 all [installed]
+libldb2/focal-updates,focal-security,now 2:2.2.3-0ubuntu0.20.04.2 amd64 [installed]
+liblightdm-gobject-1-0/focal-updates,now 1.30.0-0ubuntu4~20.04.2 amd64 [installed]
+liblilv-0-0/focal-updates,now 0.24.6-1ubuntu0.1 amd64 [installed]
+liblinux-epoll-perl/focal,now 0.017-1 amd64 [installed]
+liblirc-client0/focal-updates,now 0.10.1-6.1ubuntu1.1 amd64 [installed]
+liblist-compare-perl/focal,now 0.53-1 all [installed]
+liblist-moreutils-perl/focal,now 0.416-1build5 amd64 [installed]
+libllvm12/focal-updates,focal-security,now 1:12.0.0-3ubuntu1~20.04.5 amd64 [installed]
+libllvm12/now 1:12.0.0-3ubuntu1~20.04.5 i386 [installed,local]
+liblmdb0/focal,now 0.9.24-1 amd64 [installed]
+liblocale-gettext-perl/focal,now 1.07-4 amd64 [installed]
+liblouis-data/focal,now 3.12.0-3 all [installed]
+liblouis20/focal,now 3.12.0-3 amd64 [installed]
+liblouisutdml-bin/focal,now 2.8.0-3 amd64 [installed]
+liblouisutdml-data/focal,now 2.8.0-3 all [installed]
+liblouisutdml9/focal,now 2.8.0-3 amd64 [installed]
+liblsan0/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libltdl7/focal,now 2.4.6-14 amd64 [installed]
+liblua5.2-0/focal,now 5.2.4-1.1build3 amd64 [installed]
+liblvm2cmd2.03/focal,now 2.03.07-1ubuntu1 amd64 [installed]
+liblwp-mediatypes-perl/focal,now 6.04-1 all [installed]
+liblwp-protocol-https-perl/focal,now 6.07-2ubuntu2 all [installed]
+liblz4-1/focal-updates,focal-security,now 1.9.2-2ubuntu0.20.04.1 amd64 [installed]
+liblzma5/focal-updates,focal-security,now 5.2.4-1ubuntu1.1 amd64 [installed]
+liblzo2-2/focal,now 2.10-2 amd64 [installed]
+libmagic-mgc/focal,now 1:5.38-4 amd64 [installed]
+libmagic1/focal,now 1:5.38-4 amd64 [installed]
+libmailtools-perl/focal,now 2.21-1 all [installed]
+libmate-desktop-2-17/una,now 1.26.0-0ubuntu1~focal2.1 amd64 [installed]
+libmate-menu2/una,now 1.26.0-linuxmint2 amd64 [installed]
+libmate-panel-applet-4-1/una,now 1.26.1.1mint1+una amd64 [installed]
+libmateweather-common/una,now 1.26.0-0ubuntu1~focal2.0 all [installed]
+libmateweather1/una,now 1.26.0-0ubuntu1~focal2.0 amd64 [installed]
+libmaxminddb0/focal-updates,focal-security,now 1.4.2-0ubuntu1.20.04.1 amd64 [installed]
+libmbim-glib4/focal-updates,now 1.24.8-1~20.04 amd64 [installed]
+libmbim-proxy/focal-updates,now 1.24.8-1~20.04 amd64 [installed]
+libmessaging-menu0/focal,now 13.10.1+18.10.20180918-0ubuntu2 amd64 [installed]
+libmetacity1/focal,now 1:3.36.1-1 amd64 [installed]
+libmhash2/focal,now 0.9.9.9-8 amd64 [installed]
+libminiupnpc17/focal,now 2.1.20190824-0ubuntu2 amd64 [installed]
+libmm-glib0/focal-updates,now 1.16.6-2~20.04.1 amd64 [installed]
+libmnl0/focal,now 1.0.4-2 amd64 [installed]
+libmodule-implementation-perl/focal,now 0.09-1 all [installed]
+libmodule-runtime-perl/focal,now 0.016-1 all [installed]
+libmoo-perl/focal,now 2.003006-1 all [installed]
+libmoox-aliases-perl/focal,now 0.001006-1 all [installed]
+libmount1/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+libmozjs-78-0/una,now 78.2.0~linuxmint1+ulyana amd64 [installed]
+libmp3lame0/focal,now 3.100-3 amd64 [installed]
+libmpc3/focal,now 1.1.0-1 amd64 [installed]
+libmpdec2/focal,now 2.4.2-3 amd64 [installed]
+libmpfr6/focal,now 4.0.2-1 amd64 [installed]
+libmpg123-0/focal,now 1.25.13-1 amd64 [installed]
+libmpv1/focal,now 0.32.0-1ubuntu1 amd64 [installed]
+libmspub-0.1-1/focal,now 0.1.4-1build3 amd64 [installed]
+libmtdev1/focal,now 1.1.5-1.1 amd64 [installed]
+libmtp-common/focal,now 1.1.17-3 all [installed]
+libmtp-runtime/focal,now 1.1.17-3 amd64 [installed]
+libmtp9/focal,now 1.1.17-3 amd64 [installed]
+libmuffin0/una,now 5.2.1+una amd64 [installed]
+libmusicbrainz5-2/focal,now 5.1.0+git20150707-9build1 amd64 [installed]
+libmusicbrainz5cc2v5/focal,now 5.1.0+git20150707-9build1 amd64 [installed]
+libmwaw-0.3-3/focal,now 0.3.15-2build1 amd64 [installed]
+libmysofa1/focal,now 1.0~dfsg0-1 amd64 [installed]
+libmysqlclient21/focal-updates,focal-security,now 8.0.29-0ubuntu0.20.04.3 amd64 [installed]
+libmythes-1.2-0/focal,now 2:1.2.4-3build1 amd64 [installed]
+libnamespace-clean-perl/focal,now 0.27-1 all [installed]
+libnatpmp1/focal,now 20150609-7build1 amd64 [installed]
+libnautilus-extension1a/focal-updates,now 1:3.36.3-0ubuntu1.20.04.1 amd64 [installed]
+libncurses6/focal,now 6.2-0ubuntu2 amd64 [installed]
+libncursesw6/focal,now 6.2-0ubuntu2 amd64 [installed]
+libndp0/focal,now 1.7-0ubuntu1 amd64 [installed]
+libnemo-extension1/una,now 5.2.4+una amd64 [installed]
+libneon27-gnutls/focal,now 0.30.2-4 amd64 [installed]
+libnet-dbus-perl/focal,now 1.2.0-1 amd64 [installed]
+libnet-dns-perl/focal,now 1.22-1 all [installed]
+libnet-domain-tld-perl/focal,now 1.75-1 all [installed]
+libnet-http-perl/focal,now 6.19-1 all [installed]
+libnet-ip-perl/focal,now 1.26-2 all [installed]
+libnet-libidn-perl/focal,now 0.12.ds-3build2 amd64 [installed]
+libnet-smtp-ssl-perl/focal,now 1.04-1 all [installed]
+libnet-ssleay-perl/focal,now 1.88-2ubuntu1 amd64 [installed]
+libnetfilter-conntrack3/focal,now 1.0.7-2 amd64 [installed]
+libnetplan0/focal-updates,now 0.104-0ubuntu2~20.04.1 amd64 [installed]
+libnettle7/focal-updates,focal-security,now 3.5.1+really3.5.1-2ubuntu0.2 amd64 [installed]
+libnewt0.52/focal,now 0.52.21-4ubuntu2 amd64 [installed]
+libnfnetlink0/focal,now 1.0.1-3build1 amd64 [installed]
+libnfs13/focal,now 4.0.0-1 amd64 [installed]
+libnftnl11/focal,now 1.1.5-1 amd64 [installed]
+libnghttp2-14/focal,now 1.40.0-1build1 amd64 [installed]
+libnl-3-200/focal,now 3.4.0-1 amd64 [installed]
+libnl-genl-3-200/focal,now 3.4.0-1 amd64 [installed]
+libnl-route-3-200/focal,now 3.4.0-1 amd64 [installed]
+libnm0/focal-updates,now 1.22.10-1ubuntu2.3 amd64 [installed]
+libnma0/una,now 1.8.24-linuxmint4 amd64 [installed]
+libnorm1/focal,now 1.5.8+dfsg2-2build1 amd64 [installed]
+libnotify-bin/focal,now 0.7.9-1ubuntu2 amd64 [installed]
+libnotify4/focal,now 0.7.9-1ubuntu2 amd64 [installed]
+libnpth0/focal,now 1.6-1 amd64 [installed]
+libnspr4/focal,now 2:4.25-1 amd64 [installed]
+libnss-mdns/focal,now 0.14.1-1ubuntu1 amd64 [installed]
+libnss-myhostname/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+libnss-systemd/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+libnss3/focal-updates,focal-security,now 2:3.49.1-1ubuntu1.7 amd64 [installed]
+libntfs-3g883/focal-updates,focal-security,now 1:2017.3.23AR.3-3ubuntu1.1 amd64 [installed]
+libnuma1/focal,now 2.0.12-1 amd64 [installed]
+libnumber-compare-perl/focal,now 0.03-1 all [installed]
+libnvidia-cfg1-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-common-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 all [installed,automatic]
+libnvidia-compute-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-compute-470/now 470.103.01-0ubuntu0.20.04.1 i386 [installed,local]
+libnvidia-decode-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-decode-470/now 470.103.01-0ubuntu0.20.04.1 i386 [installed,local]
+libnvidia-encode-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-encode-470/now 470.103.01-0ubuntu0.20.04.1 i386 [installed,local]
+libnvidia-extra-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-fbc1-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-fbc1-470/now 470.103.01-0ubuntu0.20.04.1 i386 [installed,local]
+libnvidia-gl-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-gl-470/now 470.103.01-0ubuntu0.20.04.1 i386 [installed,local]
+libnvidia-ifr1-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+libnvidia-ifr1-470/now 470.103.01-0ubuntu0.20.04.1 i386 [installed,local]
+libodfgen-0.1-1/focal,now 0.1.7-1ubuntu2 amd64 [installed]
+libogg0/focal,now 1.3.4-0ubuntu1 amd64 [installed]
+libopenal-data/focal,now 1:1.19.1-1 all [installed]
+libopenal1/focal,now 1:1.19.1-1 amd64 [installed]
+libopengl0/focal-updates,focal-security,now 1.3.2-1~ubuntu0.20.04.2 amd64 [installed,automatic]
+libopenjp2-7/focal-updates,focal-security,now 2.3.1-1ubuntu4.20.04.1 amd64 [installed]
+libopenmpt0/focal,now 0.4.11-1build1 amd64 [installed]
+libopus0/focal,now 1.3.1-0ubuntu1 amd64 [installed]
+liborc-0.4-0/focal,now 1:0.4.31-1 amd64 [installed]
+liborcus-0.15-0/focal,now 0.15.3-3build2 amd64 [installed]
+libostree-1-1/una,now 2020.8-flatpak1~focal amd64 [installed]
+libp11-kit0/focal-updates,focal-security,now 0.23.20-1ubuntu0.1 amd64 [installed]
+libpackage-stash-perl/focal,now 0.38-1 all [installed]
+libpackagekit-glib2-18/focal-updates,focal-security,now 1.1.13-2ubuntu1.1 amd64 [installed]
+libpagemaker-0.0-0/focal,now 0.0.4-1build1 amd64 [installed]
+libpam-cap/focal,now 1:2.32-1 amd64 [installed]
+libpam-gnome-keyring/focal,now 3.36.0-1ubuntu1 amd64 [installed]
+libpam-modules-bin/focal-updates,now 1.3.1-5ubuntu4.3 amd64 [installed]
+libpam-modules/focal-updates,now 1.3.1-5ubuntu4.3 amd64 [installed]
+libpam-runtime/focal-updates,now 1.3.1-5ubuntu4.3 all [installed]
+libpam-systemd/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+libpam0g/focal-updates,now 1.3.1-5ubuntu4.3 amd64 [installed]
+libpango-1.0-0/focal,now 1.44.7-2ubuntu4 amd64 [installed]
+libpango-perl/focal,now 1.227-3build1 amd64 [installed]
+libpangocairo-1.0-0/focal,now 1.44.7-2ubuntu4 amd64 [installed]
+libpangoft2-1.0-0/focal,now 1.44.7-2ubuntu4 amd64 [installed]
+libpangomm-1.4-1v5/focal,now 2.42.0-2build1 amd64 [installed]
+libpangoxft-1.0-0/focal,now 1.44.7-2ubuntu4 amd64 [installed]
+libpaper-utils/focal,now 1.1.28 amd64 [installed]
+libpaper1/focal,now 1.1.28 amd64 [installed]
+libparams-classify-perl/focal,now 0.015-1build2 amd64 [installed]
+libparted-fs-resize0/focal-updates,now 3.3-4ubuntu0.20.04.1 amd64 [installed]
+libparted2/focal-updates,now 3.3-4ubuntu0.20.04.1 amd64 [installed]
+libpath-tiny-perl/focal,now 0.108-1 all [installed]
+libpcap0.8/focal,now 1.9.1-3 amd64 [installed]
+libpcaudio0/focal,now 1.1-4 amd64 [installed]
+libpci3/focal-updates,now 1:3.6.4-1ubuntu0.20.04.1 amd64 [installed]
+libpciaccess0/focal,now 0.16-0ubuntu1 amd64 [installed]
+libpciaccess0/now 0.16-0ubuntu1 i386 [installed,local]
+libpcre2-16-0/focal,now 10.34-7 amd64 [installed]
+libpcre2-32-0/focal,now 10.34-7 amd64 [installed]
+libpcre2-8-0/focal,now 10.34-7 amd64 [installed]
+libpcre3/focal,now 2:8.39-12build1 amd64 [installed]
+libpcsclite1/focal,now 1.8.26-3 amd64 [installed]
+libpeas-1.0-0/focal,now 1.26.0-2 amd64 [installed]
+libpeas-common/focal,now 1.26.0-2 all [installed]
+libperl5.30/focal-updates,focal-security,now 5.30.0-9ubuntu0.2 amd64 [installed]
+libperlio-gzip-perl/focal,now 0.19-1build5 amd64 [installed]
+libpgm-5.2-0/focal,now 5.2.122~dfsg-3ubuntu1 amd64 [installed]
+libphonenumber7/focal,now 7.1.0-5ubuntu11 amd64 [installed]
+libpipeline1/focal,now 1.5.2-2build1 amd64 [installed]
+libpixman-1-0/focal,now 0.38.4-0ubuntu1 amd64 [installed]
+libpkcs11-helper1/focal,now 1.26-1 amd64 [installed]
+libplist3/focal,now 2.1.0-4build2 amd64 [installed]
+libplymouth5/una,now 0.9.4+mint2+ulyssa amd64 [installed]
+libpng16-16/focal,now 1.6.37-2 amd64 [installed]
+libpolkit-agent-1-0/focal-updates,focal-security,now 0.105-26ubuntu1.3 amd64 [installed]
+libpolkit-gobject-1-0/focal-updates,focal-security,now 0.105-26ubuntu1.3 amd64 [installed]
+libpoppler-cpp0v5/focal,now 0.86.1-0ubuntu1 amd64 [installed]
+libpoppler-glib8/focal,now 0.86.1-0ubuntu1 amd64 [installed]
+libpoppler97/focal,now 0.86.1-0ubuntu1 amd64 [installed]
+libpopt0/focal,now 1.16-14 amd64 [installed]
+libpostproc55/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libprocps8/focal-updates,now 2:3.3.16-1ubuntu2.3 amd64 [installed]
+libprotobuf17/focal,now 3.6.1.3-2ubuntu5 amd64 [installed]
+libproxy1-plugin-gsettings/focal-updates,focal-security,now 0.4.15-10ubuntu1.2 amd64 [installed]
+libproxy1-plugin-networkmanager/focal-updates,focal-security,now 0.4.15-10ubuntu1.2 amd64 [installed]
+libproxy1v5/focal-updates,focal-security,now 0.4.15-10ubuntu1.2 amd64 [installed]
+libpsl5/focal,now 0.21.0-1ubuntu1 amd64 [installed]
+libpulse-mainloop-glib0/focal-updates,now 1:13.99.1-1ubuntu3.13 amd64 [installed]
+libpulse0/focal-updates,now 1:13.99.1-1ubuntu3.13 amd64 [installed]
+libpulsedsp/focal-updates,now 1:13.99.1-1ubuntu3.13 amd64 [installed]
+libpwquality-common/focal,now 1.4.2-1build1 all [installed]
+libpwquality1/focal,now 1.4.2-1build1 amd64 [installed]
+libpython2-stdlib/focal,now 2.7.17-2ubuntu4 amd64 [installed,automatic]
+libpython2.7-minimal/focal-updates,focal-security,now 2.7.18-1~20.04.1 amd64 [installed,automatic]
+libpython2.7-stdlib/focal-updates,focal-security,now 2.7.18-1~20.04.1 amd64 [installed,automatic]
+libpython3-dev/focal,now 3.8.2-0ubuntu2 amd64 [installed,automatic]
+libpython3-stdlib/focal,now 3.8.2-0ubuntu2 amd64 [installed]
+libpython3.8-dev/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04.4 amd64 [installed,automatic]
+libpython3.8-minimal/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04.4 amd64 [installed]
+libpython3.8-stdlib/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04.4 amd64 [installed]
+libpython3.8/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04.4 amd64 [installed]
+libqmi-glib5/focal-updates,now 1.28.6-1~20.04.1 amd64 [installed]
+libqmi-proxy/focal-updates,now 1.28.6-1~20.04.1 amd64 [installed]
+libqpdf26/focal-updates,focal-security,now 9.1.1-1ubuntu0.1 amd64 [installed]
+libqt5core5a/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed]
+libqt5dbus5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed]
+libqt5designer5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5gui5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed]
+libqt5help5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5location5/focal,now 5.12.8+dfsg-0ubuntu1 amd64 [installed,automatic]
+libqt5multimedia5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5multimediawidgets5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5network5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed]
+libqt5opengl5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed,automatic]
+libqt5positioning5/focal,now 5.12.8+dfsg-0ubuntu1 amd64 [installed,automatic]
+libqt5positioningquick5/focal,now 5.12.8+dfsg-0ubuntu1 amd64 [installed,automatic]
+libqt5printsupport5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed,automatic]
+libqt5qml5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5quick5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5quickwidgets5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5sensors5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5sql5-sqlite/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed,automatic]
+libqt5sql5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed,automatic]
+libqt5svg5/focal,now 5.12.8-0ubuntu1 amd64 [installed]
+libqt5test5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed,automatic]
+libqt5webchannel5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5webkit5/focal-updates,now 5.212.0~alpha4-1ubuntu2.1 amd64 [installed,automatic]
+libqt5websockets5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libqt5widgets5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed]
+libqt5xml5/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed,automatic]
+libqt5xmlpatterns5/focal,now 5.12.8-0ubuntu1 amd64 [installed,automatic]
+libquadmath0/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libraptor2-0/focal-updates,focal-security,now 2.0.15-0ubuntu1.20.04.1 amd64 [installed]
+librasqal3/focal,now 0.9.33-0.1 amd64 [installed]
+libraw1394-11/focal,now 2.1.2-1 amd64 [installed]
+librdf0/focal,now 1.0.17-1.1ubuntu1 amd64 [installed]
+libreadline5/focal,now 5.2+dfsg-3build3 amd64 [installed]
+libreadline8/focal,now 8.0-4 amd64 [installed]
+libreoffice-base-core/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-base-drivers/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-base/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-calc/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-common/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-core/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-draw/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-gnome/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-gtk3/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-help-common/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-de/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-en-gb/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-en-us/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-es/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-fr/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-it/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-pt-br/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-pt/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-ru/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-zh-cn/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-help-zh-tw/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-impress/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-java-common/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-de/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-en-gb/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-en-za/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-es/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-fr/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-it/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-pt-br/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-pt/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-ru/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-zh-cn/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-l10n-zh-tw/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-math/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-sdbc-hsqldb/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libreoffice-style-colibre/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-style-tango/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libreoffice-writer/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+librest-0.7-0/focal,now 0.8.1-1 amd64 [installed]
+librevenge-0.0-0/focal,now 0.0.4-6ubuntu5 amd64 [installed]
+librhythmbox-core10/focal,now 3.4.4-1ubuntu2 amd64 [installed]
+libridl-java/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libroken18-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+librole-tiny-perl/focal,now 2.001004-1 all [installed]
+librsvg2-2/focal-updates,now 2.48.9-1ubuntu0.20.04.1 amd64 [installed]
+librsvg2-common/focal-updates,now 2.48.9-1ubuntu0.20.04.1 amd64 [installed]
+librtmp1/focal,now 2.4+20151223.gitfa8646d.1-2build1 amd64 [installed]
+librubberband2/focal,now 1.8.2-1build1 amd64 [installed]
+libsamplerate0/focal,now 0.1.9-2 amd64 [installed]
+libsane-common/focal-updates,now 1.0.29-0ubuntu5.2 all [installed]
+libsane-hpaio/una,now 3.21.8+dfsg0-1+klbkfocal amd64 [installed]
+libsane/focal-updates,now 1.0.29-0ubuntu5.2 amd64 [installed]
+libsasl2-2/focal-updates,focal-security,now 2.1.27+dfsg-2ubuntu0.1 amd64 [installed]
+libsasl2-modules-db/focal-updates,focal-security,now 2.1.27+dfsg-2ubuntu0.1 amd64 [installed]
+libsasl2-modules/focal-updates,focal-security,now 2.1.27+dfsg-2ubuntu0.1 amd64 [installed]
+libsbc1/focal,now 1.4-1 amd64 [installed]
+libsdl2-2.0-0/focal,now 2.0.10+dfsg1-3 amd64 [installed]
+libseccomp2/focal-updates,focal-security,now 2.5.1-1ubuntu1~20.04.2 amd64 [installed]
+libsecret-1-0/focal-updates,now 0.20.4-0ubuntu1 amd64 [installed]
+libsecret-common/focal-updates,now 0.20.4-0ubuntu1 all [installed]
+libselinux1/focal,now 3.0-1build2 amd64 [installed]
+libsemanage-common/focal,now 3.0-1build2 all [installed]
+libsemanage1/focal,now 3.0-1build2 amd64 [installed]
+libsensors-config/focal-updates,now 1:3.6.0-2ubuntu1.1 all [installed]
+libsensors5/focal-updates,now 1:3.6.0-2ubuntu1.1 amd64 [installed]
+libsensors5/now 1:3.6.0-2ubuntu1.1 i386 [installed,local]
+libsepol1/focal-updates,focal-security,now 3.0-1ubuntu0.1 amd64 [installed]
+libserd-0-0/focal,now 0.30.2-1 amd64 [installed]
+libsereal-decoder-perl/focal,now 4.011+ds-1build1 amd64 [installed]
+libsereal-encoder-perl/focal,now 4.011+ds-1build1 amd64 [installed]
+libservlet-api-java/focal,now 4.0.1-2 all [installed]
+libservlet3.1-java/focal,now 1:4.0.1-2 all [installed]
+libsgutils2-2/focal,now 1.44-1ubuntu2 amd64 [installed]
+libshine3/focal,now 3.1.1-2 amd64 [installed]
+libshout3/focal,now 2.4.3-1 amd64 [installed]
+libsigc++-2.0-0v5/focal,now 2.10.2-1build1 amd64 [installed]
+libsigsegv2/focal,now 2.12-2 amd64 [installed]
+libslang2/focal,now 2.3.2-4 amd64 [installed]
+libsm6/focal,now 2:1.2.3-1 amd64 [installed]
+libsmartcols1/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+libsmbclient/focal-updates,now 2:4.13.17~dfsg-0ubuntu0.21.04.2 amd64 [installed]
+libsmbios-c2/focal,now 2.4.3-1 amd64 [installed]
+libsnapd-glib1/focal-updates,now 1.58-0ubuntu0.20.04.0 amd64 [installed]
+libsnappy1v5/focal,now 1.1.8-1build1 amd64 [installed]
+libsndfile1/focal-updates,focal-security,now 1.0.28-7ubuntu0.1 amd64 [installed]
+libsndio7.0/focal,now 1.5.0-3 amd64 [installed]
+libsnmp-base/focal-updates,focal-security,now 5.8+dfsg-2ubuntu2.3 all [installed]
+libsnmp35/focal-updates,focal-security,now 5.8+dfsg-2ubuntu2.3 amd64 [installed]
+libsodium23/focal,now 1.0.18-1 amd64 [installed]
+libsonic0/focal,now 0.2.0-8 amd64 [installed]
+libsord-0-0/focal,now 0.16.4-1 amd64 [installed]
+libsoup-gnome2.4-1/focal,now 2.70.0-1 amd64 [installed]
+libsoup2.4-1/focal,now 2.70.0-1 amd64 [installed]
+libsoxr0/focal,now 0.1.3-2build1 amd64 [installed]
+libspectre1/focal,now 0.2.8-2 amd64 [installed]
+libspeechd2/focal,now 0.9.1-4 amd64 [installed]
+libspeex1/focal-updates,focal-security,now 1.2~rc1.2-1.1ubuntu1.20.04.1 amd64 [installed]
+libspeexdsp1/focal-updates,focal-security,now 1.2~rc1.2-1.1ubuntu1.20.04.1 amd64 [installed]
+libsqlite3-0/focal-updates,focal-security,now 3.31.1-4ubuntu0.3 amd64 [installed]
+libsratom-0-0/focal,now 0.6.4-1 amd64 [installed]
+libss2/focal,now 1.45.5-2ubuntu1 amd64 [installed]
+libssh-4/focal-updates,focal-security,now 0.9.3-2ubuntu2.2 amd64 [installed]
+libssh-gcrypt-4/focal-updates,focal-security,now 0.9.3-2ubuntu2.2 amd64 [installed]
+libssl1.1/focal-updates,focal-security,now 1.1.1f-1ubuntu2.13 amd64 [installed]
+libstartup-notification0/focal,now 0.12-6 amd64 [installed]
+libstdc++-9-dev/focal-updates,focal-security,now 9.4.0-1ubuntu1~20.04.1 amd64 [installed,automatic]
+libstdc++6/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libstdc++6/now 10.3.0-1ubuntu1~20.04 i386 [installed,local]
+libstemmer0d/focal,now 0+svn585-2 amd64 [installed]
+libstrictures-perl/focal,now 2.000006-1 all [installed]
+libstruct-dumb-perl/focal,now 0.09-1 all [installed]
+libsub-exporter-progressive-perl/focal,now 0.001013-1 all [installed]
+libsub-identify-perl/focal,now 0.14-1build2 amd64 [installed]
+libsub-name-perl/focal,now 0.26-1 amd64 [installed]
+libsub-quote-perl/focal,now 2.006006-1 all [installed]
+libsuitesparseconfig5/focal,now 1:5.7.1+dfsg-2 amd64 [installed]
+libswresample3/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libswscale5/focal-updates,focal-security,now 7:4.2.4-1ubuntu0.1 amd64 [installed]
+libsystemd0/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+libtag1v5-vanilla/focal,now 1.11.1+dfsg.1-0.3ubuntu2 amd64 [installed]
+libtag1v5/focal,now 1.11.1+dfsg.1-0.3ubuntu2 amd64 [installed]
+libtalloc2/focal-updates,focal-security,now 2.3.1-0ubuntu0.20.04.1 amd64 [installed]
+libtasn1-6/focal,now 4.16.0-2 amd64 [installed]
+libtdb1/focal-updates,focal-security,now 1.4.3-0ubuntu0.20.04.1 amd64 [installed]
+libteamdctl0/focal,now 1.30-1 amd64 [installed]
+libterm-readkey-perl/focal,now 2.38-1build1 amd64 [installed,automatic]
+libtevent0/focal-updates,focal-security,now 0.10.2-0ubuntu0.20.04.1 amd64 [installed]
+libtext-charwidth-perl/focal,now 0.04-10 amd64 [installed]
+libtext-glob-perl/focal,now 0.10-1 all [installed]
+libtext-iconv-perl/focal,now 1.7-7 amd64 [installed]
+libtext-levenshtein-perl/focal,now 0.13-1 all [installed]
+libtext-wrapi18n-perl/focal,now 0.06-9 all [installed]
+libthai-data/focal,now 0.1.28-3 all [installed]
+libthai0/focal,now 0.1.28-3 amd64 [installed]
+libtheora0/focal,now 1.1.1+dfsg.1-15ubuntu2 amd64 [installed]
+libtie-ixhash-perl/focal,now 1.23-2 all [installed]
+libtiff5/focal-updates,focal-security,now 4.1.0+git191117-2ubuntu0.20.04.2 amd64 [installed]
+libtimedate-perl/focal,now 2.3200-1 all [installed]
+libtimezonemap-data/focal,now 0.4.6-2 all [installed]
+libtimezonemap1/focal,now 0.4.6-2 amd64 [installed]
+libtinfo6/focal,now 6.2-0ubuntu2 amd64 [installed]
+libtinfo6/now 6.2-0ubuntu2 i386 [installed,local]
+libtotem-plparser-common/focal,now 3.26.5-1ubuntu1 all [installed]
+libtotem-plparser18/focal,now 3.26.5-1ubuntu1 amd64 [installed]
+libtry-tiny-perl/focal,now 0.30-1 all [installed]
+libtsan0/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libtss2-esys0/focal,now 2.3.2-1 amd64 [installed]
+libtwolame0/focal,now 0.4.0-2 amd64 [installed]
+libtype-tiny-perl/focal,now 1.008001-2 all [installed]
+libubsan1/focal-updates,focal-security,now 10.3.0-1ubuntu1~20.04 amd64 [installed]
+libuchardet0/focal,now 0.0.6-3build1 amd64 [installed]
+libudev1/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+libudisks2-0/focal-updates,now 2.8.4-1ubuntu2 amd64 [installed]
+libunicode-utf8-perl/focal,now 0.62-1build1 amd64 [installed]
+libunistring2/focal,now 0.9.10-2 amd64 [installed]
+libunistring2/now 0.9.10-2 i386 [installed,local]
+libunity-protocol-private0/focal,now 7.1.4+19.04.20190319-0ubuntu3 amd64 [installed]
+libunity-scopes-json-def-desktop/focal,now 7.1.4+19.04.20190319-0ubuntu3 all [installed]
+libunity9/focal,now 7.1.4+19.04.20190319-0ubuntu3 amd64 [installed]
+libuno-cppu3/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libuno-cppuhelpergcc3-3/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libuno-purpenvhelpergcc3-3/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libuno-sal3/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libuno-salhelpergcc3-3/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+libunoil-java/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libunoloader-java/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 all [installed]
+libunwind8/focal,now 1.2.1-9build1 amd64 [installed]
+libupower-glib3/focal,now 0.99.11-1build2 amd64 [installed]
+liburi-perl/focal,now 1.76-2 all [installed]
+libusb-1.0-0/focal,now 2:1.0.23-2build1 amd64 [installed]
+libusbmuxd6/focal,now 2.0.1-2 amd64 [installed]
+libuuid-perl/focal,now 0.28-1build1 amd64 [installed]
+libuuid1/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+libuv1/focal-updates,focal-security,now 1.34.2-1ubuntu1.3 amd64 [installed]
+libv4l-0/focal,now 1.18.0-2build1 amd64 [installed]
+libv4lconvert0/focal,now 1.18.0-2build1 amd64 [installed]
+libva-drm2/focal,now 2.7.0-2 amd64 [installed]
+libva-wayland2/focal,now 2.7.0-2 amd64 [installed]
+libva-x11-2/focal,now 2.7.0-2 amd64 [installed]
+libva2/focal,now 2.7.0-2 amd64 [installed]
+libvariable-magic-perl/focal,now 0.62-1build2 amd64 [installed]
+libvdpau1/focal,now 1.3-1ubuntu2 amd64 [installed]
+libvidstab1.1/focal,now 1.1.0-2 amd64 [installed]
+libvisio-0.1-1/focal,now 0.1.7-1build2 amd64 [installed]
+libvisual-0.4-0/focal,now 0.4.0-17 amd64 [installed]
+libvisual-0.4-plugins/focal,now 1:0.4.0+dfsg1-14 amd64 [installed]
+libvolume-key1/focal,now 0.3.12-3.1 amd64 [installed]
+libvorbis0a/focal,now 1.3.6-2ubuntu1 amd64 [installed]
+libvorbisenc2/focal,now 1.3.6-2ubuntu1 amd64 [installed]
+libvorbisfile3/focal,now 1.3.6-2ubuntu1 amd64 [installed]
+libvpx6/focal,now 1.8.2-1build1 amd64 [installed]
+libvte-2.91-0/focal-updates,now 0.60.3-0ubuntu1~20.04 amd64 [installed]
+libvte-2.91-common/focal-updates,now 0.60.3-0ubuntu1~20.04 amd64 [installed]
+libvulkan1/focal,now 1.2.131.2-1 amd64 [installed]
+libvulkan1/now 1.2.131.2-1 i386 [installed,local]
+libwacom-bin/focal-updates,now 1.3-2ubuntu3 amd64 [installed]
+libwacom-common/focal-updates,now 1.3-2ubuntu3 all [installed]
+libwacom2/focal-updates,now 1.3-2ubuntu3 amd64 [installed]
+libwavpack1/focal-updates,focal-security,now 5.2.0-1ubuntu0.1 amd64 [installed]
+libwayland-client0/focal,now 1.18.0-1 amd64 [installed]
+libwayland-client0/now 1.18.0-1 i386 [installed,local]
+libwayland-cursor0/focal,now 1.18.0-1 amd64 [installed]
+libwayland-egl1/focal,now 1.18.0-1 amd64 [installed]
+libwayland-server0/focal,now 1.18.0-1 amd64 [installed]
+libwbclient0/focal-updates,now 2:4.13.17~dfsg-0ubuntu0.21.04.2 amd64 [installed]
+libwebkit2gtk-4.0-37/focal-updates,focal-security,now 2.36.0-0ubuntu0.20.04.3 amd64 [installed]
+libwebp6/focal-updates,focal-security,now 0.6.1-2ubuntu0.20.04.1 amd64 [installed]
+libwebpdemux2/focal-updates,focal-security,now 0.6.1-2ubuntu0.20.04.1 amd64 [installed]
+libwebpmux3/focal-updates,focal-security,now 0.6.1-2ubuntu0.20.04.1 amd64 [installed]
+libwebrtc-audio-processing1/focal,now 0.3.1-0ubuntu3 amd64 [installed]
+libwebsocket-api-java/focal,now 1.1-1 all [installed]
+libwind0-heimdal/focal,now 7.7.0+dfsg-1ubuntu1 amd64 [installed]
+libwmf0.2-7-gtk/focal,now 0.2.8.4-17ubuntu1 amd64 [installed]
+libwmf0.2-7/focal,now 0.2.8.4-17ubuntu1 amd64 [installed]
+libwnck-3-0/focal,now 3.36.0-1 amd64 [installed]
+libwnck-3-common/focal,now 3.36.0-1 all [installed]
+libwoff1/focal,now 1.0.2-1build2 amd64 [installed]
+libwpd-0.10-10/focal,now 0.10.3-1build1 amd64 [installed]
+libwpg-0.3-3/focal,now 0.3.3-1build1 amd64 [installed]
+libwps-0.4-4/focal,now 0.4.10-1build1 amd64 [installed]
+libwrap0/focal,now 7.6.q-30 amd64 [installed]
+libwww-perl/focal,now 6.43-1 all [installed]
+libwww-robotrules-perl/focal,now 6.02-1 all [installed]
+libwxbase3.0-0v5/focal,now 3.0.4+dfsg-15build1 amd64 [installed,automatic]
+libwxgtk3.0-gtk3-0v5/focal,now 3.0.4+dfsg-15build1 amd64 [installed,automatic]
+libx11-6/focal-updates,focal-security,now 2:1.6.9-2ubuntu1.2 amd64 [installed]
+libx11-6/now 2:1.6.9-2ubuntu1.2 i386 [installed,local]
+libx11-data/focal-updates,focal-security,now 2:1.6.9-2ubuntu1.2 all [installed]
+libx11-protocol-perl/focal,now 0.56-7 all [installed]
+libx11-xcb1/focal-updates,focal-security,now 2:1.6.9-2ubuntu1.2 amd64 [installed]
+libx11-xcb1/now 2:1.6.9-2ubuntu1.2 i386 [installed,local]
+libx264-155/focal,now 2:0.155.2917+git0a84d98-2 amd64 [installed]
+libx265-179/focal,now 3.2.1-1build1 amd64 [installed]
+libxapian30/focal,now 1.4.14-2 amd64 [installed]
+libxapp1/una,now 2.2.8+una amd64 [installed]
+libxatracker2/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+libxau6/focal,now 1:1.0.9-0ubuntu1 amd64 [installed]
+libxau6/now 1:1.0.9-0ubuntu1 i386 [installed,local]
+libxaw7/focal,now 2:1.0.13-1 amd64 [installed]
+libxcb-dri2-0/focal,now 1.14-2 amd64 [installed]
+libxcb-dri2-0/now 1.14-2 i386 [installed,local]
+libxcb-dri3-0/focal,now 1.14-2 amd64 [installed]
+libxcb-dri3-0/now 1.14-2 i386 [installed,local]
+libxcb-glx0/focal,now 1.14-2 amd64 [installed]
+libxcb-glx0/now 1.14-2 i386 [installed,local]
+libxcb-icccm4/focal,now 0.4.1-1.1 amd64 [installed]
+libxcb-image0/focal,now 0.4.0-1build1 amd64 [installed]
+libxcb-keysyms1/focal,now 0.4.0-1build1 amd64 [installed]
+libxcb-present0/focal,now 1.14-2 amd64 [installed]
+libxcb-present0/now 1.14-2 i386 [installed,local]
+libxcb-randr0/focal,now 1.14-2 amd64 [installed]
+libxcb-randr0/now 1.14-2 i386 [installed,local]
+libxcb-render-util0/focal,now 0.3.9-1build1 amd64 [installed]
+libxcb-render0/focal,now 1.14-2 amd64 [installed]
+libxcb-res0/focal,now 1.14-2 amd64 [installed]
+libxcb-shape0/focal,now 1.14-2 amd64 [installed]
+libxcb-shm0/focal,now 1.14-2 amd64 [installed]
+libxcb-shm0/now 1.14-2 i386 [installed,local]
+libxcb-sync1/focal,now 1.14-2 amd64 [installed]
+libxcb-sync1/now 1.14-2 i386 [installed,local]
+libxcb-util1/focal,now 0.4.0-0ubuntu3 amd64 [installed]
+libxcb-xfixes0/focal,now 1.14-2 amd64 [installed]
+libxcb-xfixes0/now 1.14-2 i386 [installed,local]
+libxcb-xinerama0/focal,now 1.14-2 amd64 [installed]
+libxcb-xinput0/focal,now 1.14-2 amd64 [installed]
+libxcb-xkb1/focal,now 1.14-2 amd64 [installed]
+libxcb-xv0/focal,now 1.14-2 amd64 [installed]
+libxcb1/focal,now 1.14-2 amd64 [installed]
+libxcb1/now 1.14-2 i386 [installed,local]
+libxcomposite1/focal,now 1:0.4.5-1 amd64 [installed]
+libxcursor1/focal,now 1:1.2.0-2 amd64 [installed]
+libxdamage1/focal,now 1:1.1.5-2 amd64 [installed]
+libxdmcp6/focal,now 1:1.1.3-0ubuntu1 amd64 [installed]
+libxdmcp6/now 1:1.1.3-0ubuntu1 i386 [installed,local]
+libxext6/focal,now 2:1.3.4-0ubuntu1 amd64 [installed]
+libxext6/now 2:1.3.4-0ubuntu1 i386 [installed,local]
+libxfixes3/focal,now 1:5.0.3-2 amd64 [installed]
+libxfixes3/now 1:5.0.3-2 i386 [installed,local]
+libxfont2/focal,now 1:2.0.3-1 amd64 [installed]
+libxft2/focal,now 2.3.3-0ubuntu1 amd64 [installed]
+libxi6/focal,now 2:1.7.10-0ubuntu1 amd64 [installed]
+libxinerama1/focal,now 2:1.1.4-2 amd64 [installed]
+libxkbcommon-x11-0/focal,now 0.10.0-1 amd64 [installed]
+libxkbcommon0/focal,now 0.10.0-1 amd64 [installed]
+libxkbfile1/focal,now 1:1.1.0-1 amd64 [installed]
+libxklavier16/focal,now 5.4-4 amd64 [installed]
+libxml-libxml-perl/focal,now 2.0134+dfsg-1build1 amd64 [installed]
+libxml-namespacesupport-perl/focal,now 1.12-1 all [installed]
+libxml-parser-perl/focal,now 2.46-1 amd64 [installed]
+libxml-sax-base-perl/focal,now 1.09-1 all [installed]
+libxml-sax-expat-perl/focal,now 0.51-1 all [installed]
+libxml-sax-perl/focal,now 1.02+dfsg-1 all [installed]
+libxml-twig-perl/focal,now 1:3.50-2 all [installed]
+libxml-writer-perl/focal,now 0.625-1 all [installed]
+libxml-xpathengine-perl/focal,now 0.14-1 all [installed]
+libxml2/focal-updates,focal-security,now 2.9.10+dfsg-5ubuntu0.20.04.2 amd64 [installed]
+libxmlb1/focal-updates,now 0.1.15-2ubuntu1~20.04.1 amd64 [installed]
+libxmlsec1-nss/focal,now 1.2.28-2 amd64 [installed]
+libxmlsec1/focal,now 1.2.28-2 amd64 [installed]
+libxmu6/focal,now 2:1.1.3-0ubuntu1 amd64 [installed]
+libxmuu1/focal,now 2:1.1.3-0ubuntu1 amd64 [installed]
+libxnvctrl0/focal-updates,now 470.57.01-0ubuntu0.20.04.3 amd64 [installed,automatic]
+libxpm4/focal,now 1:3.5.12-1 amd64 [installed]
+libxrandr2/focal,now 2:1.5.2-0ubuntu1 amd64 [installed]
+libxreaderdocument3/una,now 3.2.2+una amd64 [installed]
+libxreaderview3/una,now 3.2.2+una amd64 [installed]
+libxrender1/focal,now 1:0.9.10-1 amd64 [installed]
+libxres1/focal,now 2:1.2.0-4 amd64 [installed]
+libxshmfence1/focal,now 1.3-1 amd64 [installed]
+libxshmfence1/now 1.3-1 i386 [installed,local]
+libxslt1.1/focal,now 1.1.34-4 amd64 [installed]
+libxss1/focal,now 1:1.2.3-1 amd64 [installed]
+libxt6/focal,now 1:1.1.5-1 amd64 [installed]
+libxtables12/focal,now 1.8.4-3ubuntu2 amd64 [installed]
+libxtst6/focal,now 2:1.2.3-1 amd64 [installed]
+libxv1/focal,now 2:1.0.11-1 amd64 [installed]
+libxvidcore4/focal,now 2:1.3.7-1 amd64 [installed]
+libxvmc1/focal,now 2:1.0.12-2 amd64 [installed]
+libxxf86dga1/focal,now 2:1.1.5-0ubuntu1 amd64 [installed]
+libxxf86vm1/focal,now 1:1.1.4-1build1 amd64 [installed]
+libxxf86vm1/now 1:1.1.4-1build1 i386 [installed,local]
+libyajl2/focal,now 2.1.0-3 amd64 [installed]
+libyaml-0-2/focal,now 0.2.2-1 amd64 [installed]
+libyaml-libyaml-perl/focal,now 0.81+repack-1 amd64 [installed]
+libyaml-tiny-perl/focal,now 1.73-1 all [installed]
+libyelp0/una,now 3.36.2-linuxmint1+uma amd64 [installed]
+libzip5/focal,now 1.5.1-0ubuntu1 amd64 [installed]
+libzmq5/focal,now 4.3.2-2ubuntu1 amd64 [installed]
+libzstd1/focal-updates,focal-security,now 1.4.4+dfsg-3ubuntu0.1 amd64 [installed]
+libzstd1/now 1.4.4+dfsg-3ubuntu0.1 i386 [installed,local]
+libzvbi-common/focal,now 0.2.35-17 all [installed]
+libzvbi0/focal,now 0.2.35-17 amd64 [installed]
+lightdm-settings/una,now 1.5.7 all [installed]
+lightdm/focal-updates,now 1.30.0-0ubuntu4~20.04.2 amd64 [installed]
+lintian/focal-updates,now 2.62.0ubuntu2 all [installed]
+linux-base/focal-updates,now 4.5ubuntu3.7 all [installed]
+linux-firmware/focal-updates,now 1.187.30 all [installed]
+linux-generic/focal-updates,focal-security,now 5.4.0.110.114 amd64 [installed]
+linux-headers-5.4.0-110-generic/focal-updates,focal-security,now 5.4.0-110.124 amd64 [installed,automatic]
+linux-headers-5.4.0-110/focal-updates,focal-security,now 5.4.0-110.124 all [installed,automatic]
+linux-headers-5.4.0-91-generic/focal-updates,focal-security,now 5.4.0-91.102 amd64 [installed]
+linux-headers-5.4.0-91/focal-updates,focal-security,now 5.4.0-91.102 all [installed]
+linux-headers-5.8.0-63-generic/focal-updates,focal-security,now 5.8.0-63.71~20.04.1 amd64 [installed]
+linux-headers-generic/focal-updates,focal-security,now 5.4.0.110.114 amd64 [installed]
+linux-hwe-5.8-headers-5.8.0-63/focal-updates,focal-security,now 5.8.0-63.71~20.04.1 all [installed,automatic]
+linux-image-5.4.0-110-generic/focal-updates,focal-security,now 5.4.0-110.124 amd64 [installed,automatic]
+linux-image-5.4.0-91-generic/focal-updates,focal-security,now 5.4.0-91.102 amd64 [installed]
+linux-image-5.8.0-63-generic/focal-updates,focal-security,now 5.8.0-63.71~20.04.1 amd64 [installed]
+linux-image-generic/focal-updates,focal-security,now 5.4.0.110.114 amd64 [installed]
+linux-libc-dev/focal-updates,focal-security,now 5.4.0-110.124 amd64 [installed]
+linux-modules-5.4.0-110-generic/focal-updates,focal-security,now 5.4.0-110.124 amd64 [installed,automatic]
+linux-modules-5.4.0-91-generic/focal-updates,focal-security,now 5.4.0-91.102 amd64 [installed]
+linux-modules-5.8.0-63-generic/focal-updates,focal-security,now 5.8.0-63.71~20.04.1 amd64 [installed,automatic]
+linux-modules-extra-5.4.0-110-generic/focal-updates,focal-security,now 5.4.0-110.124 amd64 [installed,automatic]
+linux-modules-extra-5.4.0-91-generic/focal-updates,focal-security,now 5.4.0-91.102 amd64 [installed]
+linux-modules-extra-5.8.0-63-generic/focal-updates,focal-security,now 5.8.0-63.71~20.04.1 amd64 [installed]
+linux-sound-base/focal,now 1.0.25+dfsg-0ubuntu5 all [installed]
+linuxmint-keyring/una,now 2016.05.26 all [installed]
+lm-sensors/focal-updates,now 1:3.6.0-2ubuntu1.1 amd64 [installed]
+localechooser-data/focal,now 2.71ubuntu4 all [installed]
+locales/focal-updates,now 2.31-0ubuntu9.9 all [installed]
+login/focal-updates,now 1:4.8.1-1ubuntu5.20.04.1 amd64 [installed]
+logrotate/focal,now 3.14.0-4ubuntu3 amd64 [installed]
+logsave/focal,now 1.45.5-2ubuntu1 amd64 [installed]
+lp-solve/focal,now 5.5.0.15-4build1 amd64 [installed]
+lsb-base/focal,now 11.1.0ubuntu2 all [installed]
+lsb-release/focal,now 11.1.0ubuntu2 all [installed]
+lshw/focal-updates,now 02.18.85-0.3ubuntu2.20.04.1 amd64 [installed]
+lsof/focal-updates,now 4.93.2+dfsg-1ubuntu0.20.04.1 amd64 [installed]
+ltrace/focal,now 0.7.3-6.1ubuntu1 amd64 [installed]
+lupin-casper/focal,now 0.57build1 all [installed]
+lvm2/focal,now 2.03.07-1ubuntu1 amd64 [installed]
+lz4/focal-updates,focal-security,now 1.9.2-2ubuntu0.20.04.1 amd64 [installed]
+m4/focal,now 1.4.18-4 amd64 [installed]
+make/focal,now 4.2.1-1.2 amd64 [installed]
+makedev/focal,now 2.3.1-94 all [installed]
+man-db/focal,now 2.9.1-1 amd64 [installed]
+manpages-dev/focal,now 5.05-1 all [installed]
+manpages/focal,now 5.05-1 all [installed]
+mariadb-client-10.3/focal-updates,focal-security,now 1:10.3.34-0ubuntu0.20.04.1 amd64 [installed,automatic]
+mariadb-client-core-10.3/focal-updates,focal-security,now 1:10.3.34-0ubuntu0.20.04.1 amd64 [installed,automatic]
+mariadb-common/focal-updates,focal-security,now 1:10.3.34-0ubuntu0.20.04.1 all [installed,automatic]
+mariadb-server-10.3/focal-updates,focal-security,now 1:10.3.34-0ubuntu0.20.04.1 amd64 [installed,automatic]
+mariadb-server-core-10.3/focal-updates,focal-security,now 1:10.3.34-0ubuntu0.20.04.1 amd64 [installed,automatic]
+mariadb-server/focal-updates,focal-security,now 1:10.3.34-0ubuntu0.20.04.1 all [installed]
+mate-desktop-common/una,now 1.26.0-0ubuntu1~focal2.1 all [installed]
+mate-desktop/una,now 1.26.0-0ubuntu1~focal2.1 amd64 [installed]
+mate-menus/una,now 1.26.0-linuxmint2 all [installed]
+mate-panel-common/una,now 1.26.1.1mint1+una all [installed]
+mate-panel/una,now 1.26.1.1mint1+una amd64 [installed]
+mate-polkit-common/una,now 1.26.0-0ubuntu1~focal2.0 amd64 [installed]
+mate-polkit/una,now 1.26.0-0ubuntu1~focal2.0 amd64 [installed]
+mawk/focal,now 1.3.4.20200120-2 amd64 [installed]
+media-player-info/focal,now 24-2 all [installed]
+menu-xdg/focal,now 0.6 all [installed]
+mesa-utils/focal,now 8.4.0-1build1 amd64 [installed]
+mesa-va-drivers/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+mesa-vdpau-drivers/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+mesa-vulkan-drivers/focal-updates,focal-security,now 21.2.6-0ubuntu0.1~20.04.2 amd64 [installed]
+mesa-vulkan-drivers/now 21.2.6-0ubuntu0.1~20.04.2 i386 [installed,local]
+metacity-common/focal,now 1:3.36.1-1 all [installed]
+metacity/focal,now 1:3.36.1-1 amd64 [installed]
+mime-support/focal,now 3.64ubuntu1 all [installed]
+mint-artwork/una,now 1.5.5 all [installed]
+mint-backgrounds-ulyana/una,now 1.1 all [installed]
+mint-backgrounds-ulyssa/una,now 1.1 all [installed]
+mint-backgrounds-uma/una,now 1.2 all [installed]
+mint-backgrounds-una/una,now 1.1 all [installed]
+mint-common/una,now 2.1.7 all [installed]
+mint-info-cinnamon/una,now 2021.11.18 all [installed]
+mint-meta-cinnamon/una,now 2021.11.18 all [installed]
+mint-meta-core/una,now 2021.11.18 all [installed]
+mint-mirrors/una,now 1.2.4 all [installed]
+mint-themes/una,now 1.9.8 all [installed]
+mint-translations/una,now 2021.12.31 all [installed]
+mint-upgrade-info/una,now 1.1.9 all [installed]
+mint-x-icons/una,now 1.6.4 all [installed]
+mint-y-icons/una,now 1.5.9 all [installed]
+mintbackup/una,now 2.4.2 all [installed]
+mintdrivers/una,now 1.6.0 all [installed]
+mintinstall/una,now 8.0.9 all [installed]
+mintlocale/una,now 1.5.8 all [installed]
+mintmenu/una,now 6.1.4 all [installed]
+mintreport/una,now 1.2.8 all [installed]
+mintsources/una,now 2.1.0 all [installed]
+mintstick/una,now 1.4.7 all [installed]
+mintsystem/una,now 8.5.3 all [installed]
+mintupdate/una,now 5.8.1 all [installed]
+mintwelcome/una,now 2.5.3 all [installed]
+mlocate/focal,now 0.26-3ubuntu3 amd64 [installed]
+mobile-broadband-provider-info/focal,now 20190618-3 all [installed]
+modemmanager/focal-updates,now 1.16.6-2~20.04.1 amd64 [installed]
+mokutil/focal,now 0.3.0+1538710437.fb6250f-1 amd64 [installed]
+mongodb-compass/now 1.31.2 amd64 [installed,local]
+mount/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+mousetweaks/focal,now 3.32.0-2 amd64 [installed]
+mscompress/focal,now 0.4-7 amd64 [installed]
+mtools/focal,now 4.0.24-1 amd64 [installed]
+mtr-tiny/focal,now 0.93-1 amd64 [installed]
+muffin-common/una,now 5.2.1+una all [installed]
+muffin-dbg/una,now 5.2.1+una amd64 [installed]
+muffin/una,now 5.2.1+una amd64 [installed]
+mysql-common/focal,now 5.8+1.0.5ubuntu2 all [installed]
+mythes-de-ch/focal,now 20160424-3 all [installed]
+mythes-de/focal,now 20160424-3 all [installed]
+mythes-en-au/focal,now 2.1-5.4 all [installed]
+mythes-en-us/focal,now 1:6.4.3-1 all [installed]
+mythes-fr/focal,now 1:6.4.3-1 all [installed]
+mythes-it/focal,now 1:6.4.3-1 all [installed]
+mythes-pt-pt/focal,now 1:6.4.3-1 all [installed]
+mythes-ru/focal,now 1:6.4.3-1 all [installed]
+nano/focal,now 4.8-1ubuntu1 amd64 [installed]
+nautilus-data/focal-updates,now 1:3.36.3-0ubuntu1.20.04.1 all [installed]
+ncurses-base/focal,now 6.2-0ubuntu2 all [installed]
+ncurses-bin/focal,now 6.2-0ubuntu2 amd64 [installed]
+nemo-data/una,now 5.2.4+una all [installed]
+nemo-dbg/una,now 5.2.4+una amd64 [installed]
+nemo-emblems/una,now 5.2.0+una all [installed]
+nemo-fileroller/una,now 5.2.0+una amd64 [installed]
+nemo-preview/una,now 5.2.1+una amd64 [installed]
+nemo-share/una,now 5.2.0+una amd64 [installed]
+nemo/una,now 5.2.4+una amd64 [installed]
+neofetch/focal,now 7.0.0-1 all [installed]
+net-tools/focal,now 1.60+git20180626.aebd88e-1ubuntu1 amd64 [installed]
+netbase/focal,now 6.1 all [installed]
+netcat-openbsd/focal,now 1.206-1ubuntu1 amd64 [installed]
+netplan.io/focal-updates,now 0.104-0ubuntu2~20.04.1 amd64 [installed]
+network-manager-config-connectivity-ubuntu/focal-updates,now 1.22.10-1ubuntu2.3 all [installed]
+network-manager-gnome/una,now 1.8.24-linuxmint4 amd64 [installed]
+network-manager-openvpn-gnome/focal,now 1.8.12-1 amd64 [installed]
+network-manager-openvpn/focal,now 1.8.12-1 amd64 [installed]
+network-manager-pptp-gnome/focal,now 1.2.8-2 amd64 [installed]
+network-manager-pptp/focal,now 1.2.8-2 amd64 [installed]
+network-manager/focal-updates,now 1.22.10-1ubuntu2.3 amd64 [installed]
+networkd-dispatcher/focal-updates,focal-security,now 2.1-2~ubuntu20.04.3 all [installed]
+ntfs-3g/focal-updates,focal-security,now 1:2017.3.23AR.3-3ubuntu1.1 amd64 [installed]
+nvidia-compute-utils-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+nvidia-dkms-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+nvidia-driver-455/focal-updates,focal-security,now 460.91.03-0ubuntu0.20.04.1 amd64 [installed]
+nvidia-driver-460/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+nvidia-driver-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+nvidia-kernel-common-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+nvidia-kernel-source-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+nvidia-prime-applet/una,now 1.3.1 all [installed]
+nvidia-prime/focal-updates,now 0.8.16~0.20.04.2 all [installed,automatic]
+nvidia-settings/focal-updates,now 470.57.01-0ubuntu0.20.04.3 amd64 [installed,automatic]
+nvidia-utils-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+ocl-icd-libopencl1/focal,now 2.2.11-1ubuntu1 amd64 [installed]
+odt2txt/focal,now 0.5-1build3 amd64 [installed]
+onboard-common/una,now 1.4.1-3linuxmint1 all [installed]
+onboard/una,now 1.4.1-3linuxmint1 amd64 [installed]
+openjdk-11-jre-headless/focal-updates,focal-security,now 11.0.15+10-0ubuntu0.20.04.1 amd64 [installed]
+openjdk-11-jre/focal-updates,focal-security,now 11.0.15+10-0ubuntu0.20.04.1 amd64 [installed]
+openprinting-ppds/focal,now 20200401-1 all [installed]
+openssh-client/focal-updates,now 1:8.2p1-4ubuntu0.5 amd64 [installed]
+openssl/focal-updates,focal-security,now 1.1.1f-1ubuntu2.13 amd64 [installed]
+openvpn/focal-updates,focal-security,now 2.4.7-1ubuntu2.20.04.4 amd64 [installed]
+orca/focal-updates,now 3.36.2-1ubuntu1~20.04.1 all [installed]
+os-prober/focal,now 1.74ubuntu2 amd64 [installed]
+p11-kit-modules/focal-updates,focal-security,now 0.23.20-1ubuntu0.1 amd64 [installed]
+p11-kit/focal-updates,focal-security,now 0.23.20-1ubuntu0.1 amd64 [installed]
+p7zip-full/focal,now 16.02+dfsg-7build1 amd64 [installed]
+p7zip/focal,now 16.02+dfsg-7build1 amd64 [installed]
+packagekit-tools/focal-updates,focal-security,now 1.1.13-2ubuntu1.1 amd64 [installed]
+packagekit/focal-updates,focal-security,now 1.1.13-2ubuntu1.1 amd64 [installed]
+parted/focal-updates,now 3.3-4ubuntu0.20.04.1 amd64 [installed]
+passwd/focal-updates,now 1:4.8.1-1ubuntu5.20.04.1 amd64 [installed]
+patch/focal,now 2.7.6-6 amd64 [installed]
+patchutils/focal,now 0.3.4-2 amd64 [installed]
+pci.ids/focal,now 0.0~2020.03.20-1 all [installed]
+pciutils/focal-updates,now 1:3.6.4-1ubuntu0.20.04.1 amd64 [installed]
+pcmciautils/focal,now 018-11 amd64 [installed]
+perl-base/focal-updates,focal-security,now 5.30.0-9ubuntu0.2 amd64 [installed]
+perl-modules-5.30/focal-updates,focal-security,now 5.30.0-9ubuntu0.2 all [installed]
+perl-openssl-defaults/focal,now 4 amd64 [installed]
+perl/focal-updates,focal-security,now 5.30.0-9ubuntu0.2 amd64 [installed]
+pinentry-curses/focal,now 1.1.0-3build1 amd64 [installed]
+pinentry-gnome3/focal,now 1.1.0-3build1 amd64 [installed]
+pix-data/una,now 2.8.4+una all [installed]
+pix-dbg/una,now 2.8.4+una amd64 [installed]
+pix/una,now 2.8.4+una amd64 [installed]
+pkg-config/focal,now 0.29.1-0ubuntu4 amd64 [installed]
+plymouth-label/una,now 0.9.4+mint2+ulyssa amd64 [installed]
+plymouth-theme-ubuntu-text/una,now 0.9.4+mint2+ulyssa amd64 [installed]
+plymouth/una,now 0.9.4+mint2+ulyssa amd64 [installed]
+pm-utils/focal,now 1.4.1-19 all [installed]
+policykit-1-gnome/focal,now 0.105-7ubuntu2 amd64 [installed]
+policykit-1/focal-updates,focal-security,now 0.105-26ubuntu1.3 amd64 [installed]
+policykit-desktop-privileges/focal,now 0.21 all [installed]
+poppler-data/focal,now 0.4.9-2 all [installed]
+poppler-utils/focal,now 0.86.1-0ubuntu1 amd64 [installed]
+powermgmt-base/focal,now 1.36 all [installed]
+ppp/focal-updates,focal-security,now 2.4.7-2+4.1ubuntu5.1 amd64 [installed]
+pppconfig/focal,now 2.3.24 all [installed]
+pppoeconf/focal,now 1.21ubuntu1 all [installed]
+pptp-linux/focal,now 1.10.0-1build1 amd64 [installed]
+printer-driver-brlaser/focal,now 6-1build1 amd64 [installed]
+printer-driver-c2esp/focal,now 27-6 amd64 [installed]
+printer-driver-foo2zjs-common/focal,now 20171202dfsg0-4 all [installed]
+printer-driver-foo2zjs/focal,now 20171202dfsg0-4 amd64 [installed]
+printer-driver-gutenprint/focal,now 5.3.3-4 amd64 [installed]
+printer-driver-hpcups/una,now 3.21.8+dfsg0-1+klbkfocal amd64 [installed]
+printer-driver-m2300w/focal,now 0.51-14 amd64 [installed]
+printer-driver-min12xxw/focal,now 0.0.9-11 amd64 [installed]
+printer-driver-pnm2ppa/focal,now 1.13+nondbs-0ubuntu6 amd64 [installed]
+printer-driver-postscript-hp/una,now 3.21.8+dfsg0-1+klbkfocal amd64 [installed]
+printer-driver-ptouch/focal,now 1.4.2-3 amd64 [installed]
+printer-driver-pxljr/focal,now 1.4+repack0-5 amd64 [installed]
+printer-driver-sag-gdi/focal,now 0.1-7 all [installed]
+printer-driver-splix/focal,now 2.0.0+svn315-7fakesync1build1 amd64 [installed]
+procps/focal-updates,now 2:3.3.16-1ubuntu2.3 amd64 [installed]
+psmisc/focal,now 23.3-1 amd64 [installed]
+publicsuffix/focal,now 20200303.0012-1 all [installed]
+pulseaudio-module-bluetooth/focal-updates,now 1:13.99.1-1ubuntu3.13 amd64 [installed]
+pulseaudio-utils/focal-updates,now 1:13.99.1-1ubuntu3.13 amd64 [installed]
+pulseaudio/focal-updates,now 1:13.99.1-1ubuntu3.13 amd64 [installed]
+python-apt-common/focal-updates,now 2.0.0ubuntu0.20.04.7 all [installed]
+python-nemo/una,now 5.2.0+una amd64 [installed]
+python-pip-whl/focal-updates,now 20.0.2-5ubuntu1.6 all [installed,automatic]
+python-tinycss2-common/focal,now 1.0.2-1 all [installed]
+python-wxgtk3.0/focal,now 3.0.2.0+dfsg-8build1 amd64 [installed,automatic]
+python-wxversion/focal,now 3.0.2.0+dfsg-8build1 all [installed,automatic]
+python2-minimal/focal,now 2.7.17-2ubuntu4 amd64 [installed,automatic]
+python2.7-minimal/focal-updates,focal-security,now 2.7.18-1~20.04.1 amd64 [installed,automatic]
+python2.7/focal-updates,focal-security,now 2.7.18-1~20.04.1 amd64 [installed,automatic]
+python2/focal,now 2.7.17-2ubuntu4 amd64 [installed,automatic]
+python3-apport/focal-updates,now 2.20.11-0ubuntu27.23 all [installed]
+python3-apt/focal-updates,now 2.0.0ubuntu0.20.04.7 amd64 [installed]
+python3-aptdaemon.gtk3widgets/focal-updates,focal-security,now 1.1.1+bzr982-0ubuntu32.3 all [installed]
+python3-aptdaemon/focal-updates,focal-security,now 1.1.1+bzr982-0ubuntu32.3 all [installed]
+python3-blinker/focal,now 1.4+dfsg1-0.3ubuntu1 all [installed]
+python3-brlapi/focal,now 6.0+dfsg-4ubuntu6 amd64 [installed]
+python3-bs4/focal,now 4.8.2-1 all [installed]
+python3-cairo/focal,now 1.16.2-2ubuntu2 amd64 [installed]
+python3-certifi/focal,now 2019.11.28-1 all [installed]
+python3-cffi-backend/focal,now 1.14.0-1build1 amd64 [installed]
+python3-chardet/focal,now 3.0.4-4build1 all [installed]
+python3-click/focal,now 7.0-3 all [installed]
+python3-colorama/focal,now 0.4.3-1build1 all [installed]
+python3-commandnotfound/focal-updates,now 20.04.6 all [installed]
+python3-configobj/focal,now 5.0.6-4 all [installed]
+python3-crypto/focal,now 2.6.1-13ubuntu2 amd64 [installed]
+python3-cryptography/focal-updates,focal-security,now 2.8-3ubuntu0.1 amd64 [installed]
+python3-cups/focal,now 1.9.73-3build1 amd64 [installed]
+python3-cupshelpers/focal-updates,now 1.5.12-0ubuntu1.1 all [installed]
+python3-dbus/focal,now 1.2.16-1build1 amd64 [installed]
+python3-debian/focal,now 0.1.36ubuntu1 all [installed]
+python3-defer/focal,now 1.0.6-2.1 all [installed]
+python3-dev/focal,now 3.8.2-0ubuntu2 amd64 [installed,automatic]
+python3-distro/focal,now 1.4.0-1 all [installed]
+python3-distutils/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04 all [installed,automatic]
+python3-entrypoints/focal,now 0.3-2ubuntu1 all [installed]
+python3-gdbm/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04 amd64 [installed]
+python3-gi-cairo/focal,now 3.36.0-1 amd64 [installed]
+python3-gi/focal,now 3.36.0-1 amd64 [installed]
+python3-grpcio/focal,now 1.16.1-1ubuntu5 amd64 [installed]
+python3-httplib2/focal,now 0.14.0-1ubuntu1 all [installed]
+python3-icu/focal,now 2.4.2-0ubuntu3 amd64 [installed]
+python3-idna/focal,now 2.8-1 all [installed]
+python3-ifaddr/focal,now 0.1.6-1 all [installed]
+python3-imdbpy/focal,now 6.8-2 all [installed]
+python3-jwt/focal,now 1.7.1-2ubuntu2 all [installed]
+python3-keyring/focal,now 18.0.1-2ubuntu1 all [installed]
+python3-launchpadlib/focal,now 1.10.13-1 all [installed]
+python3-lazr.restfulclient/focal,now 0.14.2-2build1 all [installed]
+python3-lazr.uri/focal,now 1.0.3-4build1 all [installed]
+python3-ldb/focal-updates,focal-security,now 2:2.2.3-0ubuntu0.20.04.2 amd64 [installed]
+python3-lib2to3/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04 all [installed,automatic]
+python3-louis/focal,now 3.12.0-3 all [installed]
+python3-macaroonbakery/focal,now 1.3.1-1 all [installed]
+python3-magic/focal,now 2:0.4.15-3 all [installed]
+python3-mako/focal,now 1.1.0+ds1-1ubuntu2 all [installed]
+python3-markupsafe/focal,now 1.1.0-1build2 amd64 [installed]
+python3-minimal/focal,now 3.8.2-0ubuntu2 amd64 [installed]
+python3-mock/focal,now 3.0.5-1build1 all [installed,automatic]
+python3-nacl/focal,now 1.3.0-5 amd64 [installed]
+python3-netaddr/focal-updates,now 0.7.19-3ubuntu1 all [installed]
+python3-netifaces/focal,now 0.10.4-1ubuntu4 amd64 [installed]
+python3-oauthlib/focal,now 3.1.0-1ubuntu2 all [installed]
+python3-packaging/focal,now 20.3-1 all [installed]
+python3-pam/focal,now 0.4.2-13.2ubuntu8 amd64 [installed]
+python3-parted/focal,now 3.11.2-11.1build1 amd64 [installed]
+python3-pbr/focal,now 5.4.5-0ubuntu1 all [installed,automatic]
+python3-pexpect/focal,now 4.6.0-1build1 all [installed]
+python3-pil/focal-updates,focal-security,now 7.0.0-4ubuntu0.5 amd64 [installed]
+python3-pip/focal-updates,now 20.0.2-5ubuntu1.6 all [installed]
+python3-pkg-resources/focal,now 45.2.0-1 all [installed]
+python3-problem-report/focal-updates,now 2.20.11-0ubuntu27.23 all [installed]
+python3-protobuf/focal,now 3.6.1.3-2ubuntu5 amd64 [installed]
+python3-psutil/focal,now 5.5.1-1ubuntu4 amd64 [installed]
+python3-ptyprocess/focal,now 0.6.0-1ubuntu1 all [installed]
+python3-pyatspi/focal,now 2.36.0-1 all [installed]
+python3-pycurl/focal,now 7.43.0.2-1ubuntu5 amd64 [installed]
+python3-pyinotify/focal,now 0.9.6-1.2ubuntu1 all [installed]
+python3-pymacaroons/focal,now 0.13.0-3 all [installed]
+python3-pyparsing/focal,now 2.4.6-1 all [installed]
+python3-pyqt5.qtmultimedia/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtopengl/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtpositioning/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtquick/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtsql/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtsvg/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtwebchannel/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtwebkit/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtwebsockets/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5.qtxmlpatterns/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-pyqt5/focal,now 5.14.1+dfsg-3build1 amd64 [installed,automatic]
+python3-qtpy/focal,now 1.9.0-3 all [installed,automatic]
+python3-reportlab-accel/focal,now 3.5.34-1ubuntu1 amd64 [installed]
+python3-reportlab/focal,now 3.5.34-1ubuntu1 all [installed]
+python3-requests-file/focal,now 1.4.3-2 all [installed]
+python3-requests-unixsocket/focal,now 0.2.0-2 all [installed]
+python3-requests/focal,now 2.22.0-2ubuntu1 all [installed]
+python3-rfc3339/focal,now 1.1-2 all [installed]
+python3-samba/focal-updates,now 2:4.13.17~dfsg-0ubuntu0.21.04.2 amd64 [installed]
+python3-secretstorage/focal,now 2.3.1-2ubuntu1 all [installed]
+python3-setproctitle/focal,now 1.1.10-1ubuntu1 amd64 [installed]
+python3-setuptools/focal,now 45.2.0-1 all [installed,automatic]
+python3-simplejson/focal,now 3.16.0-2ubuntu2 amd64 [installed]
+python3-sip/focal,now 4.19.21+dfsg-1build1 amd64 [installed,automatic]
+python3-six/focal,now 1.14.0-2 all [installed]
+python3-soupsieve/focal,now 1.9.5+dfsg-1 all [installed]
+python3-speechd/focal,now 0.9.1-4 all [installed]
+python3-systemd/focal,now 234-3build2 amd64 [installed]
+python3-talloc/focal-updates,focal-security,now 2.3.1-0ubuntu0.20.04.1 amd64 [installed]
+python3-tdb/focal-updates,focal-security,now 1.4.3-0ubuntu0.20.04.1 amd64 [installed]
+python3-tinycss2/focal,now 1.0.2-1 all [installed]
+python3-tldextract/focal,now 2.2.1-1 all [installed]
+python3-tz/focal,now 2019.3-1 all [installed]
+python3-unidecode/focal,now 1.1.1-3build1 all [installed]
+python3-uno/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+python3-urllib3/focal-updates,focal-security,now 1.25.8-2ubuntu0.1 all [installed]
+python3-wadllib/focal,now 1.3.3-3build1 all [installed]
+python3-webencodings/focal,now 0.5.1-1ubuntu1 all [installed]
+python3-wheel/focal,now 0.34.2-1 all [installed,automatic]
+python3-xapp/una,now 2.2.1 all [installed]
+python3-xdg/focal,now 0.26-1ubuntu1 all [installed]
+python3-xkit/focal,now 0.5.0ubuntu4 all [installed]
+python3-xlib/focal,now 0.23-2build1 all [installed]
+python3-xlrd/focal,now 1.1.0-5 all [installed]
+python3-yaml/focal-updates,focal-security,now 5.3.1-1ubuntu0.1 amd64 [installed]
+python3.8-dev/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04.4 amd64 [installed,automatic]
+python3.8-minimal/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04.4 amd64 [installed]
+python3.8/focal-updates,focal-security,now 3.8.10-0ubuntu1~20.04.4 amd64 [installed]
+python3/focal,now 3.8.2-0ubuntu2 amd64 [installed]
+qt5-gtk-platformtheme/focal-updates,focal-security,now 5.12.8+dfsg-0ubuntu2.1 amd64 [installed]
+qt5-gtk2-platformtheme/focal,now 5.0.0+git23.g335dbec-3ubuntu4 amd64 [installed]
+qt5-style-plugin-cleanlooks/focal,now 5.0.0+git23.g335dbec-3ubuntu4 amd64 [installed]
+qt5-style-plugin-motif/focal,now 5.0.0+git23.g335dbec-3ubuntu4 amd64 [installed]
+qt5-style-plugin-plastique/focal,now 5.0.0+git23.g335dbec-3ubuntu4 amd64 [installed]
+qt5-style-plugins/focal,now 5.0.0+git23.g335dbec-3ubuntu4 amd64 [installed]
+qt5ct/focal,now 0.39-1build3 amd64 [installed]
+qttranslations5-l10n/focal,now 5.12.8-0ubuntu1 all [installed]
+rdate/focal,now 1:1.10-2 amd64 [installed]
+readline-common/focal,now 8.0-4 all [installed]
+redshift-gtk/una,now 1.12-linuxmint3 all [installed]
+redshift/una,now 1.12-linuxmint3 amd64 [installed]
+reiserfsprogs/focal,now 1:3.6.27-3 amd64 [installed]
+rename/focal,now 1.10-1 all [installed]
+rfkill/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+rhythmbox-data/focal,now 3.4.4-1ubuntu2 all [installed]
+rhythmbox-plugin-tray-icon/una,now 2020.05.21 all [installed]
+rhythmbox-plugins/focal,now 3.4.4-1ubuntu2 amd64 [installed]
+rhythmbox/focal,now 3.4.4-1ubuntu2 amd64 [installed]
+rsync/focal-updates,focal-security,now 3.1.3-8ubuntu0.3 amd64 [installed]
+rsyslog/focal-updates,focal-security,now 8.2001.0-1ubuntu1.3 amd64 [installed]
+rtkit/focal,now 0.12-4 amd64 [installed]
+samba-common-bin/focal-updates,now 2:4.13.17~dfsg-0ubuntu0.21.04.2 amd64 [installed]
+samba-common/focal-updates,now 2:4.13.17~dfsg-0ubuntu0.21.04.2 all [installed]
+samba-libs/focal-updates,now 2:4.13.17~dfsg-0ubuntu0.21.04.2 amd64 [installed]
+sane-utils/focal-updates,now 1.0.29-0ubuntu5.2 amd64 [installed]
+sbsigntool/focal-updates,now 0.9.2-2ubuntu1.1 amd64 [installed]
+screen-resolution-extra/focal,now 0.18build1 all [installed,automatic]
+seahorse/focal,now 3.36-1 amd64 [installed]
+secureboot-db/focal,now 1.5 amd64 [installed]
+sed/focal,now 4.7-1 amd64 [installed]
+sensible-utils/focal,now 0.0.12+nmu1 all [installed]
+session-migration/focal,now 0.3.5 amd64 [installed]
+sgml-base/focal,now 1.29.1 all [installed]
+sgml-data/focal,now 2.0.11 all [installed]
+shared-mime-info/focal,now 1.15-1 amd64 [installed]
+shim-signed/focal-updates,now 1.40.7+15.4-0ubuntu9 amd64 [installed]
+simple-scan/focal-updates,now 3.36.3-0ubuntu0.20.04.0 amd64 [installed]
+slick-greeter/una,now 1.5.6+una amd64 [installed]
+smbclient/focal-updates,now 2:4.13.17~dfsg-0ubuntu0.21.04.2 amd64 [installed]
+socat/focal,now 1.7.3.3-2 amd64 [installed,automatic]
+sound-theme-freedesktop/focal,now 0.8-2ubuntu1 all [installed]
+speech-dispatcher-audio-plugins/focal,now 0.9.1-4 amd64 [installed]
+speech-dispatcher-espeak-ng/focal,now 0.9.1-4 amd64 [installed]
+speech-dispatcher/focal,now 0.9.1-4 amd64 [installed]
+squashfs-tools/focal-updates,focal-security,now 1:4.4-1ubuntu0.3 amd64 [installed]
+ssl-cert/focal,now 1.0.39 all [installed]
+sticky/una,now 1.8 all [installed]
+strace/focal-updates,now 5.5-3ubuntu1 amd64 [installed]
+streamer/focal,now 3.106-1 amd64 [installed]
+sudo/focal-updates,focal-security,now 1.8.31-1ubuntu1.2 amd64 [installed]
+synaptic/una,now 0.84.6+linuxmint3 amd64 [installed]
+syslinux-common/focal,now 3:6.04~git20190206.bf6db5b4+dfsg1-2 all [installed]
+syslinux-legacy/focal,now 2:3.63+dfsg-2ubuntu9 amd64 [installed]
+syslinux-utils/focal,now 3:6.04~git20190206.bf6db5b4+dfsg1-2 amd64 [installed]
+syslinux/focal,now 3:6.04~git20190206.bf6db5b4+dfsg1-2 amd64 [installed]
+system-config-printer-common/focal-updates,now 1.5.12-0ubuntu1.1 all [installed]
+system-config-printer-udev/focal-updates,now 1.5.12-0ubuntu1.1 amd64 [installed]
+system-config-printer/focal-updates,now 1.5.12-0ubuntu1.1 all [installed]
+system-tools-backends/focal,now 2.10.2-3 amd64 [installed]
+systemd-coredump/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+systemd-sysv/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+systemd-timesyncd/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+systemd/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+sysvinit-utils/focal,now 2.96-2.1ubuntu1 amd64 [installed]
+t1utils/focal,now 1.41-3 amd64 [installed]
+tar/focal-updates,focal-security,now 1.30+dfsg-7ubuntu0.20.04.2 amd64 [installed]
+tcpdump/focal-updates,focal-security,now 4.9.3-4ubuntu0.1 amd64 [installed]
+telnet/focal,now 0.17-41.2build1 amd64 [installed]
+thermald/focal-updates,now 1.9.1-1ubuntu0.6 amd64 [installed]
+thingy/una,now 1.0.6 all [installed]
+thunderbird-gnome-support/focal-updates,focal-security,now 1:91.8.1+build1-0ubuntu0.20.04.1 amd64 [installed]
+thunderbird/focal-updates,focal-security,now 1:91.8.1+build1-0ubuntu0.20.04.1 amd64 [installed]
+time/focal,now 1.7-25.1build1 amd64 [installed]
+timeshift/una,now 21.09.1.1+una amd64 [installed]
+tpm-udev/focal,now 0.4 all [installed]
+transmission-common/focal,now 2.94-2ubuntu3 all [installed]
+transmission-gtk/focal,now 2.94-2ubuntu3 amd64 [installed]
+tzdata/focal-updates,focal-security,now 2022a-0ubuntu0.20.04 all [installed]
+ubuntu-dbgsym-keyring/focal-updates,now 2020.02.11.4 all [installed]
+ubuntu-drivers-common/focal-updates,now 1:0.9.0~0.20.04.7 amd64 [installed]
+ubuntu-keyring/focal-updates,now 2020.02.11.4 all [installed]
+ubuntu-system-adjustments/una,now 2021.12.17-una all [installed]
+ucf/focal,now 3.0038+nmu1 all [installed]
+udev/focal-updates,now 245.4-4ubuntu3.17 amd64 [installed]
+udisks2/focal-updates,now 2.8.4-1ubuntu2 amd64 [installed]
+ufw/focal-updates,now 0.36-6ubuntu1 all [installed]
+uno-libs-private/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+untex/focal,now 1:1.2-6 amd64 [installed]
+unzip/focal,now 6.0-25ubuntu1 amd64 [installed]
+update-inetd/focal,now 4.50 all [installed]
+upower/focal,now 0.99.11-1build2 amd64 [installed]
+ure/focal-updates,focal-security,now 1:6.4.7-0ubuntu0.20.04.4 amd64 [installed]
+usb-modeswitch-data/focal,now 20191128-3 all [installed]
+usb-modeswitch/focal,now 2.5.2+repack0-2ubuntu3 amd64 [installed]
+usb.ids/focal,now 2020.03.19-1 all [installed]
+usbmuxd/focal,now 1.1.1~git20191130.9af2b12-1 amd64 [installed]
+usbutils/focal,now 1:012-2 amd64 [installed]
+user-setup/focal,now 1.63ubuntu6 all [installed]
+util-linux/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+uuid-runtime/focal-updates,focal-security,now 2.34-0.1ubuntu9.3 amd64 [installed]
+va-driver-all/focal,now 2.7.0-2 amd64 [installed]
+vim-common/focal-updates,focal-security,now 2:8.1.2269-1ubuntu5.7 all [installed]
+vim-tiny/focal-updates,focal-security,now 2:8.1.2269-1ubuntu5.7 amd64 [installed]
+wamerican/focal,now 2018.04.16-1 all [installed]
+warpinator/una,now 1.2.9+una all [installed]
+wbrazilian/focal,now 3.0~beta4-22 all [installed]
+wbritish/focal,now 2018.04.16-1 all [installed]
+webapp-manager/una,now 1.1.9 all [installed]
+wfrench/focal,now 1.2.5-1 all [installed]
+wget/focal-updates,now 1.20.3-1ubuntu2 amd64 [installed]
+whiptail/focal,now 0.52.21-4ubuntu2 amd64 [installed]
+wireless-regdb/focal-updates,focal-security,now 2021.08.28-0ubuntu1~20.04.1 all [installed]
+wireless-tools/focal,now 30~pre9-13ubuntu1 amd64 [installed]
+witalian/focal,now 1.10 all [installed]
+wmctrl/focal,now 1.07-7build1 amd64 [installed]
+wngerman/focal,now 20161207-7 all [installed]
+wogerman/focal,now 1:2-35 all [installed]
+wpasupplicant/focal-updates,focal-security,now 2:2.9-1ubuntu4.3 amd64 [installed]
+wportuguese/focal,now 20190329-3 all [installed]
+wspanish/focal,now 1.0.28 all [installed]
+wswiss/focal,now 20161207-7 all [installed]
+x11-apps/focal,now 7.7+8 amd64 [installed]
+x11-common/focal,now 1:7.7+19ubuntu14 all [installed]
+x11-session-utils/focal,now 7.7+4 amd64 [installed]
+x11-utils/focal,now 7.7+5 amd64 [installed]
+x11-xkb-utils/focal,now 7.7+5 amd64 [installed]
+x11-xserver-utils/focal,now 7.7+8 amd64 [installed]
+xapps-common/una,now 2.2.8+una all [installed]
+xauth/focal,now 1:1.1-0ubuntu1 amd64 [installed]
+xawtv-plugins/focal,now 3.106-1 amd64 [installed]
+xbacklight/focal,now 1.2.1-1build2 amd64 [installed]
+xbitmaps/focal,now 1.1.1-2 all [installed]
+xbrlapi/focal,now 6.0+dfsg-4ubuntu6 amd64 [installed]
+xdg-dbus-proxy/focal,now 0.1.2-1 amd64 [installed]
+xdg-desktop-portal-gtk/una,now 1.8.0-1~flatpak1~20.04 amd64 [installed]
+xdg-desktop-portal/una,now 1.8.1-1~flatpak1~20.04 amd64 [installed]
+xdg-user-dirs-gtk/focal,now 0.10-3 amd64 [installed]
+xdg-user-dirs/focal,now 0.17-2ubuntu1 amd64 [installed]
+xdg-utils/focal-updates,focal-security,now 1.1.3-2ubuntu1.20.04.2 all [installed]
+xed-common/una,now 3.2.2+una all [installed]
+xed-dbg/una,now 3.2.2+una amd64 [installed]
+xed/una,now 3.2.2+una amd64 [installed]
+xfonts-base/focal,now 1:1.0.5 all [installed]
+xfonts-encodings/focal,now 1:1.0.5-0ubuntu1 all [installed]
+xfonts-scalable/focal,now 1:1.0.3-1.1 all [installed]
+xfonts-utils/focal,now 1:7.7+6 amd64 [installed]
+xfsprogs/focal,now 5.3.0-1ubuntu2 amd64 [installed]
+xinit/focal,now 1.4.1-0ubuntu2 amd64 [installed]
+xinput/focal,now 1.6.3-1 amd64 [installed]
+xkb-data/focal,now 2.29-2 all [installed]
+xml-core/focal,now 0.18+nmu1 all [installed]
+xorg-docs-core/focal,now 1:1.7.1-1.1 all [installed]
+xorg/focal,now 1:7.7+19ubuntu14 amd64 [installed]
+xplayer-thumbnailer/una,now 2.4.2+uma amd64 [installed]
+xreader-common/una,now 3.2.2+una all [installed]
+xreader-dbg/una,now 3.2.2+una amd64 [installed]
+xreader/una,now 3.2.2+una amd64 [installed]
+xserver-common/focal-updates,focal-security,now 2:1.20.13-1ubuntu1~20.04.2 all [installed]
+xserver-xephyr/focal-updates,focal-security,now 2:1.20.13-1ubuntu1~20.04.2 amd64 [installed]
+xserver-xorg-core/focal-updates,focal-security,now 2:1.20.13-1ubuntu1~20.04.2 amd64 [installed]
+xserver-xorg-input-all/focal,now 1:7.7+19ubuntu14 amd64 [installed]
+xserver-xorg-input-libinput/focal,now 0.29.0-1 amd64 [installed]
+xserver-xorg-input-wacom/focal,now 1:0.39.0-0ubuntu1 amd64 [installed]
+xserver-xorg-legacy/focal-updates,focal-security,now 2:1.20.13-1ubuntu1~20.04.2 amd64 [installed]
+xserver-xorg-video-all/focal,now 1:7.7+19ubuntu14 amd64 [installed]
+xserver-xorg-video-amdgpu/focal,now 19.1.0-1 amd64 [installed]
+xserver-xorg-video-ati/focal,now 1:19.1.0-1 amd64 [installed]
+xserver-xorg-video-fbdev/focal,now 1:0.5.0-1ubuntu1 amd64 [installed]
+xserver-xorg-video-intel/focal,now 2:2.99.917+git20200226-1 amd64 [installed]
+xserver-xorg-video-nouveau/focal,now 1:1.0.16-1 amd64 [installed]
+xserver-xorg-video-nvidia-470/focal-updates,focal-security,now 470.103.01-0ubuntu0.20.04.1 amd64 [installed,automatic]
+xserver-xorg-video-qxl/focal,now 0.1.5+git20200331-1 amd64 [installed]
+xserver-xorg-video-radeon/focal,now 1:19.1.0-1 amd64 [installed]
+xserver-xorg-video-vesa/focal,now 1:2.4.0-2 amd64 [installed]
+xserver-xorg-video-vmware/focal,now 1:13.3.0-3 amd64 [installed]
+xserver-xorg/focal,now 1:7.7+19ubuntu14 amd64 [installed]
+xul-ext-lightning/focal-updates,focal-security,now 1:91.8.1+build1-0ubuntu0.20.04.1 amd64 [installed]
+xviewer-dbg/una,now 3.2.4+una amd64 [installed]
+xviewer-plugins/una,now 1.4.1+una amd64 [installed]
+xviewer/una,now 3.2.4+una amd64 [installed]
+xwayland/focal-updates,focal-security,now 2:1.20.13-1ubuntu1~20.04.2 amd64 [installed]
+xxd/focal-updates,focal-security,now 2:8.1.2269-1ubuntu5.7 amd64 [installed]
+xz-utils/focal-updates,focal-security,now 5.2.4-1ubuntu1.1 amd64 [installed]
+yelp-xsl/focal,now 3.36.0-1 all [installed]
+yelp/una,now 3.36.2-linuxmint1+uma amd64 [installed]
+youtube-dl/una,now 2021.04.26-1 all [installed]
+zenity-common/focal,now 3.32.0-5 all [installed]
+zenity/focal,now 3.32.0-5 amd64 [installed]
+zip/focal,now 3.0-11build1 amd64 [installed]
+zlib1g-dev/focal-updates,focal-security,now 1:1.2.11.dfsg-2ubuntu1.3 amd64 [installed,automatic]
+zlib1g/focal-updates,focal-security,now 1:1.2.11.dfsg-2ubuntu1.3 amd64 [installed]
+zlib1g/now 1:1.2.11.dfsg-2ubuntu1.3 i386 [installed,local]
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt list --installed | less
+
+[1]+  Stopped                 sudo apt list --installed | less
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ cat /etc/os-release lsb_release -a hostnamectl
+cat: invalid option -- 'a'
+Try 'cat --help' for more information.
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$  /etc/os-release lsb_release -a hostnamectl
+bash: /etc/os-release: Permission denied
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ lsb_release -a hostnamectl
+Usage: lsb_release [options]
+
+lsb_release: error: No arguments are permitted
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ hostnamectl
+   Static hostname: syafak-IdeaPad-5-14ITL05
+         Icon name: computer-laptop
+           Chassis: laptop
+        Machine ID: 09143d0261be487380a9ec9bf41d5922
+           Boot ID: ada8507a0c354d47b0f6b0627d244bc6
+  Operating System: Linux Mint 20.3
+            Kernel: Linux 5.8.0-63-generic
+      Architecture: x86-64
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Linuxmint
+Description:	Linux Mint 20.3
+Release:	20.3
+Codename:	una
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt-get install gnupg
+[sudo] password for syafak:       
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+gnupg is already the newest version (2.2.19-3ubuntu2.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2 not fully installed or removed.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable
+Could not exec dpkg!
+E: Sub-process /usr/bin/dpkg returned an error code (100)
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+OK
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt-get update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Hit:2 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease        
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease                                       
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                    
+Ign:5 http://packages.linuxmint.com una InRelease                                            
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                      
+Ign:7 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease                    
+Hit:8 http://archive.canonical.com/ubuntu focal InRelease                                    
+Hit:9 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release                      
+Hit:11 http://packages.linuxmint.com una Release                                          
+Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,6 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66,2 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [278 kB]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2.464 B]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [390 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:20 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [9.568 B]
+Get:21 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30,8 kB]
+Fetched 1.155 kB in 4s (326 kB/s)                                           
+Reading package lists... Done
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  mongodb-database-tools mongodb-mongosh mongodb-org-database
+  mongodb-org-database-tools-extra mongodb-org-mongos mongodb-org-server mongodb-org-shell
+  mongodb-org-tools
+The following NEW packages will be installed:
+  mongodb-database-tools mongodb-mongosh mongodb-org mongodb-org-database
+  mongodb-org-database-tools-extra mongodb-org-mongos mongodb-org-server mongodb-org-shell
+  mongodb-org-tools
+0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
+2 not fully installed or removed.
+Need to get 91,4 MB/142 MB of archives.
+After this operation, 455 MB of additional disk space will be used.
+Get:1 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse amd64 mongodb-database-tools amd64 100.5.2 [46,5 MB]
+Get:2 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse amd64 mongodb-org-server amd64 5.0.8 [26,4 MB]
+Get:3 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse amd64 mongodb-org-mongos amd64 5.0.8 [18,5 MB]
+Fetched 91,4 MB in 37s (2.488 kB/s)                                                          
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable
+Could not exec dpkg!
+E: Sub-process /usr/bin/dpkg returned an error code (100)
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ ^C
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt install dpkg
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+dpkg is already the newest version (1.19.7ubuntu3).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2 not fully installed or removed.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable
+Could not exec dpkg!
+E: Sub-process /usr/bin/dpkg returned an error code (100)
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt-get install --reinstall dpkg
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 1 reinstalled, 0 to remove and 0 not upgraded.
+2 not fully installed or removed.
+Need to get 1.128 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 dpkg amd64 1.19.7ubuntu3 [1.128 kB]
+Fetched 1.128 kB in 4s (315 kB/s)                   
+debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process: Resource temporarily unavailable
+Could not exec dpkg!
+E: Sub-process /usr/bin/dpkg returned an error code (100)
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo dpkg -i --force-all /var/cache/apt/archives/mongodb-org-tools_5_0_amd64.deb
+sudo: dpkg: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ apt install dpkg
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+dpkg is already the newest version (1.19.7ubuntu3).
+E: Could not get lock /var/cache/apt/archives/lock. It is held by process 95163 (synaptic)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to lock directory /var/cache/apt/archives/
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo killall apt-get   
+apt-get: no process found
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo kill all apt
+kill: failed to parse argument: 'all'
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo kill all apt-apt
+kill: failed to parse argument: 'all'
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo kill all
+kill: failed to parse argument: 'all'
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo kill all apt-get-apt
+kill: failed to parse argument: 'all'
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo kill apt-apt
+kill: failed to parse argument: 'apt-apt'
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo kill apt
+kill: failed to parse argument: 'apt'
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo killall apt-apt
+apt-apt: no process found
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo killall apt
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ apt install dpkg
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+dpkg is already the newest version (1.19.7ubuntu3).
+E: Could not get lock /var/cache/apt/archives/lock. It is held by process 95163 (synaptic)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to lock directory /var/cache/apt/archives/
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt-get update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Hit:2 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease        
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease                                       
+Ign:4 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease                    
+Hit:5 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release                      
+Hit:7 http://security.ubuntu.com/ubuntu focal-security InRelease                             
+Hit:8 http://archive.ubuntu.com/ubuntu focal-updates InRelease                            
+Ign:9 http://packages.linuxmint.com una InRelease                   
+Hit:10 http://archive.canonical.com/ubuntu focal InRelease          
+Hit:11 http://packages.linuxmint.com una Release                    
+Hit:12 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists... Done
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  mongodb-database-tools mongodb-mongosh mongodb-org-database
+  mongodb-org-database-tools-extra mongodb-org-mongos mongodb-org-server mongodb-org-shell
+  mongodb-org-tools
+E: Could not get lock /var/cache/apt/archives/lock. It is held by process 95163 (synaptic)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to lock directory /var/cache/apt/archives/
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ 
+syafak@syafak-IdeaPad-5-14ITL05:~/dpkg$ 
+
