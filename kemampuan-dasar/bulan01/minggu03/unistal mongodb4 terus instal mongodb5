@@ -1,0 +1,427 @@
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease                                                      
+Ign:2 http://packages.linuxmint.com una InRelease                                                                    
+Ign:3 http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 InRelease                                            
+Hit:4 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease                                
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                                            
+Hit:6 http://archive.ubuntu.com/ubuntu focal InRelease                                                               
+Hit:7 http://packages.linuxmint.com una Release                                                                      
+Hit:8 http://archive.canonical.com/ubuntu focal InRelease                                                            
+Ign:9 http://repo.mongodb.com/apt/debian buster/mongodb-enterprise/5.0 InRelease                                     
+Ign:10 http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 InRelease                           
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                             
+Hit:13 http://repo.mongodb.com/apt/debian buster/mongodb-enterprise/5.0 Release                                  
+Hit:15 http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 Release                                         
+Hit:17 http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 Release                   
+Get:19 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Fetched 336 kB in 5s (65,7 kB/s)    
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'http://repo.mongodb.com/apt/debian buster/mongodb-enterprise/5.0 InRelease' doesn't support architecture 'i386'
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'http://repo.mongodb.org/apt/debian buster/mongodb-org/4.4 InRelease' doesn't support architecture 'i386'
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'http://repo.mongodb.org/apt/debian buster/mongodb-org/5.0 InRelease' doesn't support architecture 'i386'
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -H gedit /etc/apt/source.list.d/pgdg.list
+sudo: gedit: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo gedit
+sudo: gedit: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt gedit
+apt
+Usage: apt command [options]
+       apt help command [options]
+
+Commands:
+  add-repository   - Add entries to apt sources.list
+  autoclean        - Erase old downloaded archive files
+  autopurge        - Remove packages with their configuration files and automatically remove all unused packages
+  autoremove       - Remove automatically all unused packages
+  build            - Build binary or source packages from sources
+  build-dep        - Configure build-dependencies for source packages
+  changelog        - View a package's changelog
+  check            - Verify that there are no broken dependencies
+  clean            - Erase downloaded archive files
+  contains         - List packages containing a file
+  content          - List files contained in a package
+  deb              - Install a .deb package
+  depends          - Show raw dependency information for a package
+  dist-upgrade     - Upgrade the system by removing/installing/upgrading packages
+  download         - Download the .deb file for a package
+  edit-sources     - Edit /etc/apt/sources.list with your preferred text editor
+  dselect-upgrade  - Follow dselect selections
+  full-upgrade     - Same as 'dist-upgrade'
+  held             - List all held packages
+  help             - Show help for a command
+  hold             - Hold a package
+  install          - Install/upgrade packages
+  list             - List packages based on package names
+  policy           - Show policy settings
+  purge            - Remove packages and their configuration files
+  recommends       - List missing recommended packages for a particular package
+  rdepends         - Show reverse dependency information for a package
+  reinstall        - Download and (possibly) reinstall a currently installed package
+  remove           - Remove packages
+  search           - Search for a package by name and/or expression
+  show             - Display detailed information about a package
+  showhold         - Same as 'held'
+  showsrc          - Display all the source package records that match the given package name
+  source           - Download source archives
+  sources          - Same as 'edit-sources'
+  unhold           - Unhold a package
+  update           - Download lists of new/upgradable packages
+  upgrade          - Perform a safe upgrade
+  version          - Show the installed version of a package
+
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install gedit
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  mongodb-database-tools mongodb-mongosh
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  gedit-common libamtk-5-0 libamtk-5-common libtepl-4-0
+Suggested packages:
+  gedit-plugins
+The following NEW packages will be installed:
+  gedit gedit-common libamtk-5-0 libamtk-5-common libtepl-4-0
+0 upgraded, 5 newly installed, 0 to remove and 2 not upgraded.
+Need to get 601 kB of archives.
+After this operation, 5.489 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gedit-common all 3.36.2-0ubuntu1 [94,7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 libamtk-5-common all 5.0.2-1build1 [2.396 B]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 libamtk-5-0 amd64 5.0.2-1build1 [22,8 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libtepl-4-0 amd64 4.4.0-1 [73,8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gedit amd64 3.36.2-0ubuntu1 [407 kB]
+Fetched 601 kB in 3s (203 kB/s)
+Selecting previously unselected package gedit-common.
+(Reading database ... 431297 files and directories currently installed.)
+Preparing to unpack .../gedit-common_3.36.2-0ubuntu1_all.deb ...
+Unpacking gedit-common (3.36.2-0ubuntu1) ...
+Selecting previously unselected package libamtk-5-common.
+Preparing to unpack .../libamtk-5-common_5.0.2-1build1_all.deb ...
+Unpacking libamtk-5-common (5.0.2-1build1) ...
+Selecting previously unselected package libamtk-5-0:amd64.
+Preparing to unpack .../libamtk-5-0_5.0.2-1build1_amd64.deb ...
+Unpacking libamtk-5-0:amd64 (5.0.2-1build1) ...
+Selecting previously unselected package libtepl-4-0:amd64.
+Preparing to unpack .../libtepl-4-0_4.4.0-1_amd64.deb ...
+Unpacking libtepl-4-0:amd64 (4.4.0-1) ...
+Selecting previously unselected package gedit.
+Preparing to unpack .../gedit_3.36.2-0ubuntu1_amd64.deb ...
+Unpacking gedit (3.36.2-0ubuntu1) ...
+Setting up gedit-common (3.36.2-0ubuntu1) ...
+Setting up libamtk-5-common (5.0.2-1build1) ...
+Setting up libamtk-5-0:amd64 (5.0.2-1build1) ...
+Setting up libtepl-4-0:amd64 (4.4.0-1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for libglib2.0-0:amd64 (2.64.6-1~ubuntu20.04.4) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for desktop-file-utils (0.24+linuxmint1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Setting up gedit (3.36.2-0ubuntu1) ...
+update-alternatives: using /usr/bin/gedit to provide /usr/bin/gnome-text-editor (gnome-text-editor) in auto mode
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -H gedit /etc/apt/source.list.d/pgdg.list
+
+(gedit:7276): Tepl-WARNING **: 05:20:39.436: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+
+(gedit:7276): Gtk-CRITICAL **: 05:21:13.870: gtk_notebook_get_tab_label: assertion 'list != NULL' failed
+
+(gedit:7276): Gtk-CRITICAL **: 05:21:13.880: gtk_notebook_get_tab_label: assertion 'list != NULL' failed
+syafak@syafak-IdeaPad-5-14ITL05:~$ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
+deb [ arch=amd64,arm64 ] http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 multiverse
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Hit:2 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease                                
+Ign:3 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 InRelease                                      
+Ign:4 http://packages.linuxmint.com una InRelease                                                                    
+Hit:5 http://archive.ubuntu.com/ubuntu focal InRelease                                    
+Hit:6 http://archive.canonical.com/ubuntu focal InRelease                                                       
+Get:7 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                                       
+Get:8 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 Release [5.385 B]              
+Hit:9 http://packages.linuxmint.com una Release                                                              
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]       
+Get:12 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 Release.gpg [801 B] 
+Get:13 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse arm64 Packages [14,8 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:15 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 Packages [17,0 kB]
+Fetched 374 kB in 3s (133 kB/s)     
+Reading package lists... Done
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install -y mongodb-enterprise
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libsasl2-modules-gssapi-mit mongodb-enterprise-cryptd mongodb-enterprise-database
+  mongodb-enterprise-database-tools-extra mongodb-enterprise-mongos mongodb-enterprise-server
+  mongodb-enterprise-shell mongodb-enterprise-tools snmp
+The following NEW packages will be installed:
+  libsasl2-modules-gssapi-mit mongodb-enterprise mongodb-enterprise-cryptd mongodb-enterprise-database
+  mongodb-enterprise-database-tools-extra mongodb-enterprise-mongos mongodb-enterprise-server
+  mongodb-enterprise-shell mongodb-enterprise-tools snmp
+0 upgraded, 10 newly installed, 0 to remove and 2 not upgraded.
+Need to get 108 MB of archives.
+After this operation, 438 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsasl2-modules-gssapi-mit amd64 2.1.27+dfsg-2ubuntu0.1 [36,8 kB]
+Get:2 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise-shell amd64 5.0.8 [17,9 MB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 snmp amd64 5.8+dfsg-2ubuntu2.3 [168 kB]
+Get:4 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise-server amd64 5.0.8 [26,9 MB]
+Get:5 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise-mongos amd64 5.0.8 [18,9 MB]
+Get:6 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise-database-tools-extra amd64 5.0.8 [27,1 MB]
+Get:7 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise-cryptd amd64 5.0.8 [17,0 MB]
+Get:8 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise-database amd64 5.0.8 [3.560 B]
+Get:9 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise-tools amd64 5.0.8 [2.912 B]
+Get:10 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0/multiverse amd64 mongodb-enterprise amd64 5.0.8 [2.952 B]
+Fetched 108 MB in 2min 10s (833 kB/s)                                                                                
+Selecting previously unselected package libsasl2-modules-gssapi-mit:amd64.
+(Reading database ... 432855 files and directories currently installed.)
+Preparing to unpack .../0-libsasl2-modules-gssapi-mit_2.1.27+dfsg-2ubuntu0.1_amd64.deb ...
+Unpacking libsasl2-modules-gssapi-mit:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Selecting previously unselected package mongodb-enterprise-shell.
+Preparing to unpack .../1-mongodb-enterprise-shell_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise-shell (5.0.8) ...
+Selecting previously unselected package snmp.
+Preparing to unpack .../2-snmp_5.8+dfsg-2ubuntu2.3_amd64.deb ...
+Unpacking snmp (5.8+dfsg-2ubuntu2.3) ...
+Selecting previously unselected package mongodb-enterprise-server.
+Preparing to unpack .../3-mongodb-enterprise-server_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise-server (5.0.8) ...
+Selecting previously unselected package mongodb-enterprise-mongos.
+Preparing to unpack .../4-mongodb-enterprise-mongos_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise-mongos (5.0.8) ...
+Selecting previously unselected package mongodb-enterprise-database-tools-extra.
+Preparing to unpack .../5-mongodb-enterprise-database-tools-extra_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise-database-tools-extra (5.0.8) ...
+Selecting previously unselected package mongodb-enterprise-cryptd.
+Preparing to unpack .../6-mongodb-enterprise-cryptd_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise-cryptd (5.0.8) ...
+Selecting previously unselected package mongodb-enterprise-database.
+Preparing to unpack .../7-mongodb-enterprise-database_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise-database (5.0.8) ...
+Selecting previously unselected package mongodb-enterprise-tools.
+Preparing to unpack .../8-mongodb-enterprise-tools_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise-tools (5.0.8) ...
+Selecting previously unselected package mongodb-enterprise.
+Preparing to unpack .../9-mongodb-enterprise_5.0.8_amd64.deb ...
+Unpacking mongodb-enterprise (5.0.8) ...
+Setting up snmp (5.8+dfsg-2ubuntu2.3) ...
+Setting up mongodb-enterprise-mongos (5.0.8) ...
+Setting up libsasl2-modules-gssapi-mit:amd64 (2.1.27+dfsg-2ubuntu0.1) ...
+Setting up mongodb-enterprise-shell (5.0.8) ...
+Setting up mongodb-enterprise-database-tools-extra (5.0.8) ...
+Setting up mongodb-enterprise-cryptd (5.0.8) ...
+Setting up mongodb-enterprise-server (5.0.8) ...
+Setting up mongodb-enterprise-tools (5.0.8) ...
+Setting up mongodb-enterprise-database (5.0.8) ...
+Setting up mongodb-enterprise (5.0.8) ...
+Processing triggers for man-db (2.9.1-1) ...
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt purge mongodb-org*
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'mongodb-org-unstable-tools' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-mongos' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-tools' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-database-tools-extra' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-server' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-shell' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-shell' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-mongos' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-database-tools-extra' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-tools-unstable' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org' for glob 'mongodb-org*'
+Note, selecting 'mongodb-org-server' for glob 'mongodb-org*'
+Package 'mongodb-org-tools' is not installed, so not removed
+Package 'mongodb-org-tools-unstable' is not installed, so not removed
+Package 'mongodb-org' is not installed, so not removed
+Package 'mongodb-org-mongos' is not installed, so not removed
+Package 'mongodb-org-server' is not installed, so not removed
+Package 'mongodb-org-shell' is not installed, so not removed
+Package 'mongodb-org-unstable' is not installed, so not removed
+Package 'mongodb-org-unstable-mongos' is not installed, so not removed
+Package 'mongodb-org-unstable-server' is not installed, so not removed
+Package 'mongodb-org-unstable-shell' is not installed, so not removed
+Package 'mongodb-org-unstable-tools' is not installed, so not removed
+Package 'mongodb-org-database-tools-extra' is not installed, so not removed
+Package 'mongodb-org-unstable-database-tools-extra' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Ign:2 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 InRelease                                      
+Ign:3 http://packages.linuxmint.com una InRelease                                                                    
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                                            
+Hit:5 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease                                
+Hit:6 http://archive.ubuntu.com/ubuntu focal InRelease                                                               
+Hit:7 http://archive.canonical.com/ubuntu focal InRelease                                                            
+Hit:8 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 Release                        
+Hit:9 http://packages.linuxmint.com una Release                                                      
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]       
+Get:13 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Fetched 336 kB in 3s (115 kB/s)    
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  libtiff5 libxml2
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 802 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxml2 amd64 2.9.10+dfsg-5ubuntu0.20.04.3 [640 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtiff5 amd64 4.1.0+git191117-2ubuntu0.20.04.3 [162 kB]
+Fetched 802 kB in 4s (229 kB/s)   
+(Reading database ... 432982 files and directories currently installed.)
+Preparing to unpack .../libxml2_2.9.10+dfsg-5ubuntu0.20.04.3_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.3) over (2.9.10+dfsg-5ubuntu0.20.04.2) ...
+Setting up libxml2:amd64 (2.9.10+dfsg-5ubuntu0.20.04.3) ...
+(Reading database ... 432982 files and directories currently installed.)
+Preparing to unpack .../libtiff5_4.1.0+git191117-2ubuntu0.20.04.3_amd64.deb ...
+Unpacking libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.3) over (4.1.0+git191117-2ubuntu0.20.04.2) ...
+Setting up libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.3) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo -H gedit /etc/apt/source.list.d/pgdg.list
+
+(gedit:9787): Tepl-WARNING **: 05:26:52.377: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+
+(gedit:9787): Gtk-CRITICAL **: 05:26:54.403: gtk_notebook_get_tab_label: assertion 'list != NULL' failed
+
+(gedit:9787): Gtk-CRITICAL **: 05:26:54.414: gtk_notebook_get_tab_label: assertion 'list != NULL' failed
+syafak@syafak-IdeaPad-5-14ITL05:~$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Ign:2 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease                                            
+Ign:3 http://packages.linuxmint.com una InRelease                                                                    
+Hit:4 http://ppa.launchpad.net/apandada1/brightness-controller/ubuntu focal InRelease                                
+Hit:5 http://archive.ubuntu.com/ubuntu focal InRelease                                                               
+Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                                       
+Hit:7 http://packages.linuxmint.com una Release                                                                      
+Get:8 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release [4.406 B]                                    
+Hit:9 http://archive.canonical.com/ubuntu focal InRelease                                                       
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                                        
+Get:12 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release.gpg [801 B]       
+Get:13 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse arm64 Packages [13,4 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]                            
+Get:15 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse amd64 Packages [15,5 kB]
+Fetched 370 kB in 2s (149 kB/s)
+Reading package lists... Done
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install -y mongodb-org=5.0.8 mongodb-org-database=5.0.8 mongodb-org-server=5.0.8 mongodb-org-shell=5.0.8 mongodb-org-mongos=5.0.8 mongodb-org-tools=5.0.8
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  mongodb-enterprise-cryptd snmp
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  mongodb-org-database-tools-extra
+The following packages will be REMOVED:
+  mongodb-enterprise mongodb-enterprise-database mongodb-enterprise-database-tools-extra mongodb-enterprise-mongos
+  mongodb-enterprise-server mongodb-enterprise-shell mongodb-enterprise-tools
+The following NEW packages will be installed:
+  mongodb-org mongodb-org-database mongodb-org-database-tools-extra mongodb-org-mongos mongodb-org-server
+  mongodb-org-shell mongodb-org-tools
+0 upgraded, 7 newly installed, 7 to remove and 0 not upgraded.
+Need to get 59,3 MB/59,3 MB of archives.
+After this operation, 123 MB disk space will be freed.
+Get:1 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse amd64 mongodb-org-shell amd64 5.0.8 [14,4 MB]
+Get:2 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse amd64 mongodb-org-server amd64 5.0.8 [26,4 MB]
+Get:3 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0/multiverse amd64 mongodb-org-mongos amd64 5.0.8 [18,5 MB]
+Fetched 59,3 MB in 2min 27s (404 kB/s)                                                                               
+(Reading database ... 432980 files and directories currently installed.)
+Removing mongodb-enterprise (5.0.8) ...
+Removing mongodb-enterprise-database (5.0.8) ...
+Removing mongodb-enterprise-tools (5.0.8) ...
+Removing mongodb-enterprise-database-tools-extra (5.0.8) ...
+Removing mongodb-enterprise-mongos (5.0.8) ...
+Removing mongodb-enterprise-server (5.0.8) ...
+Removing mongodb-enterprise-shell (5.0.8) ...
+Selecting previously unselected package mongodb-org-shell.
+(Reading database ... 432935 files and directories currently installed.)
+Preparing to unpack .../0-mongodb-org-shell_5.0.8_amd64.deb ...
+Unpacking mongodb-org-shell (5.0.8) ...
+Selecting previously unselected package mongodb-org-server.
+Preparing to unpack .../1-mongodb-org-server_5.0.8_amd64.deb ...
+Unpacking mongodb-org-server (5.0.8) ...
+Selecting previously unselected package mongodb-org-mongos.
+Preparing to unpack .../2-mongodb-org-mongos_5.0.8_amd64.deb ...
+Unpacking mongodb-org-mongos (5.0.8) ...
+Selecting previously unselected package mongodb-org-database-tools-extra.
+Preparing to unpack .../3-mongodb-org-database-tools-extra_5.0.8_amd64.deb ...
+Unpacking mongodb-org-database-tools-extra (5.0.8) ...
+Selecting previously unselected package mongodb-org-database.
+Preparing to unpack .../4-mongodb-org-database_5.0.8_amd64.deb ...
+Unpacking mongodb-org-database (5.0.8) ...
+Selecting previously unselected package mongodb-org-tools.
+Preparing to unpack .../5-mongodb-org-tools_5.0.8_amd64.deb ...
+Unpacking mongodb-org-tools (5.0.8) ...
+Selecting previously unselected package mongodb-org.
+Preparing to unpack .../6-mongodb-org_5.0.8_amd64.deb ...
+Unpacking mongodb-org (5.0.8) ...
+Setting up mongodb-org-server (5.0.8) ...
+Setting up mongodb-org-shell (5.0.8) ...
+Setting up mongodb-org-mongos (5.0.8) ...
+Setting up mongodb-org-database-tools-extra (5.0.8) ...
+Setting up mongodb-org-database (5.0.8) ...
+Setting up mongodb-org-tools (5.0.8) ...
+Setting up mongodb-org (5.0.8) ...
+Processing triggers for man-db (2.9.1-1) ...
+syafak@syafak-IdeaPad-5-14ITL05:~$ mongo
+MongoDB shell version v5.0.8
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Error: couldn't connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :
+connect@src/mongo/shell/mongo.js:372:17
+@(connect):2:6
+exception: connect failed
+exiting with code 1
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo service mongod start
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo service mongod status
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2022-05-17 05:31:12 WIB; 13s ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 11355 (mongod)
+     Memory: 59.3M
+     CGroup: /system.slice/mongod.service
+             └─11355 /usr/bin/mongod --config /etc/mongod.conf
+
+May 17 05:31:12 syafak-IdeaPad-5-14ITL05 systemd[1]: Started MongoDB Database Server.
+syafak@syafak-IdeaPad-5-14ITL05:~$ mongo
+MongoDB shell version v5.0.8
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("ce9fe02b-ab73-4406-96ad-2a08604d5883") }
+MongoDB server version: 5.0.8
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-05-17T05:31:12.298+07:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-05-17T05:31:12.443+07:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> 
+
