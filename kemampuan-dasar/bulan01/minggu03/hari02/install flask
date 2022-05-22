@@ -51,3 +51,75 @@ Installing collected packages: zipp, importlib-metadata, itsdangerous, Werkzeug,
 Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 Werkzeug-2.1.2 click-8.1.3 flask-2.1.2 importlib-metadata-4.11.3 itsdangerous-2.1.2 zipp-3.8.0
 syafak@syafak-IdeaPad-5-14ITL05:~$ 
 
+
+
+carane ben mlakuuuu
+
+
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ cd ..
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar$ cd ..
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy$ cd ..
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt install python3-pip
+^Citing for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 587386 (apt)... 1283s
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo pip3 install virtualenv
+[sudo] password for syafak:       
+Requirement already satisfied: virtualenv in /usr/lib/python3/dist-packages (20.0.17)
+syafak@syafak-IdeaPad-5-14ITL05:~$ cd Praxis-Academy
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy$ cd kemampuan-dasar
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar$ cd flask-app
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ virtualenv env
+created virtual environment CPython3.8.10.final.0-64 in 106ms
+  creator CPython3Posix(dest=/home/syafak/Praxis-Academy/kemampuan-dasar/flask-app/env, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, pkg_resources=latest, via=copy, app_data_dir=/home/syafak/.local/share/virtualenv/seed-app-data/v1.0.1.debian.1)
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ ls -l
+total 4
+drwxrwxr-x 4 syafak syafak 4096 May 20 15:29 env
+syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ source env/bin/activate
+(env) syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ pip install flask
+Collecting flask
+  Using cached Flask-2.1.2-py3-none-any.whl (95 kB)
+Collecting importlib-metadata>=3.6.0; python_version < "3.10"
+  Using cached importlib_metadata-4.11.3-py3-none-any.whl (18 kB)
+Collecting itsdangerous>=2.0
+  Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Werkzeug>=2.0
+  Using cached Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+Collecting Jinja2>=3.0
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting click>=8.0
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting zipp>=0.5
+  Using cached zipp-3.8.0-py3-none-any.whl (5.4 kB)
+Collecting MarkupSafe>=2.0
+  Using cached MarkupSafe-2.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Installing collected packages: zipp, importlib-metadata, itsdangerous, Werkzeug, MarkupSafe, Jinja2, click, flask
+Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 Werkzeug-2.1.2 click-8.1.3 flask-2.1.2 importlib-metadata-4.11.3 itsdangerous-2.1.2 zipp-3.8.0
+(env) syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ nano run.py
+(env) syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ python run.py
+  File "run.py", line 9
+    if __name__ == "__main__:
+                            ^
+SyntaxError: EOL while scanning string literal
+(env) syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ nano run.py
+(env) syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ python run.py
+ * Serving Flask app 'run' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-954-551
+127.0.0.1 - - [20/May/2022 15:37:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2022 15:37:21] "GET /favicon.ico HTTP/1.1" 404 -
+
+
+
+
+
+menonaktifkan
+
+
+(env) syafak@syafak-IdeaPad-5-14ITL05:~/Praxis-Academy/kemampuan-dasar/flask-app$ deactivate
