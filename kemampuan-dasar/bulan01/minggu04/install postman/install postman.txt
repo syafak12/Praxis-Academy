@@ -1,0 +1,21 @@
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo rm /etc/apt/preferences.d/nosnap.pref
+[sudo] password for syafak:      
+rm: cannot remove '/etc/apt/preferences.d/nosnap.pref': No such file or directory
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt update
+Ign:1 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease
+Hit:2 http://ppa.launchpad.net/lutris-team/lutris/ubuntu focal InRelease
+Hit:3 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt install snapd
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+snapd is already the newest version (2.54.3+20.04.1ubuntu0.3).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo snap install postman
+Download snap "postman" (178) from channel "v9/stable"                                                                                                                                        postman (v9/stable) 9.19.0 from Postman, Inc. (postman-inc✓) installed
+syafak@syafak-IdeaPad-5-14ITL05:~$ 
+

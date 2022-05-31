@@ -16,4 +16,3 @@ result = client["<dbName"]["<collName>"].find()
 # print results
 for i in result:
     print(i)
-termi

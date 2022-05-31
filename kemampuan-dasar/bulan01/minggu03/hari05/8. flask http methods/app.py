@@ -5,7 +5,7 @@ app = Flask(__name__)
 def success(name,alamat):
    return f"welcome {name} alamatmu {alamat}"
 
-@app.route('/login.html',methods = ['POST', 'GET'])
+@app.route('/login',methods = ['POST', 'GET'])
 def login():
    if request.method == 'POST':
       user = request.form['nm']
