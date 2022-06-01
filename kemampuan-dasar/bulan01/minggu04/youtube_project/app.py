@@ -1,38 +1,38 @@
-from crypt import methods
-from email.headerregistry import Address
-import json
-from flask import Flask, request
-from flask_mongoengine import MongoEngine
-
+from flask import Flask, Response
+import pymongo
 app = Flask(__name__)
 
-app.config["MONGODB_SETTINGS"]={
-    "host": "mongodb://localhost/youtubedb"
-}
-db = MongoEngine(app)
+try:
+    mongo = pymongo.MongoClient(
+        host="localhost",
+        port=27017,
+        serverSelectionTimoutMS = 1000  # memicu pengecualian jika tidak bisa ke db
+    )
+    db = mongo.company
+except:
+    print ("ERROR - Cannot connect to db")
+
+####################
+@app.route('/users', methods=["POST"])
+def create_user():
+    try:
+        user = {"name": "A", "lastName": "AA"}
+        dbResponse = db.users.insert_one(user)
+        # for attr in dir(dbResponse):
+        #     print(attr)
+        return Response(
+            response= {"message": "user created", "id"},
+            status=200,
+            mimetype="application/json"
+        )
+
+    except Exception as ex:
+        print("********")
+        print(ex)
+        print("********")
+###################
 
 
-class siswa(db.Document):
-    name = db.StringField(max_length = 150)
-    email = db.StringField()
-    address = db.DictField()
-    created_at = db.DateTimeField()
-
-
-@app.route('/')
-def selamatdatangUser():
-    return "selamat pagi dunia"
-
-@app.route('/create_siswa', methods=["POST"])
-def create_siswa():
-    data = request.json
-    siswa = siswa(**data).save()
-    return siswa.to__json()
-
-@app.route('/create_siswa', methods=["GET"])
-def getSiswa():
-    siswa = siswa.objects().to_json()
-    return siswa
 
 if __name__ == "__main__":
     app.run()
