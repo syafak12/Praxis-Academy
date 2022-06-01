@@ -1,4 +1,4 @@
 flask
 python-dotenv
 pymongo
-mongoengine
+flask_mongoengine
