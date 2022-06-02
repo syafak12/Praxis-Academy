@@ -1,9 +1,9 @@
-from crypt import methods
 from flask import Flask, Response, request
 import pymongo
 import json
 from bson.objectid import ObjectId
 app = Flask(__name__)
+
 
 try:
     mongo = pymongo.MongoClient(
@@ -16,6 +16,7 @@ try:
 except:
     print ("ERROR - Cannot connect to db")
 ####################
+
 @app.route("/users", methods=["GET"])
 def get_some_users():
     try:
@@ -23,22 +24,23 @@ def get_some_users():
         for user in data:
             user["_id"] = str(user["_id"])
         return Response(
-            response= json.dumps([{"id":1}], [{"id":2}]),
-            status=200,
+            response= json.dumps(data),
+            status=500,
             mimetype="application/json"
             )
     except Exception as ex:
         print(ex)
-        return Response(response= json.dums({"message": "cannot read users"}), status=200, mimetype="application/json")
+        return Response(response= json.dums({"message": "cannot read users"}), status=500, mimetype="application/json")
+
 
 ####################
-@app.route('/users', methods=["POST"])
+@app.route("/users", methods=["POST"])
 def create_user():
     try:
         user = {
             "name":request.form["name"], 
             "lastName":request.form["lastName"]
-            }
+        }
         dbResponse = db.users.insert_one(user)
         print(dbResponse.inserted_id)
         # for attr in dir(dbResponse):
@@ -56,22 +58,22 @@ def create_user():
         print(ex)
         print("********")
 ###################
-@app.route("/users/<id>", methods["PATCH"])
+@app.route("/users/<id>", methods=["PATCH"])
 def update_user(id):
     try:
         dbResponse = db.users.update_one(
             {"_id":ObjectId(id)},
-            {"$set":{"name":request.from["name"]}}
+            {"$set":{"name":request.form["name"]}}
         )
         # for attr ini dir(dbRensponse):
         #     print(f"*****{attr}*****")
         if dbResponse.modified_count == 1:
             return Response(
-            response= json.dums(
-                {"message": "user updated"}),
-            status=200,
-            mimetype="application/json"
-        )
+                response= json.dums(
+                    {"message": "user updated"}),
+                status=200,
+                mimetype="application/json"
+            )
         return Response(
             response= json.dums(
                 {"message": "nothing to update"}),
@@ -89,7 +91,7 @@ def update_user(id):
             mimetype="application/json"
         )
 ###################
-@app.route("/users/<id>", methods: ["DELETE"])
+@app.route("/users/<id>", methods=["DELETE"])
 def delete_user(id):
     try:
         dbResponse = db.users.delete_one({"_id":ObjectId(id)})
@@ -100,10 +102,16 @@ def delete_user(id):
         print("******")
         print(ex)
         print("******")
-        
+        return Response(
+            response= json.dums(
+                {"message": "sorry cannot delete user"}),
+            status=500,
+            mimetype="application/json"
+        )
 
 ###################
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
