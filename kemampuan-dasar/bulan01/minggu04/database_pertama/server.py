@@ -42,15 +42,17 @@ def get_some_users():
 @app.route("/creat", methods=["POST"])
 def create_user():
     try:
-        user = {
-            'Nama': request.form["Nama"],
-            'Daerah': request.form["Daerah"],
-            'Tahun Masuk': request.form["Tahun Masuk"],
-            'Tahun Keluar': request.form["Tahun Keluar"],
-            'No.hp': request.form["No.hp"],
-            'Email': request.form["Email"]
-            }
-        dbResponse = db.masuk_data.insert_one(user)
+        payload = json.loads(request.data)
+        # user = {
+        #     'Nama': request.values["Nama"],
+        #     'Daerah': request.values["Daerah"],
+        #     'tahunMasuk': request.values["tahunMasuk"],
+        #     'tahunKeluar': request.values["tahunKeluar"],
+        #     'NoHp': request.values["NoHp"],
+        #     'Email': request.values["Email"]
+            # }
+        # print(payload)
+        dbResponse = db.masuk_data.insert_one(payload)
         print(dbResponse.inserted_id)
         return Response(
             response=json.dumps(
@@ -74,9 +76,9 @@ def update_user(id):
             {"_id": ObjectId(id)},
             {"$set":{'Nama': request.form["Nama"]}},
             {"$set":{'Daerah': request.form["Daerah"]}},
-            {"$set":{'Tahun Masuk': request.form["Tahun Masuk"]}},
-            {"$set":{'Tahun Keluar': request.form["Tahun Keluar"]}},
-            {"$set":{'No.hp': request.form["No.hp"]}},
+            {"$set":{'tahunMasuk': request.form["tahunMasuk"]}},
+            {"$set":{'tahunKeluar': request.form["tahunKeluar"]}},
+            {"$set":{'NohHp': request.form["NoHp"]}},
             {"$set":{'Email': request.form["Email"]}}
         )
         if dbResponse.modified_count == 1:

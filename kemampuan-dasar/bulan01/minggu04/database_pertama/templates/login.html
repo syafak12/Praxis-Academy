@@ -1,21 +1,45 @@
-<html>
-   <body>
-      <form action = "http://127.0.0.1:5000/read" method = "GET">
-         <p>Nama:</p>
-         <p><input type = "text" name = "nm" /></p> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <form onsubmit="sendData()">
+      <p>Nama:</p>
+      <p><input type = "text" name = "Nama" /></p> 
       </br>
-         <p>Daerah</p>
-         <p><input type = "text" name = "daerah"></p>
-         <p>Tahun Masuk</p>
-         <p><input type = "text" name = "tahun masuk"></p>
-         <p>Tahun Keluar</p>
-         <p><input type = "text" name = "tahun keluar"></p>
-         <p>No.hp</p>
-         <p><input type = "text" name = "no.hp"></p>
-         <p>Email</p>
-         <p><input type = "text" name = "email"></p>
-         <p><input type = "submit" value = "submit" /></p>
-      </form>
-      
-   </body>
+      <p>Daerah</p>
+      <p><input type = "text" name = "Daerah"></p>
+      <p>Tahun Masuk</p>
+      <p><input type = "text" name = "Tahun Masuk"></p>
+      <p>Tahun Keluar</p>
+      <p><input type = "text" name = "Tahun Keluar"></p>
+      <p>No.hp</p>
+      <p><input type = "text" name = "No.hp"></p>
+      <p>Email</p>
+      <p><input type = "text" name = "Email"></p>
+      <p><input type = "submit" value = "submit" /></p>
+   </form>
+   <script>
+      document.forms[0].onsubmit = async(e) => {
+      e.preventDefault();
+      const params = new URLSearchParams([...new FormData(e.target).entries()]);
+      fetch("http://127.0.0.1:5000/creat", {method:"POST", body:params})
+      const response = await new Response(params).text();
+      console.log(response);
+      }
 
+      // fetch("/path/to/server", {
+      //    method:"POST",
+      //    body:new URLSearchParams("email=test@example.com&password=pw")
+      // })
+      // console.log(new URLSearchParams.name())
+         // console.log(new URLSearchParams("email=test@example.com&password=pw"))
+      
+
+   </script>
+</body>
+</html>
