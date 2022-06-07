@@ -1,0 +1,351 @@
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt update
+[sudo] password for syafak:      
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Hit:2 http://ppa.launchpad.net/lutris-team/lutris/ubuntu focal InRelease       
+Ign:3 http://packages.linuxmint.com una InRelease                              
+Hit:4 http://archive.ubuntu.com/ubuntu focal InRelease                         
+Hit:5 http://archive.canonical.com/ubuntu focal InRelease                      
+Hit:6 http://packages.linuxmint.com una Release                                
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]        
+Ign:9 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease      
+Hit:10 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release       
+Get:12 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]     
+Fetched 336 kB in 14s (23,8 kB/s)                                              
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo snap install dbeaver-ce
+error: cannot perform the following tasks:
+- Download snap "dbeaver-ce" (185) from channel "stable" (read tcp 192.168.1.70:50354->185.125.190.27:443: read: connection reset by peer)
+syafak@syafak-IdeaPad-5-14ITL05:~$ dbeaver-ce
+dbeaver-ce: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+--2022-06-07 14:55:08--  https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+Resolving dbeaver.io (dbeaver.io)... 104.131.190.124
+Connecting to dbeaver.io (dbeaver.io)|104.131.190.124|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://dbeaver.io/files/22.1.0/dbeaver-ce_22.1.0_amd64.deb [following]
+--2022-06-07 14:55:10--  https://dbeaver.io/files/22.1.0/dbeaver-ce_22.1.0_amd64.deb
+Reusing existing connection to dbeaver.io:443.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://download.dbeaver.com/community/22.1.0/dbeaver-ce_22.1.0_amd64.deb [following]
+--2022-06-07 14:55:10--  https://download.dbeaver.com/community/22.1.0/dbeaver-ce_22.1.0_amd64.deb
+Resolving download.dbeaver.com (download.dbeaver.com)... 205.185.216.42, 205.185.216.10
+Connecting to download.dbeaver.com (download.dbeaver.com)|205.185.216.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 111455198 (106M) [application/vnd.debian.binary-package]
+Saving to: ‘dbeaver-ce_latest_amd64.deb’
+
+        dbeaver-ce_   0%[                    ]  40,00K   361 B/s    eta 3d 13h ^C
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt install -f
+[sudo] password for syafak:      
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  linux-hwe-5.13-headers-5.13.0-44 linux-hwe-5.15-headers-5.15.0-33
+  linux-hwe-5.8-headers-5.8.0-63
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo dpkg -i dbeaver-ce_latest_amd64.deb
+Selecting previously unselected package dbeaver-ce.
+(Reading database ... 385682 files and directories currently installed.)
+Preparing to unpack dbeaver-ce_latest_amd64.deb ...
+Unpacking dbeaver-ce (22.1.0) ...
+dpkg-deb (subprocess): cannot copy archive member from 'dbeaver-ce_latest_amd64.deb' to decompressor pipe: unexpected end of file or stream
+dpkg-deb: error: paste subprocess returned error exit status 2
+dpkg: error processing archive dbeaver-ce_latest_amd64.deb (--install):
+ cannot copy extracted data for './usr/share/dbeaver-ce/dbeaver.png' to '/usr/share/dbeaver-ce/dbeaver.png.dpkg-new': unexpected end of file or stream
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.24+linuxmint1) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Errors were encountered while processing:
+ dbeaver-ce_latest_amd64.deb
+syafak@syafak-IdeaPad-5-14ITL05:~$ dbeaver
+dbeaver: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo posgresql
+sudo: posgresql: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ psql
+psql: error: FATAL:  role "syafak" does not exist
+syafak@syafak-IdeaPad-5-14ITL05:~$ service postgresql
+Usage: /etc/init.d/postgresql {start|stop|restart|reload|force-reload|status} [version ..]
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo systemctl status postgresql
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor pr>
+     Active: active (exited) since Tue 2022-06-07 14:19:05 WIB; 56min ago
+    Process: 1048 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 1048 (code=exited, status=0/SUCCESS)
+
+Jun 07 14:19:05 syafak-IdeaPad-5-14ITL05 systemd[1]: Starting PostgreSQL RDBMS.>
+Jun 07 14:19:05 syafak-IdeaPad-5-14ITL05 systemd[1]: Finished PostgreSQL RDBMS.
+
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt install openjdk-11-jdk openjdk-11-jre -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+openjdk-11-jre is already the newest version (11.0.15+10-0ubuntu0.20.04.1).
+The following packages were automatically installed and are no longer required:
+  linux-hwe-5.13-headers-5.13.0-44 linux-hwe-5.15-headers-5.15.0-33
+  linux-hwe-5.8-headers-5.8.0-63
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libice-dev libpthread-stubs0-dev libsm-dev libx11-dev libxau-dev libxcb1-dev
+  libxdmcp-dev libxt-dev openjdk-11-jdk-headless x11proto-core-dev
+  x11proto-dev xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  libice-doc libsm-doc libx11-doc libxcb-doc libxt-doc openjdk-11-demo
+  openjdk-11-source visualvm
+The following NEW packages will be installed:
+  libice-dev libpthread-stubs0-dev libsm-dev libx11-dev libxau-dev libxcb1-dev
+  libxdmcp-dev libxt-dev openjdk-11-jdk openjdk-11-jdk-headless
+  x11proto-core-dev x11proto-dev xorg-sgml-doctools xtrans-dev
+0 upgraded, 14 newly installed, 0 to remove and 3 not upgraded.
+Need to get 228 MB of archives.
+After this operation, 243 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 xorg-sgml-doctools all 1:1.11-1 [12,9 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-dev all 2019.2-1ubuntu1 [594 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-core-dev all 2019.2-1ubuntu1 [2.620 B]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libice-dev amd64 2:1.0.10-0ubuntu1 [47,8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5.384 B]
+Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 libsm-dev amd64 2:1.2.3-1 [17,0 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 libxau-dev amd64 1:1.0.9-0ubuntu1 [9.552 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu1 [25,3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 xtrans-dev all 1.4.0-1 [68,9 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/main amd64 libxcb1-dev amd64 1.14-2 [80,5 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-dev amd64 2:1.6.9-2ubuntu1.2 [647 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/main amd64 libxt-dev amd64 1:1.1.5-1 [395 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openjdk-11-jdk-headless amd64 11.0.15+10-0ubuntu0.20.04.1 [223 MB]
+73% [13 openjdk-11-jdk-headless 157 MB/223 MB 71%]                                                                                                              Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openjdk-11-jdk amd64 11.0.15+10-0ubuntu0.20.04.1 [2.573 kB]
+Fetched 228 MB in 35min 49s (106 kB/s)                                         
+Selecting previously unselected package xorg-sgml-doctools.
+(Reading database ... 385682 files and directories currently installed.)
+Preparing to unpack .../00-xorg-sgml-doctools_1%3a1.11-1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../01-x11proto-dev_2019.2-1ubuntu1_all.deb ...
+Unpacking x11proto-dev (2019.2-1ubuntu1) ...
+Selecting previously unselected package x11proto-core-dev.
+Preparing to unpack .../02-x11proto-core-dev_2019.2-1ubuntu1_all.deb ...
+Unpacking x11proto-core-dev (2019.2-1ubuntu1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../03-libice-dev_2%3a1.0.10-0ubuntu1_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../04-libpthread-stubs0-dev_0.4-1_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.4-1) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../05-libsm-dev_2%3a1.2.3-1_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../06-libxau-dev_1%3a1.0.9-0ubuntu1_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../07-libxdmcp-dev_1%3a1.1.3-0ubuntu1_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../08-xtrans-dev_1.4.0-1_all.deb ...
+Unpacking xtrans-dev (1.4.0-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../09-libxcb1-dev_1.14-2_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.14-2) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../10-libx11-dev_2%3a1.6.9-2ubuntu1.2_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.6.9-2ubuntu1.2) ...
+Selecting previously unselected package libxt-dev:amd64.
+Preparing to unpack .../11-libxt-dev_1%3a1.1.5-1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.1.5-1) ...
+Selecting previously unselected package openjdk-11-jdk-headless:amd64.
+Preparing to unpack .../12-openjdk-11-jdk-headless_11.0.15+10-0ubuntu0.20.04.1_a
+md64.deb ...
+Unpacking openjdk-11-jdk-headless:amd64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Selecting previously unselected package openjdk-11-jdk:amd64.
+Preparing to unpack .../13-openjdk-11-jdk_11.0.15+10-0ubuntu0.20.04.1_amd64.deb 
+...
+Unpacking openjdk-11-jdk:amd64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Setting up openjdk-11-jdk-headless:amd64 (11.0.15+10-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jar to provide
+ /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jarsigner to p
+rovide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javac to provi
+de /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc to pro
+vide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javap to provi
+de /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jcmd to provid
+e /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdb to provide
+ /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeprscan to p
+rovide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeps to provi
+de /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jfr to provide
+ /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jimage to prov
+ide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jinfo to provi
+de /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jlink to provi
+de /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmap to provid
+e /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmod to provid
+e /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jps to provide
+ /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jrunscript to 
+provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jshell to prov
+ide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstack to prov
+ide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstat to provi
+de /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstatd to prov
+ide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmic to provid
+e /usr/bin/rmic (rmic) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/serialver to p
+rovide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jaotc to provi
+de /usr/bin/jaotc (jaotc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jhsdb to provi
+de /usr/bin/jhsdb (jhsdb) in auto mode
+Setting up libpthread-stubs0-dev:amd64 (0.4-1) ...
+Setting up xtrans-dev (1.4.0-1) ...
+Setting up openjdk-11-jdk:amd64 (11.0.15+10-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jconsole to pr
+ovide /usr/bin/jconsole (jconsole) in auto mode
+Setting up xorg-sgml-doctools (1:1.11-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for sgml-base (1.29.1) ...
+Setting up x11proto-dev (2019.2-1ubuntu1) ...
+Setting up libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Setting up libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Setting up x11proto-core-dev (2019.2-1ubuntu1) ...
+Setting up libxcb1-dev:amd64 (1.14-2) ...
+Setting up libx11-dev:amd64 (2:1.6.9-2ubuntu1.2) ...
+Setting up libxt-dev:amd64 (1:1.1.5-1) ...
+syafak@syafak-IdeaPad-5-14ITL05:~$ java -version
+openjdk version "11.0.15" 2022-04-19
+OpenJDK Runtime Environment (build 11.0.15+10-Ubuntu-0ubuntu0.20.04.1)
+OpenJDK 64-Bit Server VM (build 11.0.15+10-Ubuntu-0ubuntu0.20.04.1, mixed mode, sharing)
+syafak@syafak-IdeaPad-5-14ITL05:~$ wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
+--2022-06-07 15:58:59--  https://dbeaver.io/debs/dbeaver.gpg.key
+Resolving dbeaver.io (dbeaver.io)... [sudo] password for syafak: ***********************************************************************************************104.131.190.124
+Connecting to dbeaver.io (dbeaver.io)|104.131.190.124|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3120 (3,0K) [application/octet-stream]
+Saving to: ‘STDOUT’
+
+-                   100%[===================>]   3,05K  --.-KB/s    in 0s      
+
+2022-06-07 15:59:02 (400 MB/s) - written to stdout [3120/3120]
+
+   
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get update
+[sudo] password for syafak:      
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease                         
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Hit:3 http://ppa.launchpad.net/lutris-team/lutris/ubuntu focal InRelease       
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]        
+Ign:5 http://packages.linuxmint.com una InRelease                              
+Hit:6 http://archive.canonical.com/ubuntu focal InRelease                      
+Hit:7 http://packages.linuxmint.com una Release                                
+Ign:9 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease      
+Hit:10 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release       
+Get:12 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,8 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1.834 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66,5 kB]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2.464 B]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [661 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [277 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [926 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [681 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [390 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Get:23 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7.992 B]
+Get:24 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30,5 kB]
+Fetched 5.255 kB in 44s (118 kB/s)                                             
+Reading package lists... Done
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install dbeaver-ce -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package dbeaver-ce is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'dbeaver-ce' has no installation candidate
+syafak@syafak-IdeaPad-5-14ITL05:~$ apt policy dbeaver-ce
+dbeaver-ce:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo apt-get install dbeaver-ce
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package dbeaver-ce is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'dbeaver-ce' has no installation candidate
+syafak@syafak-IdeaPad-5-14ITL05:~$ dbeaver-ce 
+dbeaver-ce: command not found
+syafak@syafak-IdeaPad-5-14ITL05:~$ snap info dbeaver-ce
+name:      dbeaver-ce
+summary:   Universal Database Manager and SQL Client
+publisher: DBeaver (dbeaver-corp)
+store-url: https://snapcraft.io/dbeaver-ce
+contact:   dbeaver@jkiss.org
+license:   Apache-2.0
+description: |
+  Free multi-platform database tool for developers, SQL programmers, database
+  administrators and analysts. Supports all popular databases: MySQL
+  PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access,
+  Teradata, Firebird, Derby, etc.
+snap-id: 3faKn1hkBHHE6SCJ1W3QDTPWRlumswc4
+channels:
+  latest/stable:    22.0.5.202205220912 2022-05-24 (185) 267MB -
+  latest/candidate: 22.0.5.202205220912 2022-05-31 (187) 250MB -
+  latest/beta:      ↑                                          
+  latest/edge:      7.0.0.202003021717  2020-03-16  (49) 135MB -
+syafak@syafak-IdeaPad-5-14ITL05:~$ sudo systemctl status postgresql
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor pr>
+     Active: active (exited) since Tue 2022-06-07 14:19:05 WIB; 1h 53min ago
+    Process: 1048 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 1048 (code=exited, status=0/SUCCESS)
+
+Jun 07 14:19:05 syafak-IdeaPad-5-14ITL05 systemd[1]: Starting PostgreSQL RDBMS.>
+Jun 07 14:19:05 syafak-IdeaPad-5-14ITL05 systemd[1]: Finished PostgreSQL RDBMS.
+
+syafak@syafak-IdeaPad-5-14ITL05:~$ wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+--2022-06-07 16:15:08--  https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+Resolving dbeaver.io (dbeaver.io)... 104.131.190.124
+Connecting to dbeaver.io (dbeaver.io)|104.131.190.124|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://dbeaver.io/files/22.1.0/dbeaver-ce_22.1.0_amd64.deb [following]
+--2022-06-07 16:15:17--  https://dbeaver.io/files/22.1.0/dbeaver-ce_22.1.0_amd64.deb
+Reusing existing connection to dbeaver.io:443.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://download.dbeaver.com/community/22.1.0/dbeaver-ce_22.1.0_amd64.deb [following]
+--2022-06-07 16:15:17--  https://download.dbeaver.com/community/22.1.0/dbeaver-ce_22.1.0_amd64.deb
+Resolving download.dbeaver.com (download.dbeaver.com)... 205.185.216.42, 205.185.216.10
+Connecting to download.dbeaver.com (download.dbeaver.com)|205.185.216.42|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 111455198 (106M) [application/vnd.debian.binary-package]
+Saving to: ‘dbeaver-ce_latest_amd64.deb.1’
+
+eaver-ce_latest_amd   0%[                    ] 312,00K   740 B/s    eta 41h 44m^C
+syafak@syafak-IdeaPad-5-14ITL05:~$ snap install dbeaver-ce
+dbeaver-ce 22.0.5.202205220912 from DBeaver (dbeaver-corp) installed
+syafak@syafak-IdeaPad-5-14ITL05:~$ 
+
