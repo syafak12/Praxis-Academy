@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{lorna.id}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="nama" value="{{lorna.nama}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="nama_lengkap" value="{{lorna.lnama_lengkap}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="tanggal_lahir" value="{{lorna.tanggal_lahir}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" value="{{lorna.email}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
