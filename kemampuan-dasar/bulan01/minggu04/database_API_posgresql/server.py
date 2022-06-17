@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from urllib import response
+from flask import Flask, render_template, Response, request, redirect, url_for, flash
 import psycopg2 #pip install psycopg2 
 import psycopg2.extras
 import json
@@ -17,35 +18,41 @@ conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_
 def Index():
     # return render_template('index.html')
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    s = "SELECT * FROM lorna"
+    s = "SELECT * FROM hasil_penjualan"
     cur.execute(s) # Execute the SQL
     list_users = cur.fetchall()
     return render_template('index.html', list_users = list_users)
  
 @app.route('/baca', methods=['POST'])
 def add_hasil_penjualan():
-    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    if request.method == 'POST':
+    # cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    connection = psycopg2.connect(host="localhost", Database="postgres", user="lorna", password="password")
+    # if request.method == 'POST':
+    cursor = connection.cursor()
     try:
-        pyload = json.loads(request.data)
+        payload = json.loads(request.data)
+        # nama_barang = payload['nama_barang']
+        # harga = payload['harga']
+        # merek = payload['merek']
+        # keterangan = payload['keterangan']
+
         # nama_barang = request.form['nama_barang']
         # harga = request.form['harga']
         # merek = request.form['merek']
         # keterangan = request.form['keterangan']
-        Response = db.masuk_data.insert_one(payload)
-        print(responses.inserted_id)
-        return responses(
+        Response = conn.cursor.hasil_penjualan.insert_one(payload)
+        print(Response.inserted_id)
+        return Response(
             response=json.dumps(
                 {"message": "user sudah terbaca",
-                "id":f"{sqlResponse.inserted_id}"}),
+                "id":f"{Response.inserted_id}"}),
             status=200,
             mimetype="aplication/json")
             
     except Exception as ex:
-        print("*******")
-        print(ex)
-        print("*******")
-        cur.execute("INSERT INTO hasil_penjualan (nama_barang, harga, merek, keterangan) VALUES (%s,%s,%s,%s)", (nama_barang, harga, merek, keterangan))
+        return response.badRequest(f"{ex}", "erorr")
+
+        # cur.execute("INSERT INTO hasil_penjualan (nama_barang, harga, merek, keterangan) VALUES (%s,%s,%s,%s)", (nama_barang, harga, merek, keterangan))
         conn.commit()
         flash('Sukse Memasukkan Data Barang yang terjual')
         return redirect(url_for('Index'))
@@ -54,7 +61,7 @@ def add_hasil_penjualan():
 def get_employee(id):
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
    
-    cur.execute('SELECT * FROM lorna WHERE id = %s', (id))
+    cur.execute('SELECT * FROM hasil_penjualan WHERE id = %s', (id))
     data = cur.fetchall()
     cur.close()
     print(data[0])
@@ -70,7 +77,7 @@ def update_hasil_penjualan(id):
          
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
         cur.execute("""
-            UPDATE lorna
+            UPDATE hasil_penjualan
             SET nama = %s,
                 nama_lengkap = %s,
                 tanggal_lahir = %s,
