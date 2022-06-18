@@ -25,7 +25,7 @@ def Index():
  
 @app.route('/baca', methods=['POST'])
 def add_hasil_penjualan():
-    # cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     connection = psycopg2.connect(host="localhost", Database="postgres", user="lorna", password="password", port="5432")
     # if request.method == 'POST':
     cursor = connection.cursor()
