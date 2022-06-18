@@ -40,6 +40,10 @@ def add_hasil_penjualan():
         # harga = request.form['harga']
         # merek = request.form['merek']
         # keterangan = request.form['keterangan']
+        
+        connection.commit()
+        cursor.close()
+        connection.close()
         Response = conn.cursor.hasil_penjualan.insert_one(payload)
         print(Response.inserted_id)
         return Response(
@@ -53,9 +57,9 @@ def add_hasil_penjualan():
         return response.badRequest(f"{ex}", "erorr")
 
         # cur.execute("INSERT INTO hasil_penjualan (nama_barang, harga, merek, keterangan) VALUES (%s,%s,%s,%s)", (nama_barang, harga, merek, keterangan))
-        conn.commit()
-        flash('Sukse Memasukkan Data Barang yang terjual')
-        return redirect(url_for('Index'))
+        # conn.commit()
+        # flash('Sukse Memasukkan Data Barang yang terjual')
+        # return redirect(url_for('Index'))
  
 @app.route('/edit/<id>', methods = ['POST', 'GET'])
 def get_employee(id):
