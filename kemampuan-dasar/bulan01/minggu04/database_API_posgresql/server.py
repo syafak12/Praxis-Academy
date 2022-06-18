@@ -26,16 +26,18 @@ def Index():
 @app.route('/baca', methods=['POST'])
 def add_hasil_penjualan():
     # cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    connection = psycopg2.connect(host="localhost", Database="postgres", user="lorna", password="password")
+    connection = psycopg2.connect(host="localhost", Database="postgres", user="lorna", password="password", port="5432")
     # if request.method == 'POST':
     cursor = connection.cursor()
     try:
         payload = json.loads(request.data)
-        # nama_barang = payload['nama_barang']
-        # harga = payload['harga']
-        # merek = payload['merek']
-        # keterangan = payload['keterangan']
+        nama_barang = payload['nama_barang']
+        harga = payload['harga']
+        merek = payload['merek']
+        keterangan = payload['keterangan']
 
+        Query = f"insert into qr_read(qr_nama_barang, harga, merek, keterangan)values ('{nama_barang}','{harga})','{merek}','{keterangan}"
+        cursor.execute(Query)
         # nama_barang = request.form['nama_barang']
         # harga = request.form['harga']
         # merek = request.form['merek']
