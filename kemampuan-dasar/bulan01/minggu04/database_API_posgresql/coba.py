@@ -1,3 +1,4 @@
+from msilib.schema import Patch
 from urllib import response
 from flask import Flask, render_template, Response, request, redirect, url_for, flash
 import psycopg2 #pip install psycopg2 
@@ -7,6 +8,10 @@ import json
 app = Flask(__name__)
 app.secret_key = "cairocoders-ednalan"
  
+POSGRESQL_URI='posgresql://password@localhost/lorna'
+connection = psycopg2(POSGRESQL_URI)
+cursor = connection.cursor()
+
 DB_HOST = "localhost"
 DB_NAME = "postgres"
 DB_USER = "lorna"
@@ -17,13 +22,13 @@ conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_
 @app.route('/')
 def Index():
     # return render_template('index.html')
-    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    s = "SELECT * FROM hasil_penjualan"
-    cur.execute(s) # Execute the SQL
-    list_users = cur.fetchall()
-    return render_template('index.html', list_users = list_users)
+    # cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    # s = "SELECT * FROM hasil_penjualan"
+    # cur.execute(s) # Execute the SQL
+    # list_users = cur.fetchall()
+    return render_template('index.html')
  
-@app.route('/baca', methods=['POST'])
+@app.route('/baca', methods=['POST', 'GET', 'PATCH', 'DELETE'])
 def add_hasil_penjualan():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     connection = psycopg2.connect(host="localhost", database="postgres", user="lorna", password="password", port="5432")
