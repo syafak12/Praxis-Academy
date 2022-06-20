@@ -58,5 +58,37 @@ def create():
             "message": "Gagal memasukkan data"
         }), 400
 
+@app.route("/delete/<id>", methods=["DELETE"])
+def delete(id):
+    try:
+        print(id)
+        query = f"delete from lorna a where a.id={id}"
+        curs.execute(query)
+        conn.commit()
+        return jsonify({
+            "message": "sukses",
+        })
+    except Exception as e:
+        return jsonify({
+            "message": "Gagal menghapus data",
+            "detailMessage": f"{e}"
+        }), 400
+
+@app.route("/update/<id>", methods=["PATH"])
+def update(id):
+    try:
+        query = f"update from lorna a where a.id={id}"
+        curs.execute(query)
+        conn.commit()
+        return jsonify({
+            "message": "sukses",
+        })
+    except Exception as e:
+        return jsonify({
+            "message": "Gagal update data",
+            "detailMessage": f"{e}"
+        }), 400
+
+
 if "__name__"=="__main__":
     app.run(host="0.0.0.0", port=5000)
