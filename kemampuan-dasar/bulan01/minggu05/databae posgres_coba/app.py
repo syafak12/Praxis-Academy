@@ -2,7 +2,11 @@ from codecs import namereplace_errors
 from flask import Flask, jsonify, request, json
 import psycopg2
 
+from flask import Flask
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 conn = psycopg2.connect(host="0.0.0.0", database="postgres", user="lorna", password="password")
 curs = conn.cursor()
@@ -14,9 +18,18 @@ def list():
         curs.execute(query)
         result = curs.fetchall()
         print(result)
+
+        data = []
+        for i in result:
+            data.append({
+                "id": i[0],
+                "nama": i[1],
+                "nama_lengkap": i[2],
+                "tanggal_lahir": i[3],
+                "email": i[4]
+            })
         return jsonify({
-            "id": "aku sangat rindu",
-            "title": 2
+            "data": data
         })
     except Exception as e:
         print(e)
