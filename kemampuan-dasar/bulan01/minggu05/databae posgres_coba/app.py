@@ -74,14 +74,21 @@ def delete(id):
             "detailMessage": f"{e}"
         }), 400
 
-@app.route("/update/<id>", methods=["PATH"])
+@app.route("/update/<id>", methods=["PUT"])
 def update(id):
     try:
-        query = f"update from lorna where id={id}"
+        payload = json.loads(request.data)
+        print(payload)
+        nama = payload["nama"]
+        nama_lengkap = payload["nama_lengkap"]
+        tanggal_lahir = payload["tanggal_lahir"]
+        email = payload["email"]
+
+        query = f"update lorna set nama=('{nama}'), nama_lengkap=('{nama_lengkap}'), tanggal_lahir=('{tanggal_lahir}'), email=('{email}') where id=({id})"
         curs.execute(query)
         conn.commit()
         return jsonify({
-            "message": "sukses",
+            "message": "sukses"
         })
     except Exception as e:
         return jsonify({
