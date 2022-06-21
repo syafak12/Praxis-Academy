@@ -61,7 +61,7 @@ def create():
 @app.route("/delete/<id>", methods=["DELETE"])
 def delete(id):
     try:
-        print(id)
+        # print(id)
         query = f"delete from lorna a where a.id={id}"
         curs.execute(query)
         conn.commit()
@@ -77,7 +77,7 @@ def delete(id):
 @app.route("/update/<id>", methods=["PATH"])
 def update(id):
     try:
-        query = f"update from lorna a where a.id={id}"
+        query = f"update from lorna where id={id}"
         curs.execute(query)
         conn.commit()
         return jsonify({
