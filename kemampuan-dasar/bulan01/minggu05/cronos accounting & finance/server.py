@@ -31,17 +31,19 @@ def satu():
 @app.route("/create", methods=["POST"])
 def create():
     try:
-        payload = json.loads(request.data)
-        # print(payload)
-        upload = payload["upload"]
-        query = f"insert into features (upload) values ('{upload}')"
-        curs.execute(query)
-        conn.commit()
+        file = request.files["media"]
+        print(file)
+        # payload = json.loads(request.data)
+        # # print(payload)
+        # upload = payload["upload"]
+        # query = f"insert into features (upload) values ('{upload}')"
+        # curs.execute(query)
+        # conn.commit()
         # result = curs.fetchall()
         # print(result)
         return jsonify({
             "message": "sukses",
-            "data": upload
+            "data": "upload"
         })
     #     payload = json.loads(request.data)
     #     # print(payload)
