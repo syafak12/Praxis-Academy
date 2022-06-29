@@ -14,7 +14,7 @@ curs = conn.cursor()
 @app.route("/list", methods=["GET"])
 def list():
     try:
-        query = f"select * from lorna"
+        query = f"select * from lorna order by id asc"
         curs.execute(query)
         result = curs.fetchall()
         print(result)
