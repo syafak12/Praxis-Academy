@@ -43,7 +43,7 @@ def read():
                 "image": i[3]
             })
         return jsonify({
-            "dtaa": data
+            "data": data
         })
     except Exception as i:
         print (i)
@@ -79,7 +79,7 @@ def upload():
         id_features = payload["id_features"]
         isi_content = payload["isi_content"]
         image = payload["image"]
-        query = f" insert into content (id_features), (isi_content), (image) values ('{id_features}'), ('{isi_content}'), ('{image}')"
+        query = f"insert into content (id_features, isi_content, image) values ('{id_features}', '{isi_content}', '{image}')"
         curs.execute(query)
         conn.commit()
         return jsonify({
