@@ -31,7 +31,7 @@ def baca():
 @app.route("/read", methods=["GET"])
 def read():
     try:
-        query = f"select * from content"
+        query = f"select * from content order by id asc"
         curs.execute(query)
         result = curs.fetchall()
         data = []
@@ -151,12 +151,12 @@ def perbaharui(id):
         id_features = payload["id_features"]
         isi_content = payload["isi_content"]
         image = payload["image"]
-        query = f"update content (id_features), (isi_content), (image) values ('{id_features}'), ('{isi_content}'), ('{image}')"
+        query = f"update content set id_features=('{id_features}'), isi_content=('{isi_content}'), image=('{image}') where id=({id})"
         curs.execute(query)
         conn.commit()
         return jsonify({
             "message": "sukses memasukkan data content",
-            "data": "id_features"
+            "data": "data"
         }), 200
     except Exception as i:
         return jsonify({
