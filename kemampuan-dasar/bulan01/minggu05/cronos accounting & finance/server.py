@@ -103,7 +103,7 @@ def hapus(id_menu):
         conn.commit()
         return jsonify({
             "message":"sukses menghapus data",
-        }),200
+        }), 200
     except Exception as e:
         return jsonify({
             "message": "Gagal menghapus data",
