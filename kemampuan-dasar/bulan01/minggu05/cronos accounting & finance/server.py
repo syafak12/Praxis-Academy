@@ -64,7 +64,7 @@ def create():
         return jsonify({
             "message": "sukses membuat data",
             "data": "nama"
-        })
+        }), 200
     
     except Exception as e:
         return jsonify({
