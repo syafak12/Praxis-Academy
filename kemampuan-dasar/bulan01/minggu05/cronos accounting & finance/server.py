@@ -32,6 +32,7 @@ def baca():
 def read():
     try:
         query = f"select * from content order by id asc"
+        query = f"select * from features WHERE conntent = 'id_features';"
         curs.execute(query)
         result = curs.fetchall()
         data = []
