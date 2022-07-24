@@ -13,7 +13,7 @@ curs = conn.cursor()
 @app.route("/baca", methods=["GET"])
 def baca():
     try:
-        query = f"select * from features WHERE conntent = 'id_features';"
+        query = f"select * from features"
         curs.execute(query)
         result = curs.fetchall()
         data = []
@@ -32,7 +32,7 @@ def baca():
 def read():
     try:
         query = f"select * from content order by id asc"
-        query = f"select * from features WHERE conntent = 'id_features';"
+        # query = f"select * from features WHERE conntent = 'id_features';"
         curs.execute(query)
         result = curs.fetchall()
         data = []
