@@ -28,11 +28,11 @@ def baca():
     except Exception as e:
         print(e)
     
-@app.route("/read", methods=["GET"])
-def read():
+@app.route("/read/<id_features>", methods=["GET"])
+def read(id_features):
     try:
-        query = f"select * from content order by id asc"
-        # query = f"select * from features WHERE conntent = 'id_features';"
+        #query = f"select * from content order by id asc"
+        query = f"select * from content  where id_features ={id_features} "
         curs.execute(query)
         result = curs.fetchall()
         data = []
